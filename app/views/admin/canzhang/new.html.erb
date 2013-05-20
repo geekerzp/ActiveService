@@ -1,0 +1,84 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <%= form_tag("/admin/canzhang/", :method => 'post',:name => 'canzhang_form', :multipart => true) do %>
+      <script language="javascript">
+//        通过getJSON获取json数据，初始化gongfu、cz_type
+          $(document).ready(function(){
+              $.getJSON("/admin/canzhang/canzhang_types",function(cz_data,status1){
+                  $.getJSON("/admin/canzhang/gongfu_names",function(data,status){
+                      var gongfu_names = data['data'];
+                     for(i = 0;i < gongfu_names.length;i++){
+                         $("#gongfu").append("<option>"+ gongfu_names[i] +"</option>")
+                     }
+                      var cz_types = cz_data['data'];
+
+                      //判断该功夫是否有残章。
+                      var is_has_canzhang = false;
+                      for(i = 0; i < cz_types.length;i++){
+                          if(cz_types[i][0] == gongfu_names[0]){
+                              is_has_canzhang = true;
+                              $("#cz_type").append("<option>"+ cz_types[i][1] +"</option>");
+                          }
+                      }
+                      if(is_has_canzhang == false){
+                          $("#cz_type").append("<option>没有该功夫的残章类型</option>")
+                      }
+                  });
+              });
+          });
+//        实现两个下拉框的联动。
+          function changeSelect(selectValue){
+              $.getJSON("/admin/canzhang/canzhang_types", function(data,status){
+                  var cz_types = data['data'];
+                  var j = 0;
+                  $("#cz_type").empty();
+                  var is_has_canzhang = false;
+                  for(i = 0;i < cz_types.length;i++){
+                      if(cz_types[i][0] == selectValue){
+                          is_has_canzhang = true;
+                          $("#cz_type").append("<option>"+ cz_types[i][1] +"</option>")
+                      }
+                  }
+                  if(is_has_canzhang == false){
+                      $("#cz_type").append("<option>没有该功夫的残章类型</option>")
+                  }
+              });
+          }
+      </script>
+      <div style="color: red;">
+        <% if flash[:error] %>
+            <div id="u_error">
+              <p>
+                <%= flash[:error] %>
+              </p>
+            </div>
+        <% end %>
+      </div>
+      <table class="tabinfo">
+        <tr>
+          <th>功夫名称</th>
+          <td>
+            <select id="gongfu" name="gongfu" onchange="changeSelect(this.value)">
+
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>残章类型</th>
+          <td>
+            <select id="cz_type" name="cz_type">
+
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>数量</th>
+          <td><%= text_field(:canzhang, :number) %>
+            <% if @canzhang.errors['number'] && @canzhang.errors['number'].length > 0 %>
+                <span style="color: red;">数量输入不合法,应为大于0数字。</span>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="添加残章" class="btnsubmit"/>
+  <% end %>
+</div>

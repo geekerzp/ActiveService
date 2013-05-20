@@ -1,0 +1,17 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <table class="tabinfo">
+    <tr>
+      <th>潜力</th>
+      <td><%= @soul.potential %></td>
+    </tr>
+    <tr>
+      <th>魂魄值</th>
+      <td><%= @soul.number %></td>
+    </tr>
+    <tr>
+      <th>魂魄类型</th>
+      <td><%= @names_config[@disciple_config[@soul.s_type]["name"]] %></td>
+    </tr>
+  </table>
+  <a class="btnsubmit" href=<%= "'/admin/soul/edit/#{@soul.id}'".html_safe %> >编辑</a>
+</div>

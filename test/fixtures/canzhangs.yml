@@ -1,0 +1,30 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+cz1:
+  id: 1
+  cz_type: gongfu_4001_canzhang_1
+  number: 1
+  user_id: 1
+
+cz2:
+  id: 2
+  cz_type: gongfu_4001_canzhang_2
+  number: 1
+  user_id: 1
+
+cz3:
+  id: 3
+  cz_type: gongfu_4001_canzhang_3
+  number: 1
+  user_id: 1
+
+cz4:
+  id: 4
+  cz_type: gongfu_4001_canzhang_4
+  number: 1
+  user_id: 1
+
+cz5:
+  id: 5
+  cz_type: gongfu_4001_canzhang_5
+  number: 1
+  user_id: 1

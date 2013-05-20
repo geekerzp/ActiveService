@@ -1,0 +1,45 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <table class="tabinfo">
+    <tr>
+      <th style="width: 20%">装备名称：
+      </th>
+      <td>
+        <%= @equipment_info[@equipment.id.to_s][:equipment_name] %>
+        (<%= @equipment_info[@equipment.id.to_s][:type] %>)
+      </td>
+    </tr>
+    <tr>
+      <th>
+        装备类型：
+      </th>
+      <td>
+        <%= @equipment_info[@equipment.id.to_s][:equipment_type] %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        装备等级：
+      </th>
+      <td>
+        <%= @equipment_info[@equipment.id.to_s][:level] %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        成长强度：
+      </th>
+      <td>
+        <%= @equipment_info[@equipment.id.to_s][:grow_strength] %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        位置：
+      </th>
+      <td>
+        <%= @equipment_info[@equipment.id.to_s][:position] %>
+      </td>
+    </tr>
+  </table>
+  <a class="btnsubmit" href=<%= "'/admin/equipment/edit/#{@equipment.id}'".html_safe %> >编辑</a>
+</div>

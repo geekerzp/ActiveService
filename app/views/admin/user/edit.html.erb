@@ -1,0 +1,96 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+<%= form_tag("/admin/user/#{@user.id}", :method => 'put', :multipart => true) do %>
+      <div style="color: red;">
+        <% if flash[:error] %>
+            <div id="u_error">
+              <p>
+                <%= flash[:error] %>
+              </p>
+            </div>
+        <% end %>
+      </div>
+    <table class="tabinfo" style="width: 80%">
+      <tr>
+        <th>用户名</th>
+        <td><%= text_field(:user, :username) %>
+          <% if @user.errors['username'] && @user.errors['username'].length > 0 %>
+              <span style="color: red;">用户名输入不合法，长度少于20。</span>
+          <% end %>
+        </td>
+        <th>昵称</th>
+        <td><%= text_field(:user, :name) %>
+          <% if @user.errors['name'] && @user.errors['name'].length > 0 %>
+              <span style="color: red;">昵称输入不合法，长度少于20。</span>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>用户元气</th>
+        <td><%= text_field(:user, :sprite) %>
+          <% if @user.errors['sprite'] && @user.errors['sprite'].length > 0 %>
+              <span style="color: red;">用户元气输入不合法，应为数字。</span>
+          <% end %>
+        </td>
+        <th>用户等级</th>
+        <td><%= text_field(:user, :level) %>
+          <% if @user.errors['level'] && @user.errors['level'].length > 0 %>
+              <span style="color: red;">等级输入不合法，应为数字，不能超过100。</span>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>威信</th>
+        <td><%= text_field(:user, :prestige) %>
+          <% if @user.errors['prestige'] && @user.errors['prestige'].length > 0 %>
+              <span style="color: red;">威信输入不合法，应为数字。</span>
+          <% end %>
+        </td>
+        <th>元宝</th>
+        <td><%= text_field(:user, :gold) %>
+          <% if @user.errors['gold'] && @user.errors['gold'].length > 0 %>
+              <span style="color: red;">元宝输入不合法，应为数字。</span>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>银两</th>
+        <td><%= text_field(:user, :silver) %>
+          <% if @user.errors['silver'] && @user.errors['silver'].length > 0 %>
+              <span style="color: red;">银两输入不合法，应为数字。</span>
+          <% end %>
+        </td>
+        <th>体力</th>
+        <td><%= text_field(:user, :power) %>
+          <% if @user.errors['power'] && @user.errors['power'].length > 0 %>
+              <span style="color: red;">体力输入不合法，应为数字。</span>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>用户经验</th>
+        <td><%= text_field(:user, :experience) %>
+          <% if @user.errors['experience'] && @user.errors['experience'].length > 0 %>
+              <span style="color: red;">用户经验输入不合法，应为数字。</span>
+          <% end %>
+        </td>
+        <th>Vip等级</th>
+        <td>
+          <label for="vip_level"></label>
+          <select id="vip_level" name="user[vip_level]">
+            <% @vip_level_list.each() do |vip| %>
+                <% if vip == @user.vip_level %>
+                    <option selected="selected" value=<%= "\"#{vip}\"".html_safe %> ><%= vip %></option>
+                <% else %>
+                    <option value=<%= "\"#{vip}\"".html_safe %>><%= vip %></option>
+                <% end %>
+            <% end %>
+            <% if @user.errors['vip_level'] && @user.errors['vip_level'].length > 0 %>
+                <span style="color: red;">用户经验输入不合法，应为数字。</span>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="更新用户信息" class="btnsubmit"/>
+<% end %>
+</div>

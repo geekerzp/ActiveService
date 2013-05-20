@@ -1,0 +1,35 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  用户阵容:
+  <table class="tabinfo">
+    <tr>
+      <th>姓名</th>
+      <th>位置</th>
+      <th>操作</th>
+    </tr>
+    <% @on_battle_members.each() do |member| %>
+        <% d_type = Disciple.find(member.disciple_id).d_type
+        %>
+        <tr>
+          <td><a href=<%= "'/admin/disciple/#{member.disciple_id}'".html_safe %>>
+            <%= @names_config[@d_config[d_type]["name"]] %>
+          </a></td>
+          <td>
+            <%= member.position %>
+          </td>
+          <td>
+            <a href=<%= "'/admin/team/change_equipment/#{member.disciple_id}'".html_safe %> >更换装备</a>
+            <a href=<%= "'/admin/team/change_gongfu/#{member.disciple_id}'".html_safe %> >更换功夫</a>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+  <br>
+  <% unless @disciples.nil? || @disciples.length <= 0 %>
+    <a class="btnsubmit" href=<%= "'/admin/team/edit/#{@team_members.id}'".html_safe %> >编辑阵容</a>
+  <% else %>
+      <div>
+        还没有弟子，需要添加弟子,才可以编辑阵容。
+      </div>
+    <a class="btnsubmit" href='/admin/disciple/new/' >添加弟子</a>
+  <% end %>
+</div>

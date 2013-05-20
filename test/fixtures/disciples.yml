@@ -1,0 +1,91 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  user_id: 1
+  level: 10
+  experience: 100
+  d_type: disciple_1401
+  grow_blood: 1.51
+  grow_attack: 1.53
+  grow_defend: 1.52
+  grow_internal: 1.54
+
+two:
+  id: 2
+  user_id: 1
+  level: 111
+  experience: 13453
+  d_type: disciple_1402
+  grow_blood: 0.5
+  grow_attack: 1.54
+  grow_defend: 1.55
+  grow_internal: 1.5
+
+three:
+  id: 3
+  user_id: 1
+  level: 111
+  experience: 13453
+  d_type: disciple_1403
+  grow_blood: 0.5
+  grow_attack: 1.54
+  grow_defend: 1.55
+  grow_internal: 1.5
+
+four:
+  id: 4
+  user_id: 1
+  level: 111
+  experience: 13453
+  d_type: disciple_1404
+  grow_blood: 0.5
+  grow_attack: 1.54
+  grow_defend: 1.55
+  grow_internal: 1.5
+
+five:
+  id: 5
+  user_id: 2
+  level: 111
+  experience: 13453
+  d_type: disciple_1405
+  grow_blood: 0.5
+  grow_attack: 1.54
+  grow_defend: 1.55
+  grow_internal: 1.5
+
+<% 1500.times() do |i| %>
+<%= "disciple1_#{i}:"%>
+  id: <%= (1000 + i) * 10 + 1 %>
+  user_id: <%= 1000 + i %>
+  level: 11
+  experience: 133
+  d_type: disciple_1403
+  grow_blood: 0.5
+  grow_attack: 1.54
+  grow_defend: 1.55
+  grow_internal: 1.5
+
+<%= "disciple2_#{i}:"%>
+  id: <%= (1000 + i) * 10 + 2 %>
+  user_id: <%= 1000 + i %>
+  level: 13
+  experience: 323
+  d_type: disciple_1401
+  grow_blood: 0.5
+  grow_attack: 1.54
+  grow_defend: 1.5
+  grow_internal: 1.5
+
+<%= "disciple3_#{i}:"%>
+  id: <%= (1000 + i) * 10 + 3 %>
+  user_id: <%= 1000 + i %>
+  level: 13
+  experience: 223
+  d_type: disciple_1402
+  grow_blood: 0.5
+  grow_attack: 1.4
+  grow_defend: 1.51
+  grow_internal: 1.5
+<% end %>

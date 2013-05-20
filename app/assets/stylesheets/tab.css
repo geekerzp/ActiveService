@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+
+button {
+	width: 80px;
+	font-size: 13px;
+	border: 1px solid gray;
+	height: 30px;
+	cursor: hand;
+	font-family: 微软雅黑;
+	background-color: white;
+}
+
+.other {
+	font-size: 12px;
+	float: left;
+	width: 110px;
+	text-align: left;
+}
+
+#pageNumId{
+	font-size: 14px;
+}
+
+/***********************************************************/
+/**************************************************************/
+/***********      tab      ***********************/
+
+
+.tabinfo {
+	empty-cells: show;
+	width: 99%;
+	border: 1px #59adc8 solid;
+	border-collapse: collapse;
+	text-align: center;	
+	margin: 20px auto;
+	font: 14px "Microsoft YaHei", 微软雅黑;
+}
+
+.tabinfo td {
+	border: none;
+	border-bottom: 1px solid #d9e6ea;
+	padding: 10px 5px;
+	color: #333333;
+}
+
+.tabinfo th {
+	background: url("/images/thbg.png") center repeat-x;
+	height: 38px;
+	line-height: 38px;
+	color: white;
+	font-size: 14px;
+}
+
+.tabinfo a {
+	color: #45bce9; 
+	text-decoration: none;
+	margin: 0 3px;
+}
+
+.tabinfo a:hover {
+	color: red; 
+	text-decoration: underline;
+}
+
+.tabinfo .textspan {
+	float: left;
+	width: 20%;
+	margin: 3px 0;
+}

@@ -1,0 +1,1057 @@
+{
+					
+	"1_in_10_disciple_getting_probability" : [				
+		{	"drop_bag_id" : "random_drop_bag_1001",	"probability" : 0.4	},
+		{	"drop_bag_id" : "random_drop_bag_1002",	"probability" : 0.2	},
+		{	"drop_bag_id" : "random_drop_bag_1003",	"probability" : 0.1	},
+		{	"drop_bag_id" : "random_drop_bag_2001",	"probability" : 0.2	},
+		{	"drop_bag_id" : "random_drop_bag_2002",	"probability" : 0.8	},
+		{	"drop_bag_id" : "random_drop_bag_2003",	"probability" : 0.2	}
+	],				
+	"1_in_100_disciple_getting_probability" : [				
+		{	"drop_bag_id" : "random_drop_bag_1002",	"probability" : 0.4	},
+		{	"drop_bag_id" : "random_drop_bag_1003",	"probability" : 0.2	},
+		{	"drop_bag_id" : "random_drop_bag_1004",	"probability" : 0.1	},
+		{	"drop_bag_id" : "random_drop_bag_2002",	"probability" : 0.2	},
+		{	"drop_bag_id" : "random_drop_bag_2003",	"probability" : 0.8	},
+		{	"drop_bag_id" : "random_drop_bag_2004",	"probability" : 0.2	}
+	],				
+	"1_in_10000_disciple_getting_probability" : [				
+		{	"drop_bag_id" : "random_drop_bag_1003",	"probability" : 0.5	},
+		{	"drop_bag_id" : "random_drop_bag_1004",	"probability" : 0.25	},
+		{	"drop_bag_id" : "random_drop_bag_2003",	"probability" : 0.17	},
+		{	"drop_bag_id" : "random_drop_bag_2004",	"probability" : 0.8	}
+	],				
+
+
+	"random_drop_bags" : [				
+		{			
+			"bag_id" : "random_drop_bag_1001",		
+			"content" : [		
+	{	"id" : "disciple_2107",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_4108",	"type" : 7,	"number" : 1,	"probability" : 0.006	},
+	{	"id" : "disciple_1104",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3108",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_2114",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4106",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_1102",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1106",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2102",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2111",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_2106",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_1101",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3106",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2110",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1112",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1108",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1109",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1103",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3107",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1113",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3110",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_2101",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_2103",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4105",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_3102",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4104",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_3114",	"type" : 7,	"number" : 1,	"probability" : 0.023	},
+	{	"id" : "disciple_1107",	"type" : 7,	"number" : 1,	"probability" : 0.022	},
+	{	"id" : "disciple_3113",	"type" : 7,	"number" : 1,	"probability" : 0.023	},
+	{	"id" : "disciple_1111",	"type" : 7,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_1110",	"type" : 7,	"number" : 1,	"probability" : 0.023	},
+	{	"id" : "disciple_3112",	"type" : 7,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_3101",	"type" : 7,	"number" : 1,	"probability" : 0.025	},
+	{	"id" : "disciple_4107",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4103",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_3103",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3111",	"type" : 7,	"number" : 1,	"probability" : 0.025	},
+	{	"id" : "disciple_1114",	"type" : 7,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_3105",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_2112",	"type" : 7,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_3104",	"type" : 7,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_2113",	"type" : 7,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_2104",	"type" : 7,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_2109",	"type" : 7,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_3109",	"type" : 7,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_4101",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2108",	"type" : 7,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_1105",	"type" : 7,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_4102",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2105",	"type" : 7,	"number" : 1,	"probability" : 0.03	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_1002",		
+			"content" : [		
+	{	"id" : "disciple_3209",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_3202",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_1204",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4212",	"type" : 7,	"number" : 1,	"probability" : 0.01	},
+	{	"id" : "disciple_3208",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_2201",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1203",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_3203",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3212",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2206",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_3204",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1207",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_3206",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3207",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_1205",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_1209",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_3210",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2202",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2205",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2207",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1201",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_2208",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4217",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_1202",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_4208",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3205",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_3201",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_1208",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_2203",	"type" : 7,	"number" : 1,	"probability" : 0.022	},
+	{	"id" : "disciple_4211",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4206",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4203",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4209",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2204",	"type" : 7,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_4215",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1206",	"type" : 7,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_4201",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_2210",	"type" : 7,	"number" : 1,	"probability" : 0.025	},
+	{	"id" : "disciple_4204",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_4205",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_4202",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_4207",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4214",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2209",	"type" : 7,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_4213",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1211",	"type" : 7,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_3211",	"type" : 7,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_1212",	"type" : 7,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_2211",	"type" : 7,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_2212",	"type" : 7,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_4216",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_1210",	"type" : 7,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_4210",	"type" : 7,	"number" : 1,	"probability" : 0.021	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_1003",		
+			"content" : [		
+	{	"id" : "disciple_4314",	"type" : 7,	"number" : 1,	"probability" : 0.007	},
+	{	"id" : "disciple_2308",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_3304",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_1303",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_1302",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_3307",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_3301",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_2302",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_4321",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_4317",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_4307",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_4327",	"type" : 7,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_4312",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_2303",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_1308",	"type" : 7,	"number" : 1,	"probability" : 0.01	},
+	{	"id" : "disciple_4320",	"type" : 7,	"number" : 1,	"probability" : 0.006	},
+	{	"id" : "disciple_2313",	"type" : 7,	"number" : 1,	"probability" : 0.007	},
+	{	"id" : "disciple_3312",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_1307",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_4305",	"type" : 7,	"number" : 1,	"probability" : 0.01	},
+	{	"id" : "disciple_4313",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_2309",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_2304",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_3306",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_1309",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4319",	"type" : 7,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_4322",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_1301",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4318",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_2305",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_4306",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_3308",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4302",	"type" : 7,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_2307",	"type" : 7,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_1304",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4304",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4323",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4303",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_3305",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1310",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3310",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1313",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1306",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2311",	"type" : 7,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4311",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2310",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1305",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_4325",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4301",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3311",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_4310",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2306",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3309",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_3303",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_4309",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4315",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4316",	"type" : 7,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4331",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3313",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1314",	"type" : 7,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2312",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4332",	"type" : 7,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3314",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4324",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2314",	"type" : 7,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4329",	"type" : 7,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1312",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_4326",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1311",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_3302",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4330",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4308",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2301",	"type" : 7,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4328",	"type" : 7,	"number" : 1,	"probability" : 0.02	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_1004",		
+			"content" : [		
+	{	"id" : "disciple_1401",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2408",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3405",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4403",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3407",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_2407",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3406",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2402",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3402",	"type" : 7,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_2404",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3403",	"type" : 7,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_1407",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1405",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_1406",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_1409",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3404",	"type" : 7,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_2409",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3408",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_4408",	"type" : 7,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_4405",	"type" : 7,	"number" : 1,	"probability" : 0.038	},
+	{	"id" : "disciple_2401",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_2406",	"type" : 7,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_1404",	"type" : 7,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_4407",	"type" : 7,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_3401",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_4406",	"type" : 7,	"number" : 1,	"probability" : 0.039	},
+	{	"id" : "disciple_4401",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2405",	"type" : 7,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_2403",	"type" : 7,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_2410",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_1408",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_4404",	"type" : 7,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_1403",	"type" : 7,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_1402",	"type" : 7,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_3409",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_4402",	"type" : 7,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_3410",	"type" : 7,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_1410",	"type" : 7,	"number" : 1,	"probability" : 0.026	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_2001",		
+			"content" : [		
+	{	"id" : "disciple_2107",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_4108",	"type" : 6,	"number" : 1,	"probability" : 0.006	},
+	{	"id" : "disciple_1104",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3108",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_2114",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4106",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_1102",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1106",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2102",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2111",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_2106",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_1101",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3106",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2110",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1112",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1108",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1109",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1103",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3107",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1113",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3110",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_2101",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_2103",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4105",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_3102",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4104",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_3114",	"type" : 6,	"number" : 1,	"probability" : 0.023	},
+	{	"id" : "disciple_1107",	"type" : 6,	"number" : 1,	"probability" : 0.022	},
+	{	"id" : "disciple_3113",	"type" : 6,	"number" : 1,	"probability" : 0.023	},
+	{	"id" : "disciple_1111",	"type" : 6,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_1110",	"type" : 6,	"number" : 1,	"probability" : 0.023	},
+	{	"id" : "disciple_3112",	"type" : 6,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_3101",	"type" : 6,	"number" : 1,	"probability" : 0.025	},
+	{	"id" : "disciple_4107",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4103",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_3103",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3111",	"type" : 6,	"number" : 1,	"probability" : 0.025	},
+	{	"id" : "disciple_1114",	"type" : 6,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_3105",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_2112",	"type" : 6,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_3104",	"type" : 6,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_2113",	"type" : 6,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_2104",	"type" : 6,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_2109",	"type" : 6,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_3109",	"type" : 6,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_4101",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2108",	"type" : 6,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_1105",	"type" : 6,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_4102",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2105",	"type" : 6,	"number" : 1,	"probability" : 0.03	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_2002",		
+			"content" : [		
+	{	"id" : "disciple_3209",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_3202",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_1204",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4212",	"type" : 6,	"number" : 1,	"probability" : 0.01	},
+	{	"id" : "disciple_3208",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_2201",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1203",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_3203",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3212",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2206",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_3204",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1207",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_3206",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3207",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_1205",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_1209",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_3210",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2202",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2205",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2207",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1201",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_2208",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4217",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_1202",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_4208",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3205",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_3201",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_1208",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_2203",	"type" : 6,	"number" : 1,	"probability" : 0.022	},
+	{	"id" : "disciple_4211",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4206",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4203",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4209",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2204",	"type" : 6,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_4215",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1206",	"type" : 6,	"number" : 1,	"probability" : 0.024	},
+	{	"id" : "disciple_4201",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_2210",	"type" : 6,	"number" : 1,	"probability" : 0.025	},
+	{	"id" : "disciple_4204",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_4205",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_4202",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_4207",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4214",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2209",	"type" : 6,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_4213",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1211",	"type" : 6,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_3211",	"type" : 6,	"number" : 1,	"probability" : 0.027	},
+	{	"id" : "disciple_1212",	"type" : 6,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_2211",	"type" : 6,	"number" : 1,	"probability" : 0.028	},
+	{	"id" : "disciple_2212",	"type" : 6,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_4216",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_1210",	"type" : 6,	"number" : 1,	"probability" : 0.029	},
+	{	"id" : "disciple_4210",	"type" : 6,	"number" : 1,	"probability" : 0.021	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_2003",		
+			"content" : [		
+	{	"id" : "disciple_4314",	"type" : 6,	"number" : 1,	"probability" : 0.007	},
+	{	"id" : "disciple_2308",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_3304",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_1303",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_1302",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_3307",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_3301",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_2302",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_4321",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_4317",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_4307",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_4327",	"type" : 6,	"number" : 1,	"probability" : 0.008	},
+	{	"id" : "disciple_4312",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_2303",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_1308",	"type" : 6,	"number" : 1,	"probability" : 0.01	},
+	{	"id" : "disciple_4320",	"type" : 6,	"number" : 1,	"probability" : 0.006	},
+	{	"id" : "disciple_2313",	"type" : 6,	"number" : 1,	"probability" : 0.007	},
+	{	"id" : "disciple_3312",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_1307",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_4305",	"type" : 6,	"number" : 1,	"probability" : 0.01	},
+	{	"id" : "disciple_4313",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_2309",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_2304",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_3306",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_1309",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4319",	"type" : 6,	"number" : 1,	"probability" : 0.011	},
+	{	"id" : "disciple_4322",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_1301",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4318",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_2305",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_4306",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_3308",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4302",	"type" : 6,	"number" : 1,	"probability" : 0.009	},
+	{	"id" : "disciple_2307",	"type" : 6,	"number" : 1,	"probability" : 0.014	},
+	{	"id" : "disciple_1304",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4304",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4323",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4303",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_3305",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1310",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3310",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1313",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1306",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2311",	"type" : 6,	"number" : 1,	"probability" : 0.012	},
+	{	"id" : "disciple_4311",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2310",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_1305",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_4325",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_4301",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_3311",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_4310",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_2306",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3309",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_3303",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_4309",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4315",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4316",	"type" : 6,	"number" : 1,	"probability" : 0.013	},
+	{	"id" : "disciple_4331",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3313",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_1314",	"type" : 6,	"number" : 1,	"probability" : 0.015	},
+	{	"id" : "disciple_2312",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4332",	"type" : 6,	"number" : 1,	"probability" : 0.017	},
+	{	"id" : "disciple_3314",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4324",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_2314",	"type" : 6,	"number" : 1,	"probability" : 0.016	},
+	{	"id" : "disciple_4329",	"type" : 6,	"number" : 1,	"probability" : 0.018	},
+	{	"id" : "disciple_1312",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_4326",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1311",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_3302",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4330",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4308",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2301",	"type" : 6,	"number" : 1,	"probability" : 0.021	},
+	{	"id" : "disciple_4328",	"type" : 6,	"number" : 1,	"probability" : 0.02	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_2004",		
+			"content" : [		
+	{	"id" : "disciple_1401",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2408",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3405",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_4403",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3407",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_2407",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3406",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2402",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_3402",	"type" : 6,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_2404",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3403",	"type" : 6,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_1407",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_1405",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_1406",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_1409",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3404",	"type" : 6,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_2409",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_3408",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_4408",	"type" : 6,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_4405",	"type" : 6,	"number" : 1,	"probability" : 0.038	},
+	{	"id" : "disciple_2401",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_2406",	"type" : 6,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_1404",	"type" : 6,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_4407",	"type" : 6,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_3401",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_4406",	"type" : 6,	"number" : 1,	"probability" : 0.039	},
+	{	"id" : "disciple_4401",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_2405",	"type" : 6,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_2403",	"type" : 6,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_2410",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_1408",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_4404",	"type" : 6,	"number" : 1,	"probability" : 0.02	},
+	{	"id" : "disciple_1403",	"type" : 6,	"number" : 1,	"probability" : 0.032	},
+	{	"id" : "disciple_1402",	"type" : 6,	"number" : 1,	"probability" : 0.033	},
+	{	"id" : "disciple_3409",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_4402",	"type" : 6,	"number" : 1,	"probability" : 0.019	},
+	{	"id" : "disciple_3410",	"type" : 6,	"number" : 1,	"probability" : 0.026	},
+	{	"id" : "disciple_1410",	"type" : 6,	"number" : 1,	"probability" : 0.026	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_3002",		
+			"content" : [		
+				{	"id" : "gongfu_2001","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2002","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2003","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2004","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2005","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2006","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2007","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2008","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2009","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2010","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2011","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2012","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2013","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2014","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2015","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2016","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2017","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2018","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2019","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_2020","type" : 2,"number" : 1,"probability" : 0.05	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_3003",		
+			"content" : [		
+				{	"id" : "gongfu_3001","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_3002","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_3003","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3004","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3005","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3006","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3007","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_3008","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_3009","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3010","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3011","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3012","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3013","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_3014","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_3015","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_3016","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_3017","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3018","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3019","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_3020","type" : 2,"number" : 1,"probability" : 0.05	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_3004",		
+			"content" : [		
+				{	"id" : "gongfu_4001","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4002","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4003","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4004","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4005","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4006","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4007","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4008","type" : 2,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "gongfu_4009","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4010","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4011","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4012","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4013","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4014","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4015","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_4016","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_4017","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_4018","type" : 2,"number" : 1,"probability" : 0.05	},	
+				{	"id" : "gongfu_4019","type" : 2,"number" : 1,"probability" : 0		},	
+				{	"id" : "gongfu_4020","type" : 2,"number" : 1,"probability" : 0		}	
+			]		
+		},
+		{			
+			"bag_id" : "random_drop_bag_4101",		
+			"content" : [		
+				{	"id" : "equipment_weapon_1001","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1002","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1003","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1004","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1005","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1006","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1007","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1008","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1009","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_1010","type" : 8,"number" : 1,"probability" : 0.1	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4102",		
+			"content" : [		
+				{	"id" : "equipment_weapon_2001","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2002","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2003","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2004","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2005","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2006","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2007","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2008","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2009","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_weapon_2010","type" : 8,"number" : 1,"probability" : 0.1	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4103",		
+			"content" : [		
+				{	"id" : "equipment_weapon_3001","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3002","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3003","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3004","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3005","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3006","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3007","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_weapon_3008","type" : 8,"number" : 1,"probability" : 0.125	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4104",		
+			"content" : [		
+				{	"id" : "equipment_weapon_4001","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_weapon_4002","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_weapon_4003","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_weapon_4004","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_weapon_4005","type" : 8,"number" : 1,"probability" : 0.2	}	
+			]		
+		},
+			
+		{			
+			"bag_id" : "random_drop_bag_4201",		
+			"content" : [		
+				{	"id" : "equipment_armor_1001","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1002","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1003","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1004","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1005","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1006","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1007","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1008","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1009","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_armor_1010","type" : 8,"number" : 1,"probability" : 0.1	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4202",		
+			"content" : [		
+				{	"id" : "equipment_armor_2001","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2002","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2003","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2004","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2005","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2006","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2007","type" : 8,"number" : 1,"probability" : 0.125	},	
+				{	"id" : "equipment_armor_2008","type" : 8,"number" : 1,"probability" : 0.125	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4203",		
+			"content" : [		
+				{	"id" : "equipment_armor_3001","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_3002","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_3003","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_3004","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_3005","type" : 8,"number" : 1,"probability" : 0.2	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4204",		
+			"content" : [		
+				{	"id" : "equipment_armor_4001","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_4002","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_4003","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_4004","type" : 8,"number" : 1,"probability" : 0.2	},	
+				{	"id" : "equipment_armor_4005","type" : 8,"number" : 1,"probability" : 0.2	}	
+			]		
+		},			
+
+		{			
+			"bag_id" : "random_drop_bag_4301",		
+			"content" : [		
+				{	"id" : "equipment_horse_1001","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1002","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1003","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1004","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1005","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1006","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1007","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1008","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1009","type" : 8,"number" : 1,"probability" : 0.1	},	
+				{	"id" : "equipment_horse_1010","type" : 8,"number" : 1,"probability" : 0.1	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4302",		
+			"content" : [		
+				{	"id" : "equipment_horse_2001","type" : 8,"number" : 1,"probability" : 0.14	},	
+				{	"id" : "equipment_horse_2002","type" : 8,"number" : 1,"probability" : 0.14	},	
+				{	"id" : "equipment_horse_2003","type" : 8,"number" : 1,"probability" : 0.14	},	
+				{	"id" : "equipment_horse_2004","type" : 8,"number" : 1,"probability" : 0.14	},	
+				{	"id" : "equipment_horse_2005","type" : 8,"number" : 1,"probability" : 0.14	},	
+				{	"id" : "equipment_horse_2006","type" : 8,"number" : 1,"probability" : 0.15	},	
+				{	"id" : "equipment_horse_2007","type" : 8,"number" : 1,"probability" : 0.15	}	
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4303",		
+			"content" : [		
+				{	"id" : "equipment_horse_3001","type" : 8,"number" : 1,"probability" : 0.16	},	
+				{	"id" : "equipment_horse_3002","type" : 8,"number" : 1,"probability" : 0.16	},	
+				{	"id" : "equipment_horse_3003","type" : 8,"number" : 1,"probability" : 0.17	},	
+				{	"id" : "equipment_horse_3004","type" : 8,"number" : 1,"probability" : 0.17	},	
+				{	"id" : "equipment_horse_3005","type" : 8,"number" : 1,"probability" : 0.17	},	
+				{	"id" : "equipment_horse_3006","type" : 8,"number" : 1,"probability" : 0.17	}
+			]		
+		},			
+		{			
+			"bag_id" : "random_drop_bag_4304",		
+			"content" : [		
+				{	"id" : "equipment_horse_4001","type" : 8,"number" : 1,"probability" : 0.16	},	
+				{	"id" : "equipment_horse_4002","type" : 8,"number" : 1,"probability" : 0.16	},	
+				{	"id" : "equipment_horse_4003","type" : 8,"number" : 1,"probability" : 0.17	},	
+				{	"id" : "equipment_horse_4004","type" : 8,"number" : 1,"probability" : 0.17	},	
+				{	"id" : "equipment_horse_4005","type" : 8,"number" : 1,"probability" : 0.17	},	
+				{	"id" : "equipment_horse_4006","type" : 8,"number" : 1,"probability" : 0.17	}
+			]		
+		},			
+
+
+
+
+		{			
+			"bag_id" : "random_drop_bag_5001",		
+			"content" : [		
+				{	"id" : "item_0041","type" : 4,"number" : 1,"probability" : 0.15		},	
+				{	"id" : "item_0042","type" : 4,"number" : 1,"probability" : 0.15		},
+				{	"id" : "item_0043","type" : 4,"number" : 1,"probability" : 0.05		},
+				{	"id" : "item_0044","type" : 4,"number" : 1,"probability" : 0.4		},
+				{	"id" : "item_0045","type" : 4,"number" : 1,"probability" : 0.25		}
+			]		
+		}			
+	],
+				
+	"goods" : [												
+		{	"name" : "item_0021",	"price" : 10.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0021",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{"drop_bag_id" : "random_drop_bag_5001","probability" : 0.2},{"drop_bag_id" : "random_drop_bag_3003","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_3004","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4103","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4104","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4203","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4204","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4302","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4303","probability" : 0.15}]	},
+		{	"name" : "item_0022",	"price" : 5.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0022",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{"drop_bag_id" : "random_drop_bag_5001","probability" : 0.2},{"drop_bag_id" : "random_drop_bag_3003","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_3004","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4102","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4103","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4202","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4203","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4301","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4302","probability" : 0.15}]	},
+		{	"name" : "item_0023",	"price" : 99.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0023",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{"drop_bag_id" : "random_drop_bag_5001","probability" : 0.2},{"drop_bag_id" : "random_drop_bag_3002","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_3003","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4101","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4102","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4201","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4202","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4301","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4302","probability" : 0.15}]	},
+		{	"name" : "item_0024",	"price" : 99.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0024",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{"drop_bag_id" : "random_drop_bag_5001","probability" : 0.2},{"drop_bag_id" : "random_drop_bag_3002","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_3003","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4101","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4102","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4201","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4202","probability" : 0.05},{"drop_bag_id" : "random_drop_bag_4301","probability" : 0.15},{"drop_bag_id" : "random_drop_bag_4302","probability" : 0.05}]	},
+		{	"name" : "item_0031",	"price" : 20.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0031",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0032",	"price" : 15.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0032",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0033",	"price" : 10.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0033",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0034",	"price" : 4.0,	"can_use" : 1,	"display_name" : "batton_name_0001",	"note" : "description_item_0034",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0041",	"price" : 28.0,	"can_use" : 1,	"display_name" : "batton_name_0002",	"note" : "description_item_0041",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0042",	"price" : 28.0,	"can_use" : 1,	"display_name" : "batton_name_0003",	"note" : "description_item_0042",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0043",	"price" : 198.0,	"can_use" : 1,	"display_name" : "batton_name_0003",	"note" : "description_item_0043",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0044",	"price" : 20.0,	"can_use" : 0,	"display_name" : "batton_name_0000",	"note" : "description_item_0044",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0045",	"price" : 10.0,	"can_use" : 1,	"display_name" : "batton_name_0004",	"note" : "description_item_0045",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0046",	"price" : 300.0,	"can_use" : 1,	"display_name" : "batton_name_0005",	"note" : "description_item_0046",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2015-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0047",	"price" : 99.0,	"can_use" : 1,	"display_name" : "batton_name_0006",	"note" : "description_item_0047",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0048",	"price" : 99.0,	"can_use" : 1,	"display_name" : "batton_name_0002",	"note" : "description_item_0048",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	},
+		{	"name" : "item_0049",	"price" : 99.0,	"can_use" : 1,	"display_name" : "batton_name_0002",	"note" : "description_item_0049",	"display_begin_time" : "2012-12-12 21:12:12",	"display_end_time" : "2012-12-15 21:12:12",	"vip_level_limit" : 0,	"level_limit" : 0,	"rand_drop_bags" : [{}]	}
+	],												
+													
+	"normal_bags" : [						
+		{					
+			"name" : "name_newplayergift_0001",	"content" : [
+				{			
+					"name" : "item_0044", 	"number" : 4	
+				},
+				{			
+					"name" : "item_0001", 	"number" : 20000	
+				},
+				{			
+					"name" : "gongfu_3012", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_horse_1007", 	"number" : 1	
+				}			
+			]				
+		}
+	],
+
+	"gift_bags" : [						
+		{					
+			"name" : "name_gift_0001",	"display_price" : 500,	"actual_price" : 10,	"vip_level_limit" : 0,	"content" : [
+				{			
+					"name" : "item_0046", 	"number" : 1	
+				},			
+				{			
+					"name" : "item_0045", 	"number" : 20	
+				}			
+			]				
+		},					
+		{					
+			"name" : "name_gift_0002",	"display_price" : 48,	"actual_price" : 8,	"vip_level_limit" : 1,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 10000 	
+				},			
+				{			
+					"name" : "item_0033", 	"number" : 2	
+				},			
+				{			
+					"name" : "item_0034", 	"number" : 2	
+				}			
+			]				
+		},					
+		{					
+			"name" : "name_gift_0003",	"display_price" : 248,	"actual_price" : 48,	"vip_level_limit" : 2,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 50000	
+				},			
+				{			
+					"name" : "item_0044", 	"number" : 6	
+				},			
+				{			
+					"name" : "item_0033", 	"number" : 5	
+				},			
+				{			
+					"name" : "item_0034", 	"number" : 5	
+				}			
+			]				
+		},					
+		{					
+			"name" : "name_gift_0004",	"display_price" : 480,	"actual_price" : 98,	"vip_level_limit" : 3,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 100000	
+				},			
+				{			
+					"name" : "item_0044", 	"number" : 12	
+				},			
+				{			
+					"name" : "item_0033", 	"number" : 10	
+				},			
+				{			
+					"name" : "item_0034", 	"number" : 10	
+				}			
+			]				
+		},					
+
+		{					
+			"name" : "name_gift_0005",	"display_price" : 880,	"actual_price" : 168,	"vip_level_limit" : 4,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 200000	
+				},			
+				{			
+					"name" : "item_0044", 	"number" : 24	
+				},			
+				{			
+					"name" : "item_0032", 	"number" : 10	
+				},			
+				{			
+					"name" : "item_0022", 	"number" : 10	
+				}			
+			]				
+		},					
+		{					
+			"name" : "name_gift_0006",	"display_price" : 1980,	"actual_price" : 298,	"vip_level_limit" : 5,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 500000	
+				},			
+				{			
+					"name" : "item_0047", 	"number" : 300	
+				},			
+				{			
+					"name" : "item_0041", 	"number" : 5	
+				},			
+				{			
+					"name" : "equipment_horse_3003", 	"number" : 1	
+				}			
+			]				
+		},					
+		{					
+			"name" : "name_gift_0007",	"display_price" : 2980,	"actual_price" : 498,	"vip_level_limit" : 6,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 800000	
+				},			
+				{			
+					"name" : "item_0047", 	"number" : 500	
+				},			
+				{			
+					"name" : "item_0032", 	"number" : 25	
+				},			
+				{			
+					"name" : "item_0022", 	"number" : 25	
+				},			
+				{			
+					"name" : "equipment_armor_3005", 	"number" : 1	
+				}			
+			]				
+		},					
+
+		{					
+			"name" : "name_gift_0008",	"display_price" : 3880,	"actual_price" : 698,	"vip_level_limit" : 7,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 1000000	
+				},			
+				{			
+					"name" : "item_0047", 	"number" : 800	
+				},			
+				{			
+					"name" : "item_0043", 	"number" : 5	
+				},			
+				{			
+					"name" : "equipment_weapon_3007", 	"number" : 1	
+				}			
+			]				
+		},					
+		{					
+			"name" : "name_gift_0009",	"display_price" : 6980,	"actual_price" : 1298,	"vip_level_limit" : 8,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 2000000	
+				},			
+				{			
+					"name" : "item_0047", 	"number" : 2000	
+				},			
+				{			
+					"name" : "item_0041", 	"number" : 5	
+				},			
+				{			
+					"name" : "item_0031", 	"number" : 25	
+				},
+				{			
+					"name" : "item_0021", 	"number" : 25	
+				},
+				{			
+					"name" : "equipment_armor_4005", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_horse_3006", 	"number" : 1	
+				}
+			]				
+		},
+		{					
+			"name" : "name_gift_0010",	"display_price" : 14680,	"actual_price" : 2498,	"vip_level_limit" : 9,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 5000000	
+				},						
+				{			
+					"name" : "item_0031", 	"number" : 50	
+				},
+				{			
+					"name" : "item_0021", 	"number" : 50	
+				},
+				{			
+					"name" : "equipment_weapon_4004", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_horse_3002", 	"number" : 1	
+				}
+			]				
+		},
+
+		{					
+			"name" : "name_gift_0011",	"display_price" : 18880,	"actual_price" : 3698,	"vip_level_limit" : 10,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 8000000	
+				},			
+				{			
+					"name" : "equipment_horse_4005", 	"number" : 1	
+				}
+			]				
+		},
+		{					
+			"name" : "name_gift_0012",	"display_price" : 23880,	"actual_price" : 4698,	"vip_level_limit" : 11,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 10000000	
+				},			
+				{			
+					"name" : "equipment_weapon_4001", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_armor_4001", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_horse_3001", 	"number" : 1	
+				}
+
+			]				
+		},
+		{					
+			"name" : "name_gift_0013",	"display_price" : 63880,	"actual_price" : 12698,	"vip_level_limit" : 12,	"content" : [
+				{			
+					"name" : "item_0001", 	"number" : 30000000	
+				},			
+				{			
+					"name" : "equipment_weapon_4002", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_armor_4004", 	"number" : 1	
+				},			
+				{			
+					"name" : "equipment_horse_4001", 	"number" : 1	
+				}
+			]				
+		}				
+	],		
+					
+	"recharge_list" : [								
+		{	"money":648,	"get":6480,	"present":780	},		
+		{	"money":328,	"get":3280,	"present":380	},		
+		{	"money":192,	"get":1980,	"present":220	},		
+		{	"money":68,	"get":680,	"present":70	},		
+		{	"money":30,	"get":300,	"present":30	},		
+		{	"money":6,	"get":60,	"present":5	}		
+	],										
+
+
+    "canbai_1000" : [							
+	{	"id" : "equipment_horse_2001",	"type" : 8,	"number" : 1,	"probability" : 0.2	},	
+	{	"id" : "equipment_horse_2002",	"type" : 8,	"number" : 1,	"probability" : 0.2	},	
+	{	"id" : "equipment_horse_2003",	"type" : 8,	"number" : 1,	"probability" : 0.2	},	
+	{	"id" : "equipment_horse_2004",	"type" : 8,	"number" : 1,	"probability" : 0.2	},	
+	{	"id" : "equipment_horse_2005",	"type" : 8,	"number" : 1,	"probability" : 0.2	}
+		
+    ],
+    "canbai_2000": [	
+	{	"id": "gongfu_4001",	"type": 2,	"number": 1,	"probability": 0.2	},
+        {	"id": "gongfu_4002",	"type": 2,	"number": 1,	"probability": 0.2	},
+        {	"id": "gongfu_4003",	"type": 2,	"number": 1,	"probability": 0.1	},
+        {	"id": "gongfu_4005",	"type": 2,	"number": 1,	"probability": 0.2	},
+        {	"id": "gongfu_4006",	"type": 2,	"number": 1,	"probability": 0.2	},
+        {	"id": "gongfu_4007",	"type": 2,	"number": 1,	"probability": 0.1	}
+    ],
+    "canbai_3000": [
+        {	"id": "equipment_horse_2001",	"type": 8,	"number": 1,	"probability": 0.06	},
+        {	"id": "equipment_horse_2002",	"type": 8,	"number": 1,	"probability": 0.06	},
+        {	"id": "equipment_horse_2003",	"type": 8,	"number": 1,	"probability": 0.06	},
+        {	"id": "equipment_horse_2004",	"type": 8,	"number": 1,	"probability": 0.06	},
+        {	"id": "equipment_horse_2005",	"type": 8,	"number": 1,	"probability": 0.06	},
+        {	"id": "equipment_horse_1001",	"type": 8,	"number": 1,	"probability": 0.02	},
+        {	"id": "equipment_horse_1002",	"type": 8,	"number": 1,	"probability": 0.02	},
+        {	"id": "equipment_horse_1003",	"type": 8,	"number": 1,	"probability": 0.02	},
+        {	"id": "equipment_horse_1004",	"type": 8,	"number": 1,	"probability": 0.02	},
+        {	"id": "equipment_horse_1005",	"type": 8,	"number": 1,	"probability": 0.02	},
+        {	"id": "gongfu_4001",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_4002",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_4003",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_4005",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_4006",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_4007",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_3017",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_3018",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_3019",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_3020",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_3006",	"type": 2,	"number": 1,	"probability": 0.05	},
+        {	"id": "gongfu_3012",	"type": 2,	"number": 1,	"probability": 0.05	}
+    ],
+
+
+
+	"1_in_10_disciple_price" : 10,
+	"1_in_10_disciple_cooltime" : 630,
+	"1_in_10_disciple_timeperday" : 5,
+	"1_in_100_disciple_price" : 100,
+	"1_in_100_disciple_cooltime" : 86430,
+	"1_in_100_disciple_timeperday" : 1,
+	"1_in_10000_disciple_price" : 300,
+	"1_in_10000_disciple_cooltime" : 259230,
+	"1_in_10000_disciple_timeperday" : 1
+}	

@@ -1,0 +1,46 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  物品：
+  <table class="tabinfo">
+    <tr>
+      <th>名称</th>
+      <th>数量</th>
+      <th>价格</th>
+      <th>操作</th>
+    </tr>
+    <% @goods.each() do |g| %>
+
+        <tr>
+          <td>
+            <% if g.g_type.include? 'name_newplayergift' %>
+                新手礼包
+            <% elsif g.g_type.include? 'name_gift' %>
+                <%= @names_config[g.g_type] %>
+            <% else %>
+                <a href=<%= "'/admin/goods/#{g.id.to_i}'".html_safe %>><%= @names_config[g.g_type] %></a>
+            <% end %>
+          </td>
+          <td><%= g.number %></td>
+          <td>
+            <% if g.g_type.include? 'name_newplayergift' %>
+                免费
+            <% elsif g.g_type.include? 'name_gift' %>
+                <%= @gift_bag_config[g.g_type]['display_price'] %>
+            <% else  %>
+                <%= @goods_config[g.g_type]['price'] %>
+            <% end %>
+          </td>
+          <td>
+            <% unless g.g_type.include? 'gift'%>
+                <a href=<%= "'/admin/goods/#{g.id}'".html_safe %> >详情</a>
+            <% end %>
+            <a onclick="return confirmDel()" href=<%= "'/admin/goods/delete/#{g.id}'".html_safe %> >删除</a>
+            <a href=<%= "'/admin/goods/#{g.id}/edit'".html_safe %> >编辑</a>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+  <div class="page">
+    <%= will_paginate @goods, :previous_label => '<<', :next_label => '>>' %>
+  </div>
+  <a href="/admin/goods/new" class="btnlink">添加物品</a>
+</div>

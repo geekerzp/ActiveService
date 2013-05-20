@@ -1,0 +1,45 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <%= form_tag("/admin/team/#{@team_members.first.id}", :method => 'put', :multipart => true) do %>
+      <div style="color: red;">
+        <% if flash[:error] %>
+          <div id="u_error">
+            <p>
+              <%= flash[:error] %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <table class="tabinfo">
+        <tr>
+          <th>姓名</th>
+          <th>位置</th>
+        </tr>
+        <% @disciples.each() do |disciple| %>
+            <% position = TeamMember.exists?(disciple_id: disciple.id, user_id: @user.id) ?
+                    TeamMember.find_by_disciple_id_and_user_id(disciple.id, @user.id)
+                    .position : -1%>
+            <tr>
+              <td>
+                <a href=<%= "'/admin/disciple/#{disciple.id}'".html_safe %>>
+                  <%= @names_config[@d_config[disciple.d_type]["name"]] %></a>
+              </td>
+              <td>
+                <label for="tm_position"> </label>
+                <select id="tm_position" name="team_member[tm_position][]">
+                  <% @team_position.each() do |t| %>
+                      <% if position == t %>
+                          <option selected="selected" value=<%= "\"#{t}\"".html_safe %>>
+                            <%= t %></option>
+                      <% else %>
+                          <option value=<%= "\"#{t}\"".html_safe %>>
+                            <%= t %></option>
+                      <% end %>
+                  <% end %>
+                </select>
+              </td>
+            </tr>
+        <% end %>
+      </table>
+      <input type="submit" value="更新阵容" class="btnsubmit"/>
+  <% end %>
+</div>

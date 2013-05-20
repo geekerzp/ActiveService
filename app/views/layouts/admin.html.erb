@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>掌门三国 后台管理</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery-1.8.2.min" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+      function confirmDel() {
+          return confirm("确定删除？");
+      }
+  </script>
+</head>
+<body>
+<% unless @current_user.nil? %>
+    <div id="admin_header">
+      <div class="admin_user">
+        <a href="/admin/user">
+            返回用户列表
+        </a>
+      </div>
+
+      <div class="admin_user">
+        <% unless session[:user_id].nil? %>
+            <div class="user">
+              <strong>当前用户:<%= User.find_by_id(session[:user_id]).username %></strong>
+              <strong>当前用户id:<%= User.find_by_id(session[:user_id]).id %></strong>
+            </div>
+        <% end %>
+      </div>
+
+      <div class="admin_user">
+        <strong><%= @current_user.username %> </strong>
+        <span>|</span>
+        <a href="/admin/login/logout">[退出]</a>
+      </div>
+    </div>
+
+    <div style="width:1270px;overflow:hidden;">
+      <% unless session[:user_id].nil? %>
+          <script type="text/javascript">
+              $(document).ready(function () {
+                  $("#middle").css("margin", "0");
+              })
+          </script>
+          <div>
+            <ul id="admin_list">
+              <li>
+                <a href=<%= "'/admin/user/#{User.find_by_id(session[:user_id]).id}'".html_safe %>>
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">用户详情</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/team">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">阵容管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/disciple">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">弟子管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/equipment">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">装备管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/gongfu">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)"> 武功管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/zhangmenjue">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">掌门诀管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/canzhang">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">残章管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/goods">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">物品管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/jianghu">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">江湖管理</div>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/user/change_password">
+                  <div onmouseover="adminMouseOver(this)" onmouseout="adminMouseOut(this)">修改密码</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+      <% end %>
+<% end %>
+
+<%= yield %>
+</div>
+
+</body>
+</html>

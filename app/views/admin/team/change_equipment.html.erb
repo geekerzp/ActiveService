@@ -1,0 +1,95 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <%= form_tag("/admin/team/change_equipment/#{@disciple_id}", :method => 'post', :multipart => true) do %>
+      <div style="color: red;">
+        <% if flash[:error] %>
+            <div id="u_error">
+              <p>
+                <%= flash[:error] %>
+              </p>
+            </div>
+        <% end %>
+      </div>
+      <table class="tabinfo">
+        <tr>
+          <th></th>
+          <th>装备名称</th>
+        </tr>
+            <tr>
+              <td>
+                第一件装备
+              </td>
+              <td>
+                <label for="fir_equip"> </label>
+                <select id="fir_equip" name="fir_equip">
+                  <% for i in 0...@first_e_names.length %>
+                      <% if @first_e_names[i][0] == @first_disciple_equipment_name%>
+                            <option selected="selected" value=<%= "\"#{@first_e_names[i][1]}\"".html_safe %>>
+                              <%= @first_e_names[i][0]+" 等级:"+@first_e_names[i][2].to_s %>
+                            </option>
+                      <% else %>
+                          <option value=<%= "\"#{@first_e_names[i][1]}\"".html_safe %>>
+                            <% if i==0 %>
+                                <%= @first_e_names[i][0] %>
+                            <% else %>
+                                <%= @first_e_names[i][0]+" 等级:"+@first_e_names[i][2].to_s %>
+                            <% end %>
+                          </option>
+                      <% end %>
+                  <% end %>
+                </select>
+              </td>
+            </tr>
+        <tr>
+          <td>
+            第二件装备
+          </td>
+          <td>
+            <label for="sec_equip"> </label>
+            <select id="sec_equip" name="sec_equip">
+              <% for i in 0...@second_e_names.length %>
+                  <% if @second_e_names[i][0] == @second_disciple_equipment_name%>
+                      <option selected="selected" value=<%= "\"#{@second_e_names[i][1]}\"".html_safe %>>
+                        <%= @second_e_names[i][0]+" 等级:"+@second_e_names[i][2].to_s %>
+                      </option>
+                  <% else %>
+                  <option value=<%= "\"#{@second_e_names[i][1]}\"".html_safe %>>
+                    <% if i==0 %>
+                        <%= @second_e_names[i][0] %>
+                    <% else %>
+                        <%= @second_e_names[i][0]+" 等级:"+@second_e_names[i][2].to_s %>
+                    <% end %>
+                  </option>
+                  <% end %>
+              <% end %>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            第三件装备
+          </td>
+          <td>
+            <label for="thi_equip"> </label>
+            <select id="thi_equip" name="thi_equip">
+              <% for i in 0...@third_e_names.length %>
+                  <% if @third_e_names[i][0] == @third_disciple_equipment_name%>
+                      <option selected="selected" value=<%= "\"#{@third_e_names[i][1]}\"".html_safe %>>
+                        <%= @third_e_names[i][0]+" 等级:"+@third_e_names[i][2].to_s %>
+                      </option>
+                  <% else %>
+                  <option value=<%= "\"#{@third_e_names[i][1]}\"".html_safe %>>
+                    <% if i==0 %>
+                        <%= @third_e_names[i][0] %>
+                    <% else %>
+                        <%= @third_e_names[i][0]+" 等级:"+@third_e_names[i][2].to_s %>
+                    <% end %>
+                  </option>
+                  <% end %>
+              <% end %>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="添加" class="btnsubmit"/>
+  <% end %>
+</div>

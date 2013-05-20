@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+jr1:
+  user_id: 1
+  scene_id: 0
+  item_id: 0
+  star: 3
+  is_finish: true
+  fight_time: 0
+
+jr2:
+  user_id: 1
+  scene_id: 0
+  item_id: 1
+  star: 3
+  is_finish: true
+  fight_time: 2
+
+jr3:
+  user_id: 1
+  scene_id: 0
+  item_id: 2
+  star: 3
+  is_finish: true
+  fight_time: 0
+
+jr4:
+  user_id: 1
+  scene_id: 1
+  item_id: 0
+  star: 3
+  is_finish: true
+  fight_time: 3
+
+jr5:
+  user_id: 1
+  scene_id: 1
+  item_id: 1
+  star: 0
+  is_finish: false
+  fight_time: 1

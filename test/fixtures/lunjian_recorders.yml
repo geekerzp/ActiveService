@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+# 动态生成1000个用户记录
+<% 1000.times() do |i| %>
+  <% rand(10).times() do |j| %>
+
+<%= "user_#{i}" %>:
+    defender_id: <%= 1000 + i %>
+    attacker_id: <%= 1000 + i - 1 - rand(10) %>
+    who_win: 1
+  <% end %>
+
+<% end %>

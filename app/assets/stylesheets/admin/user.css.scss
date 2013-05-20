@@ -1,0 +1,67 @@
+// Place all the styles related to the admin/user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@charset "utf-8";
+/******************************************
+ * @descreption	掌门人用户信息
+ *
+ * @Copyright	2013，Albert Y
+ * 
+ * @name		login.css
+ * 
+ * @date		2013.3.6
+******************************************/
+/*****************************************/
+
+/******change_password******/
+
+#u_tab{
+    width: 350px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#u_tab td {
+    height: 50px;
+    text-align: center;
+}
+
+#u_tab .title {
+   font-size: 18px;
+	line-height: 40px;
+	color: #BCBCBC;
+	cursor: text;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+#u_tab .inputtext {
+	font: 15px "Microsoft YaHei", 微软雅黑;
+   width: 250px;
+   height: 30px;
+   text-indent: 5px;
+	border: solid 1px #ccc;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+	padding-left: 10px;
+	color: #333;
+	line-height: 33px;
+}
+
+#u_tab .inputtext:focus{
+	box-shadow: 0 0 4px rgba(181, 222, 244, 0.8);
+	-moz-box-shadow: 0 0 4px rgba(181, 222, 244, 0.8);
+	border: solid 1px rgb(181, 222, 244);
+}
+
+#u_cancel, #u_commit{
+	font: 15px "Microsoft YaHei", 微软雅黑;
+	 background: #399ecf;
+	 color: white;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 40px;
+}
