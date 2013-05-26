@@ -17,21 +17,50 @@ class UserController < ApplicationController
   #
   # 登录接口
   #
-  def login
-    username = get_params(params, :username)
-    password = get_params(params, :password)
+  #def login
+  #  username = get_params(params, :username)
+  #  password = get_params(params, :password)
 
-    code, user, continuous_login_reward = User.login(username, password, request)
+  #  code, user, continuous_login_reward = User.login(username, password, request)
+  #  if code == ResultCode::OK
+  #    return_hash = {}
+  #    return_hash[:continuous_login_reward] = continuous_login_reward.to_dictionary
+  #    return_hash[:user] = user.to_dictionary
+  #    render_result(code, return_hash)
+  #    return
+  #  end
+  #  render_result(code, {err_msg: URI.encode(user.to_s)})
+  #end
+  def login
+    login_type = get_params(params,:login_type)  #true =>login from 91, false => login from appServer
+
+    if login_type.to_i == 1
+      uin = get_params(params, :uin)
+      sessionId= get_params(params,:sessionId)
+
+      code ,user = User.login_from_91server(uin,sessionId,request)
+      continuous_login_reward = nil
+    else
+      username = get_params(params, :username)
+      password = get_params(params, :password)
+      code ,user,continuous_login_reward = User.login(username,password,request)
+    end
+
     if code == ResultCode::OK
       return_hash = {}
-      return_hash[:continuous_login_reward] = continuous_login_reward.to_dictionary
+      if(!continuous_login_reward.nil?)
+        return_hash[:continuous_login_reward] = continuous_login_reward.to_dictionary
+      end
       return_hash[:user] = user.to_dictionary
       render_result(code, return_hash)
       return
     end
-    render_result(code, {err_msg: URI.encode(user.to_s)})
-  end
 
+    render_result(code, {err_msg: URI.encode(user.to_s)})
+
+    return
+
+  end
   #
   # 用户获取登陆奖励
   #
@@ -102,6 +131,22 @@ class UserController < ApplicationController
     end
     user.update_zhangmen_name(zhangmen_name)
     render_result(ResultCode::OK, {})
+  end
+
+  #
+  #更新用户元宝数
+  #
+  def update_gold
+    re, user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    gold = get_params(params, :gold)
+    if gold.nil? || gold.to_i < 0
+      render_result(ResultCode::INVALID_PARAMETERS, {err_msg: "invalid parameters"})
+      return
+    end
+    user.update_gold(gold)
+    render_result(ResultCode::OK,{})
   end
 
   #
@@ -269,6 +314,5 @@ class UserController < ApplicationController
       render_result(ResultCode::SAVE_FAILED, {err_msg: 'save failed.'})
    end
   end
-
 
 end

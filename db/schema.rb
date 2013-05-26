@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427022126) do
+ActiveRecord::Schema.define(:version => 20130520135047) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -272,6 +272,21 @@ ActiveRecord::Schema.define(:version => 20130427022126) do
   end
 
   add_index "obtain_disciple_recorders", ["id"], :name => "index_obtain_disciple_recorders_on_id"
+
+  create_table "orders", :force => true do |t|
+    t.string   "csid"
+    t.string   "oid"
+    t.integer  "gid",                                      :default => 0
+    t.integer  "user_id"
+    t.string   "ginfo"
+    t.integer  "gcount",                                   :default => 0
+    t.decimal  "ogmoney",    :precision => 8, :scale => 2, :default => 0.0
+    t.decimal  "omoney",     :precision => 8, :scale => 2, :default => 0.0
+    t.integer  "type"
+    t.integer  "status",                                   :default => 0
+    t.datetime "created_at",                                                :null => false
+    t.datetime "updated_at",                                                :null => false
+  end
 
   create_table "pay_recorders", :force => true do |t|
     t.integer  "p_type",     :default => -1

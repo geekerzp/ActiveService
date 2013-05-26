@@ -82,4 +82,25 @@ class JianghuRecorder < ActiveRecord::Base
     recorder.fight_time += 1
     return recorder.save, recorder.errors.full_messages.join('; ')
   end
+
+  #
+  #
+  #
+  #
+  #
+  def self.update_recorder_fight_time_and_gold(user, scene_id, item_id, gold)
+    recorder = JianghuRecorder.find_by_scene_id_and_item_id_and_user_id(scene_id, item_id, user.id)
+    if recorder.nil?
+      recorder = JianghuRecorder.new(scene_id: scene_id, item_id: item_id, user_id: user.id,
+                                     is_finish: false, star: 0, fight_time: 0)
+    end
+
+    recorder.fight_time = 0
+    user.gold = gold
+    if recorder.save and  user.save
+      return true, nil
+    else
+      return false, recorder.errors.full_messages.join('; ')
+    end
+  end
 end

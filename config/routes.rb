@@ -30,6 +30,8 @@ ZhangmenrenServer::Application.routes.draw do
     match 'team/change_equipment' => 'team#change_equipment'
     match 'team/change_gongfu' => 'team#change_gongfu'
     match 'equipment/get_equipment_type_name' => 'equipment#get_equipment_type_name'
+    match 'recharge/get_order_number' => 'recharge#get_order_number'
+    match 'recharge/get_recharge_status' => 'recharge#get_recharge_status'
     resources :user
     resources :team
     resources :disciple

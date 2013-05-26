@@ -15,7 +15,7 @@ development:
   database: zhangmenren_test
   pool: 5
   username: root
-  password: '913427'
+  password: 'tsoftime'
   host: localhost
 
 # Warning: The database defined as "test" will be erased and

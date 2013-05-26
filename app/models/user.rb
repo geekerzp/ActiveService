@@ -1,6 +1,9 @@
 #encoding: utf-8
 require 'digest/sha2'
+require 'digest/md5'
 require 'comm'
+require 'open-uri'
+require 'json'
 include Comm
 class User < ActiveRecord::Base
   attr_accessible :password, :username, :name, :vip_level, :level, :prestige, :gold, :silver, :power
@@ -251,7 +254,42 @@ class User < ActiveRecord::Base
     end
     return ResultCode::INVALID_USERNAME_PASSWORD, 'invalid username or password'
   end
+  def self.login_from_91server(uin,sessionId,request)
+      act = 4
+      url91 = "http://service.sj.91.com/usercenter/ap.aspx"
 
+      if(uin.nil?||sessionId.nil?)
+        return ResultCode::ERROR , "invalid parameters"
+      end
+
+      sign = Digest::MD5.hexdigest(APPID + act.to_s + uin + sessionId + APPKEY)
+
+      source_str ||= "?AppId=" + APPID + "&Act=" + act.to_s + "&Uin=" + uin + "&SessionId=" + sessionId + "&Sign=" +sign
+      url = url91 << source_str
+
+      response = nil
+      open(url) do |http|
+        response = http.read
+      end
+
+      if response.nil?
+        return ResultCode::ERROR, "no response"
+      end
+
+      data = JSON URI.decode(response)
+      if(!data["ErrorCode"].eql?(1.to_s))
+        return ResultCode::ERROR , data["ErrorDesc"]
+      end
+
+      user = User.find_by_username(uin)
+      if(user.nil?)
+        return User.register(uin,USER_DEFAULT_PWD,request)
+      end
+
+      return User.login(uin,USER_DEFAULT_PWD,request)
+
+
+  end
   #
   # 将user的信息转化为字典形式
   #
@@ -354,6 +392,15 @@ class User < ActiveRecord::Base
   # @param [String] name 门派名称
   def update_zhangmen_name(name)
     self.name = name
+    self.save
+  end
+
+  #
+  # 更新用户元宝数
+  # @param [Integer] gold  元宝数
+  #
+  def update_gold(gold)
+    self.gold = gold
     self.save
   end
 
