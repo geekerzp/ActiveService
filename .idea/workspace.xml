@@ -2,31 +2,165 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8029c448-7db6-454f-a3f0-6ebf69b09ca7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20130520135047_create_orders.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/recharge_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/admin/recharge_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/zhangmenren.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/canzhang.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/canzhang.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/dianbo.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/disciple.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/equipment.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/gongfu.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/goods.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/jianghu.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/jianghu.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/jquery-ui.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/kapai.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/login.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/lunjian.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/market.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/qiyu.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/soul.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D82/D20/sprockets%2F010c563a1bdf06c40d2cf1e6c70f45da" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D05/3C0/sprockets%2F023eab9d32aaa759547081db42b08f49" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C90/F30/sprockets%2F0721da0ebd7a70d0392820f2155a0506" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CF4/F00/sprockets%2F0a5d8018541aa42ea2db02758b4a76b1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D5D/AF0/sprockets%2F0c325d0b7326d680b263a3badf9fdb70" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CAE/640/sprockets%2F0c4477b6bc03373494d58bd188d104d6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DCF/B50/sprockets%2F0e68c29cabcb9ac79b94a4d0b08ab498" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1A/990/sprockets%2F119f37150f06a548a8cdc4e9caf29948" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/E17/5A0/sprockets%2F12196ce1e3edeb2dca0b62b07ffbc6b1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D39/C40/sprockets%2F12d78cd64a40759070fefb04dbf86b11" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D32/A10/sprockets%2F13fe41fee1fe35b49d145bcc06610705" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D6B/430/sprockets%2F17c4a94afb06b588a89faf0ac6c43036" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C84/230/sprockets%2F18229370e7362575e3ec157083af5fa5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D53/D60/sprockets%2F19649c2fb40f8b5d48f5e7e3e346be39" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1D/4B0/sprockets%2F19db3d657b39b51817b6c57e5ae654e7" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DCD/4A0/sprockets%2F1e90ba1f8cc18fae73db45c9a6c1f627" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D93/DC0/sprockets%2F25b5c1a3b34457adf4c602eb2fb98b9a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1F/970/sprockets%2F2891ae672b7d5e98d81704b3c8d357dc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CA1/D40/sprockets%2F2a0e121ee203691cf5348b5283b3e582" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DFF/3C0/sprockets%2F2bbafc7565c8e72fada59f64543ac2fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CEC/580/sprockets%2F2cf637267b6f35866ae8c06cf7515b17" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C77/820/sprockets%2F2d739d2b34a729210afa0587a1661954" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/BF4/AB0/sprockets%2F2d7709cf32a239225d59337288124256" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D11/710/sprockets%2F3022205cef7ee8eb55a82fd09078a737" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D3F/360/sprockets%2F319479d527eaa173bd65e35ba4f461fb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CD8/370/sprockets%2F357970feca3ac29060c1e3861e2c0953" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0F/920/sprockets%2F38005678632ec0baeed6118b48ef482c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DB7/6C0/sprockets%2F386e9196dd0f9efdce6f92ce93a6d107" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D62/7C0/sprockets%2F3b1ac4dd5cfb55ea5a182975bc303915" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D89/8E0/sprockets%2F3ec8af57aa13c27aa0eb0049f1028e5d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D34/010/sprockets%2F3f02fc87a8aa28e53355e741cb52a61a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D5C/3A0/sprockets%2F402ad5934c1cb353ea5a66a2f6f5b3b3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE3/B60/sprockets%2F40d502c507b783726cf84f31ce8c279b" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CAE/AC0/sprockets%2F41bef3cd4066674099585f3143b1ef02" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D07/BD0/sprockets%2F4663009e9172eaa0f362e18b6b7cdb70" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D9A/320/sprockets%2F47c25408d8451fccd80bcdd20a8ca4f9" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CBF/F70/sprockets%2F4ca153626a889773559dea4912ca7c86" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DD9/920/sprockets%2F50a64def488cda75ee9727b1dbaeb585" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D48/ED0/sprockets%2F50cbc7c155b67663efda9349a8df6523" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/BBB/6B0/sprockets%2F510370803075d78d70da258136947260" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D05/070/sprockets%2F55cc2db293c650c97185c02f2e1b5c61" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D14/3A0/sprockets%2F5947f0159090bb54715c9aefc4e6b8c0" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CFD/7F0/sprockets%2F5e162131da0ef921e33c55e13a50c96d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D6F/860/sprockets%2F5f14fe850d5a7f1d90c03e7f16bf4b90" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0A/CA0/sprockets%2F5f50e5555fc3d31178380f4abee21b73" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DCF/780/sprockets%2F5f78b3457def1d02bd3fb75d4e0cfb63" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0C/2E0/sprockets%2F622c93e6d12a1841a9add4fa675d2808" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CB5/BA0/sprockets%2F68152d0187f503348f44ac7bb719a89b" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CD1/B20/sprockets%2F69a494c21927b0b6cafa41156110ed92" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C8F/690/sprockets%2F6b881ed435587010bf2f95d7c5964309" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D23/CE0/sprockets%2F7680961bf4b98412eee6d47dd158d71f" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D0A/CC0/sprockets%2F780c0dc9f23a76023dcc2853ec425c57" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DFB/800/sprockets%2F7cf2cfb5d1cb313f8353be4de96bc17c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D3E/790/sprockets%2F7eaa45d79c1671e718ab956be401e2d2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CD6/C20/sprockets%2F86bf772f4327364a1dad3a4b3051c844" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA3/9A0/sprockets%2F876b69cfbc962cdada1f0f82008e907a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA4/EB0/sprockets%2F87b6dfb9f4fb70d4bf3013624b4dc7c9" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D61/340/sprockets%2F8b6ded27148130b11a9ae052c564ccfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CF0/700/sprockets%2F8d63d188d846a93757ebf0126db19a85" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D07/390/sprockets%2F908601e2104473ae3cf4e8c6ab85a42f" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D75/A40/sprockets%2F91c5d7a923883f70ab44a599f0fccab5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C9F/9C0/sprockets%2F91d44b77e99366596835afa05e508c98" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D21/0C0/sprockets%2F94f85174ef71352ad8b0eb2e9686bd57" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CAF/780/sprockets%2F9c56ec152c83029d3808cd0375eb2184" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/E31/ED0/sprockets%2F9dcc2db8e8be860b83cca74b5e7bec04" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D94/510/sprockets%2Fa012491c15c854e59dfb9a2ac1cb4df6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CCC/170/sprockets%2Fa1c53a4f63508be1f82423e275306bc0" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D55/120/sprockets%2Fa512fbb787ae9937b8bec179b094958d" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D03/970/sprockets%2Fa5cf240b8f13588daab015a86495f022" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DD9/CB0/sprockets%2Fa9135f88dfd207faa7269ef6d2a4eac8" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D2A/FA0/sprockets%2Faa1764a5277bcc332e0a1b35860aae95" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CB8/BF0/sprockets%2Fac4a09f194139184a546cf8df4958700" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D96/A10/sprockets%2Fad973fd5603d061004bfbd5bf7aed681" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CFE/660/sprockets%2Faf065a6002021fef0f5cc9d41375e291" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/E91/210/sprockets%2Fafb9d8fe22faa39ff5ffedca322e822b" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D02/2E0/sprockets%2Fafbc714ac50e10144e2df2959217375c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C4C/FD0/sprockets%2Fb05348e3aa2948554d255b055639c235" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CA1/F70/sprockets%2Fb2b66e248b4108220812e7680bbf256a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CC1/990/sprockets%2Fb3597ec4a6c502635a5293f2b96789f5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D62/E30/sprockets%2Fb3c005d16ed423777a9bda990cd0d06c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CFC/DB0/sprockets%2Fb41980084023fdbe7ee210144db75ea1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D99/130/sprockets%2Fb4f08b301e085607ea1f1e19cb88efeb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D7A/B90/sprockets%2Fbb2f6a70a78dd0eb8181c7f495e82f57" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D55/0A0/sprockets%2Fbdbd16276007fbc2c1bbf4331c8521d3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DAF/F40/sprockets%2Fc040346fdf1a6f7885b9db6f5be897bb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DE2/230/sprockets%2Fc6606be9f93ba5e998f2ebc7c8c050ff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D74/DB0/sprockets%2Fc6f51141cc92a9acefa748578f0d91e2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CF3/2D0/sprockets%2Fc8a047f0b3958e94967172f293e4d8ca" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D6C/E30/sprockets%2Fcc70a8a06744e45cd5d774b3f5760aea" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DDC/400/sprockets%2Fcffd775d018f68ce5dba1ee0d951a994" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D6E/9D0/sprockets%2Fd174a2c630a895fbbd19376d32df18ec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D18/E60/sprockets%2Fd48c481ac9a26dc62c6a69d02823f984" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CF0/DA0/sprockets%2Fd7d5b37686831d37c4dd75e645f5e016" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/CE7/B00/sprockets%2Fde202931a8263908c1bb59f7ca3f9595" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/E25/4C0/sprockets%2Fde2fd9fd11c04a582cdbbe3d84a35ae6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C76/340/sprockets%2Fdef267211036aa046778690c2501fc46" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/DA7/530/sprockets%2Fe36b8fcf5914a3a6bf058abfe7367b19" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D02/7D0/sprockets%2Fe477231b690999bbc7949d979fca8a72" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D3C/670/sprockets%2Fe6bbbd7d67a52d002204f3f95d42f792" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D52/280/sprockets%2Fe6cb599af055d2ae165f6776a15df498" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D78/F20/sprockets%2Fe9a81ec0c4ad2947e44a31656d6f5fe7" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/EB0/020/sprockets%2Feb1cbeda4c45dd0e5dbba8c1c2f48bd9" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/E15/0D0/sprockets%2Fee88cffa39fb43bf8f758381b82da7cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D31/A20/sprockets%2Ff645b18d21fa452e6a2a635c6d6e1c30" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D4E/1B0/sprockets%2Ff7cbd26ba1d28d48de824f0e94586655" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D1F/9B0/sprockets%2Ff975f343415559a379dcbf2e47c92eb1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/C7A/8D0/sprockets%2Ffd1021dc2d449847f663631b06648a05" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D88/430/sprockets%2Ffffd617d9183936ad6ea6798913ba8ea" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/team.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/team.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/tianjian.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/817fb61eee67f815654293c06604a58f5aaa258d/user.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/user.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/sass/8c1aa0accad686d30a85667be8dc2d1fbbda7903/zhangmenjue.css.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/order_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/orders.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D86/980/sprockets%2F4777d7c7867aab4daede66476c981e3b" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D38/A30/sprockets%2F87da0b390a918d212e6444d9b3c3cf5a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/assets/D5A/EA0/sprockets%2Fd771ace226fc8215a3572e0aa35bb0d6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tags" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/zhangmenren_server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130520135047_create_orders.rb" afterPath="$PROJECT_DIR$/db/migrate/20130520135047_create_orders.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/jianghu_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/jianghu_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/jianghu_recorder.rb" afterPath="$PROJECT_DIR$/app/models/jianghu_recorder.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/configurations/market.json" afterPath="$PROJECT_DIR$/config/configurations/market.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/newrelic.yml" afterPath="$PROJECT_DIR$/config/newrelic.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/newrelic_agent.log" afterPath="$PROJECT_DIR$/log/newrelic_agent.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/recharge_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/recharge_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/admin/recharge_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/admin/recharge_controller_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/user_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhangmenren.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,55 +205,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <file leaf-file-name="recharge_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/recharge_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="19" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.0">
+            <state line="13" column="8" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friend_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/friend_controller.rb">
+      <file leaf-file-name="order.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="14" column="12" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jianghu_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/jianghu_controller.rb">
+      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="48" selection-start="1618" selection-end="1618" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="market_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/market_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="180" selection-end="184" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jianghu_recorder.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/jianghu_recorder.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="8" selection-start="2507" selection-end="2507" vertical-scroll-proportion="-0.4516129">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="21" selection-start="584" selection-end="588" vertical-scroll-proportion="0.0">
+            <state line="11" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.23638968">
               <folding />
             </state>
           </provider>
@@ -143,22 +250,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/goodsperchase_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/goodspurchase_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/friend_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/chongzi_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/order.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/recharge_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130524023613_create_91users.rb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/test/functional/admin/recharge_controller_test.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/controllers/jianghu_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/jianghu_recorder.rb" />
         <option value="$PROJECT_DIR$/app/controllers/user_controller.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/app/models/order.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/recharge_controller.rb" />
+        <option value="$PROJECT_DIR$/test/functional/admin/recharge_controller_test.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130520135047_create_orders.rb" />
       </list>
     </option>
   </component>
@@ -170,10 +277,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
-    <option name="y" value="483" />
+    <option name="x" value="62" />
+    <option name="y" value="59" />
     <option name="width" value="1373" />
-    <option name="height" value="658" />
+    <option name="height" value="823" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -231,71 +338,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,23 +629,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="483" width="1373" height="658" extended-state="0" />
+    <frame x="62" y="59" width="1373" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27807084" sideWeight="0.7125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27807084" sideWeight="0.38896552" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6110345" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -670,55 +713,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/recharge_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="7" selection-start="711" selection-end="711" vertical-scroll-proportion="0.46747968">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user_goods.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="613" selection-end="613" vertical-scroll-proportion="0.33288947">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/ruby/lib/ruby/gems/1.9.1/gems/activemodel-3.2.13/lib/active_model/errors.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="8" selection-start="8510" selection-end="8510" vertical-scroll-proportion="0.33288947">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs19/array.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="478" column="8" selection-start="17107" selection-end="17107" vertical-scroll-proportion="0.33288947">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="402" selection-end="402" vertical-scroll-proportion="0.16697936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="302" selection-end="302" vertical-scroll-proportion="0.2814259">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="19" selection-start="7251" selection-end="7251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/friend_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -728,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="584" selection-end="588" vertical-scroll-proportion="0.0">
+        <state line="27" column="21" selection-start="584" selection-end="588" vertical-scroll-proportion="0.19484241">
           <folding />
         </state>
       </provider>
@@ -775,9 +769,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/functional/admin/recharge_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="64" selection-start="87" selection-end="87" vertical-scroll-proportion="0.042979944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/newrelic_agent.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="2276" selection-end="2276" vertical-scroll-proportion="0.48175183">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/development.log">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130520135047_create_orders.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="955" selection-end="955" vertical-scroll-proportion="0.27936962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/jianghu_recorder.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="8" selection-start="2507" selection-end="2507" vertical-scroll-proportion="-0.4516129">
+        <state line="76" column="8" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.22636104">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/recharge_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="8" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="304" selection-end="304" vertical-scroll-proportion="0.23638968">
           <folding />
         </state>
       </provider>
