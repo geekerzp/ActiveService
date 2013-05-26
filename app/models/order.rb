@@ -11,48 +11,6 @@ class Order < ActiveRecord::Base
   #
   def process
     # 获取用户信息
-    user = User.find(user_id)
-    # 获取充值信息
-    recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]
-
-    begin
-      Order.transaction do
-        # 用户首次充值
-        if user.orders.count == 0
-          # 找到对应的充值规则
-          if (rule = recharge_list.find{|x| x["money"] == omoney })
-            # 元宝
-            user.gold= user.gold + (rule["get"]+rule["present"])*2
-
-            # 额外赠送
-            user.silver= user.silver + 10000000
-            Equipment.create_equipment(user, 'equipment_horse_2007')
-
-            self.status= 1 # 充值成功
-            true
-          else
-            self.status= 2 # 充值失败
-            false
-          end
-        else
-        # 常规充值
-        # 找到对应的充值规则
-          if (rule = recharge_list.find{|x| x["money"] == omoney })
-            # 元宝
-            user.gold= user.gold + (rule["get"]+rule["present"])
-
-            self.status= 1 # 充值成功
-            true
-          else
-            self.status= 2 # 充值失败
-            false
-          end
-        end
-      end
-    rescue
-      false # 事务失败
-    end
-  end
     @user = User.find(user_id)
     # 获取充值信息
     @recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]
@@ -152,4 +110,5 @@ class Order < ActiveRecord::Base
     end
     logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) normal_recharge failed")
     false
+  end
 end
