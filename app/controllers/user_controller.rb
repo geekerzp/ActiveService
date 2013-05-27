@@ -34,12 +34,13 @@ class UserController < ApplicationController
   def login
     login_type = get_params(params,:login_type)  #true =>login from 91, false => login from appServer
 
+    # 91登录
     if login_type.to_i == 1
       uin = get_params(params, :uin)
       sessionId= get_params(params,:sessionId)
-
       code ,user = User.login_from_91server(uin,sessionId,request)
       continuous_login_reward = nil
+    # 直接登录
     else
       username = get_params(params, :username)
       password = get_params(params, :password)

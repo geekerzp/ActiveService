@@ -256,14 +256,19 @@ class User < ActiveRecord::Base
     end
     return ResultCode::INVALID_USERNAME_PASSWORD, 'invalid username or password'
   end
+
   def self.login_from_91server(uin,sessionId,request)
-      act = 4
-      url91 = "http://service.sj.91.com/usercenter/ap.aspx"
+    act = 4
+    url91 = "http://service.sj.91.com/usercenter/ap.aspx"
 
-      if(uin.nil?||sessionId.nil?)
-        return ResultCode::ERROR , "invalid parameters"
-      end
-
+    # 参数错误
+    if uin.nil? and sessionId.nil?
+      return ResultCode::ERROR , "invalid parameters"
+    # 第一次以后从91登录
+    elsif sessionId.empty?
+      return User.login(uin, USER_DEFAULT_PWD, request)
+    # 第一次从91登录
+    else
       sign = Digest::MD5.hexdigest(APPID + act.to_s + uin + sessionId + APPKEY)
 
       source_str ||= "?AppId=" + APPID + "&Act=" + act.to_s + "&Uin=" + uin + "&SessionId=" + sessionId + "&Sign=" +sign
@@ -284,13 +289,12 @@ class User < ActiveRecord::Base
       end
 
       user = User.find_by_username(uin)
-      if(user.nil?)
+      if user.nil?
         return User.register(uin,USER_DEFAULT_PWD,request)
       end
 
       return User.login(uin,USER_DEFAULT_PWD,request)
-
-
+    end
   end
   #
   # 将user的信息转化为字典形式
