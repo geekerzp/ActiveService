@@ -315,5 +315,96 @@ class UserController < ApplicationController
       render_result(ResultCode::SAVE_FAILED, {err_msg: 'save failed.'})
    end
   end
+  #花费元宝增加体力
+  def add_power_by_gold
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+    gold = get_params(params,:gold)
+    power = get_params(params,:power)
+
+    most_exchange_time = ZhangmenrenConfig.instance.vip_config[user.vip_level.to_s]["power_recovery_time_per_day"]
+
+
+
+    if(gold.nil?||power.nil?)
+      render_result(ResultCode::INVALID_PARAMETERS, {err_msg: 'invalid parameters'})
+      return
+    end
+
+
+    if(user.exchange_power_time < most_exchange_time)
+      if(user.update_gold_power(gold,power))
+        render_result(ResultCode::OK,{})
+        return
+      else
+        render_result(ResultCode::SAVE_FAILED,{err_msg:'save failed'})
+        return
+      end
+    end
+
+    render_result(ResultCode::ERROR,{error_msg: 'reached max times'})
+    return
+
+  end
+
+  #花费元宝增加气力
+  def add_sprite_by_gold
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+    gold = get_params(params,:gold)
+    sprite = get_params(params,:sprite)
+
+    most_exchange_time = ZhangmenrenConfig.instance.vip_config[user.vip_level.to_s]["sprite_recovery_time_per_day"]
+
+
+
+    if(gold.nil?||sprite.nil?)
+      render_result(ResultCode::INVALID_PARAMETERS, {err_msg: 'invalid parameters'})
+      return
+    end
+
+
+    if(user.exchange_sprite_time < most_exchange_time)
+      if(user.update_gold_sprite(gold,sprite))
+        render_result(ResultCode::OK,{})
+        return
+      else
+        render_result(ResultCode::SAVE_FAILED,{err_msg:'save failed'})
+        return
+      end
+    end
+
+    render_result(ResultCode::ERROR,{error_msg: 'reached max times'})
+    return
+
+  end
+    #获取用元宝购买体力的次数
+  def get_exchange_power_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{exchange_power_time:user.exchange_power_time})
+    return
+  end
+  def get_exchange_sprite_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{exchange_sprite_time:user.exchange_sprite_time})
+    return
+  end
+
+  def get_power
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{power:user.power})
+  end
+  def get_sprite
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{sprite:user.sprite})
+  end
 
 end

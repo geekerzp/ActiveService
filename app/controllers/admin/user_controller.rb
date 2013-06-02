@@ -27,11 +27,11 @@ class Admin::UserController < ApplicationController
     @user = User.find_by_id(params[:id])
 
     #用户的vip等级。
-    @vip_level_list = [1,2,3,4,5,6,7,8,9,10]
+    @vip_level_list = [0,1,2,3,4,5,6,7,8,9,10,11,12]
   end
   def update
     #用户的vip等级。
-    @vip_level_list = [1,2,3,4,5,6,7,8,9,10]
+    @vip_level_list = [0,1,2,3,4,5,6,7,8,9,10,11,12]
 
     @user = User.find_by_id(params[:id])
     @user.level = params[:user][:level]
@@ -60,6 +60,8 @@ class Admin::UserController < ApplicationController
           if @user.save
             format.html {redirect_to(action: :show, id: @user.id)}
           else
+            logger.debug("--------------------------#{@user.vip_level}")
+            logger.debug("--------------------------#{@user}")
             format.html {render(action: :edit)}
           end
         end
@@ -136,7 +138,7 @@ class Admin::UserController < ApplicationController
     @user.silver = 100
 
     #用户Vip等级
-    @vip_level_list = [1,2,3,4,5,6,7,8,9,10,11,12]
+    @vip_level_list = [0,1,2,3,4,5,6,7,8,9,10,11,12]
   end
 
   def create
@@ -151,7 +153,7 @@ class Admin::UserController < ApplicationController
     sprite = params[:user][:sprite]
     password = params[:password]
     vip_level = params[:user][:vip_level]
-    @vip_level_list = [1,2,3,4,5,6,7,8,9,10,11,12]
+    @vip_level_list = [0,1,2,3,4,5,6,7,8,9,10,11,12]
 
     @user = User.new
     @user.username = username

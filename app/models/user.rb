@@ -7,8 +7,8 @@ require 'json'
 include Comm
 class User < ActiveRecord::Base
   attr_accessible :password, :username, :name, :vip_level, :level, :prestige, :gold, :silver, :power
-  attr_accessible :last_login_ip, :last_login_time, :experience, :sprite, :status, :session_key
-  attr_accessible :direction_step, :npc_or_not, :upgrade_3_reward, :upgrade_5_reward
+  attr_accessible :last_login_ip, :last_login_time, :experience, :sprite, :status, :session_key,:exchange_power_time
+  attr_accessible :direction_step, :npc_or_not, :upgrade_3_reward, :upgrade_5_reward,:exchange_power_time
   attr_accessible :upgrade_10_reward, :upgrade_15_reward
 
   # 用户状态
@@ -51,7 +51,7 @@ class User < ActiveRecord::Base
 
   validates :name, :presence => true, :length => {:maximum => 20, :minimum => 2}
 
-  validates :vip_level, :presence => true, :numericality => {:greater_than => 0, :less_than => 30}
+  validates :vip_level, :presence => true, :numericality => {:greater_than_or_equal_to => 0, :less_than => 30}
 
   validates :level, :presence => true, :numericality => {:greater_than => 0, :less_than_or_equal_to => 100}
 
@@ -65,14 +65,14 @@ class User < ActiveRecord::Base
   def initialize
     super
     self.name = 'no name'
-    self.vip_level = 1
+    self.vip_level = 0
     self.level = 1
     self.prestige = 0
     self.gold = 0
     self.silver = 1000
     self.power = 20
     self.experience = 0
-    self.sprite = 20
+    self.sprite = 12
     self.status = USER_STATUS_NORMAL
     self.direction_step = 0
     self.upgrade_3_reward  = 0
@@ -80,6 +80,8 @@ class User < ActiveRecord::Base
     self.upgrade_10_reward = 0
     self.upgrade_15_reward = 0
     self.npc_or_not = 0
+    self.exchange_power_time = 0
+    self.exchange_sprite_time = 0
   end
 
   #
@@ -256,7 +258,7 @@ class User < ActiveRecord::Base
     end
     return ResultCode::INVALID_USERNAME_PASSWORD, 'invalid username or password'
   end
-
+#用户从91登录
   def self.login_from_91server(uin,sessionId,request)
     act = 4
     url91 = "http://service.sj.91.com/usercenter/ap.aspx"
@@ -313,6 +315,8 @@ class User < ActiveRecord::Base
     re[:power] = self.power
     re[:experience] = self.experience
     re[:sprite] = self.sprite
+    re[:exchange_power_time] = self.exchange_power_time
+    re[:exchange_sprite_time] = self.exchange_sprite_time
     re[:direction_step] = self.direction_step
     re[:upgrade_3_reward] = self.upgrade_3_reward
     re[:upgrade_5_reward] = self.upgrade_5_reward
@@ -377,7 +381,8 @@ class User < ActiveRecord::Base
     self.power = (params[:power] || self.power).to_i
     self.experience = (params[:experience] || self.experience).to_i
     self.sprite = (params[:sprite] || self.sprite).to_i
-
+    self.exchange_power_time = (params[:exchange_power_time] || self.exchange_power_time).to_i
+    self.exchange_sprite_time = (params[:exchange_sprite_time] || self.exchange_sprite_time).to_i
     lp = LunjianPosition.find_by_user_id(self.id)
     unless lp.nil?
       lp.left_time = (params[:lunjian_time] || lp.left_time).to_i
@@ -409,8 +414,33 @@ class User < ActiveRecord::Base
     self.gold = gold
     self.save
   end
+  #
+  #更新用户体力
+  #@param[Integer] power 体力
+  #
+  def update_power(power)
+    self.power = power
+    self.save
+  end
 
+  #
+  #更新用户元宝和体力
+  #@param[Integer] gold 元宝
+  #@param[Integer] power 体力
+  #
+  def update_gold_power(gold,power)
+    self.power = power
+    self.gold = gold
+    self.exchange_power_time += 1
+    self.save
+  end
 
+  def update_gold_sprite(gold,sprite)
+    self.sprite = sprite
+    self.gold = gold
+    self.exchange_sprite_time += 1
+    self.save
+  end
   #
   # 得到用户已有的物品
   #
