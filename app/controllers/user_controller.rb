@@ -407,4 +407,85 @@ class UserController < ApplicationController
     render_result(ResultCode::OK,{sprite:user.sprite})
   end
 
+
+  #获取下次增加一点体力的时间
+  def get_add_one_power_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    if( user.power >= 30)
+      render_result(ResultCode::ERROR,{err_msg:"no power to add"})
+      return
+    end
+
+    time = 1800-(Time.now - user.power_time).to_i%1800
+    h=time/3600
+    m=(time%3600)/60
+    s=(time%3600)%60
+    t='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+
+    render_result(ResultCode::OK,{time:t})
+    return
+
+  end
+
+  #获取下次增加一点气力的时间
+  def get_add_one_sprite_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    if( user.sprite >= 12 )
+      render_result(ResultCode::ERROR,{err_msg:"no sprite to add"})
+      return
+    end
+
+    time = 1800-(Time.now - user.sprite_time).to_i%1800
+    h=time/3600
+    m=(time%3600)/60
+    s=(time%3600)%60
+    t='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+
+    render_result(ResultCode::OK,{time:t})
+    return
+
+  end
+  #获取增加满体力的时间
+  def get_add_all_power_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    if( user.power >= 30)
+      render_result(ResultCode::ERROR,{err_msg:"no power to add"})
+      return
+    end
+
+    time =  (30-user.power-1)*1800 + 1800-(Time.now - user.power_time).to_i%1800
+    h=time/3600
+    m=(time%3600)/60
+    s=(time%3600)%60
+    t='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+
+    render_result(ResultCode::OK,{time:t})
+    return
+  end
+
+  def get_add_all_sprite_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    if( user.sprite >= 12)
+      render_result(ResultCode::ERROR,{err_msg:"no sprite to add"})
+      return
+    end
+
+    time =  (12-user.sprite-1)*1800 + 1800-(Time.now - user.sprite_time).to_i%1800
+    h=time/3600
+    m=(time%3600)/60
+    s=(time%3600)%60
+    t='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+
+    render_result(ResultCode::OK,{time:t})
+    return
+  end
+
 end

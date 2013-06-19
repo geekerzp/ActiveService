@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602053855) do
+ActiveRecord::Schema.define(:version => 20130619070224) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -402,6 +402,8 @@ ActiveRecord::Schema.define(:version => 20130602053855) do
     t.integer  "upgrade_15_reward"
     t.integer  "exchange_power_time",  :default => 0
     t.integer  "exchange_sprite_time", :default => 0
+    t.datetime "power_time"
+    t.datetime "sprite_time"
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"

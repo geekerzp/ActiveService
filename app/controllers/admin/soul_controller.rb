@@ -16,10 +16,24 @@ class Admin::SoulController < ApplicationController
     souls_types = user.get_user_souls(session[:user_id])
 
     #获得用户可添加的魂魄类型，排除已有的魂魄
-    @s_type_list = []
-    @disciple_config.keys.each() do |d|
-      next if souls_types.include?(d)
-      @s_type_list << d
+    #@s_type_list = []
+    #@disciple_config.keys.each() do |d|
+    #  next if souls_types.include?(d)
+    #  @s_type_list << d
+    #end
+    #获得用户已有的魂魄类型
+    @s_types = Soul.where(["user_id = ?", session[:user_id]]).select(:s_type).uniq
+    st = []
+    @s_types.each()do |s|
+      st << s.s_type
+    end
+    @souls = []
+    #获得用户可添加的魂魄类型，排除已有的魂魄
+    @disciple_config.keys.each do |d|
+      if st.include?(d)
+        next
+      end
+      @souls << @disciple_config[d]["name"]
     end
   end
 
@@ -30,32 +44,49 @@ class Admin::SoulController < ApplicationController
     user_id = session[:user_id]
     potential = params[:soul][:potential]
     number = params[:soul][:number]
-    d_name = params[:soul][:s_type]
+    name = params[:soul][:s_type]
     user = User.find(session[:user_id])
 
     #获得用户已有的魂魄类型
-    souls_types = user.get_user_souls(session[:user_id])
-    #获得用户可添加的魂魄类型，排除已有的魂魄
-    @s_type_list = []
-    @disciple_config.keys.each() do |d|
-      next if souls_types.include?(d)
-      @s_type_list << d
+    @s_types = Soul.where(["user_id = ?", session[:user_id]]).select(:s_type).uniq
+    st = []
+    @s_types.each()do |s|
+      st << s.s_type
+    end
+    @souls = []
+    @disciple_config.keys.each do |d|
+      if st.include?(d)
+          next
+      end
+    @souls << @disciple_config[d]["name"]
+    end
+
+    d_name = ''
+    @names_config.keys.each() do |n|
+      if @names_config[n] == name
+        if n.gsub(/name_disciple_/, '').to_i > 5000
+          next
+        else
+          d_name = n
+        end
+      end
     end
 
     #找到魂魄的弟子类型
-    d_type = ''
-    @names_config.keys.each() do |n|
-      if @names_config[n] == d_name
-        d_type = n
+    d_type = ""
+    @disciple_config.keys.each() do |d|
+      if @disciple_config[d]["name"] == d_name
+        d_type = d
       end
     end
-    #找到魂魄的类型
+
     s_type = ''
     @disciple_config.keys.each() do |d|
-      if @disciple_config[d]["name"] == d_type
+      if @disciple_config[d]["name"] == 'name_'+d_type
         s_type = d
       end
     end
+
     @soul = Soul.new(potential: potential, number: number, s_type: s_type, user_id: user_id)
     respond_to do |format|
       if @soul.save

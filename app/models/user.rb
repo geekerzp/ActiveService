@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :password, :username, :name, :vip_level, :level, :prestige, :gold, :silver, :power
   attr_accessible :last_login_ip, :last_login_time, :experience, :sprite, :status, :session_key,:exchange_power_time
   attr_accessible :direction_step, :npc_or_not, :upgrade_3_reward, :upgrade_5_reward,:exchange_power_time
-  attr_accessible :upgrade_10_reward, :upgrade_15_reward
+  attr_accessible :upgrade_10_reward, :upgrade_15_reward, :power_time, :sprite_time
 
   # 用户状态
   USER_STATUS_NORMAL   = 1  # 正常
@@ -389,7 +389,12 @@ class User < ActiveRecord::Base
       lp.score = (params[:lunjian_score] || lp.score).to_i
       lp.save
     end
-
+    if(self.power == 29)
+      self.power_time = Time.now
+    end
+    if(self.sprite == 11)
+      self.sprite_time = Time.now
+    end
     self.save
   end
 
