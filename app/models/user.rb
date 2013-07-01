@@ -101,6 +101,8 @@ class User < ActiveRecord::Base
     user.last_login_ip = request.remote_ip
     user.last_login_time = Time.now
     user.npc_or_not = 0 # 注册用户不是npc
+    user.power_time = Time.now
+    user.sprite_time = Time.now
 
     continuous_login_reward = ContinuousLoginReward.new
     continuous_login_reward.user_id = user.id
@@ -335,7 +337,11 @@ class User < ActiveRecord::Base
     re[:goods] = []
     self.user_goodss.each() {|goods| re[:goods] << goods.to_dictionary}
     re[:team] = []
-    self.team_members.each() {|tm| re[:team] << tm.disciple_id}
+    self.team_members.each() do |tm|
+      if(tm.position != -1)
+      re[:team] << tm.disciple_id
+      end
+    end
 
     re[:lunjian_time] = 5
     re[:lunjian_score] = 0

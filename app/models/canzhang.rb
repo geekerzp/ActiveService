@@ -205,4 +205,21 @@ class Canzhang < ActiveRecord::Base
       end
     end
   end
+
+  #
+  #创建残章
+  #
+  def self.create_canzhang(cz_type,number,user_id)
+    cangzhang_config = ZhangmenrenConfig.instance.canzhang_config[cz_type]
+    return nil if cangzhang_config.nil?
+
+    cz = Canzhang.new(cz_type: cz_type, user_id: user_id, number: number)
+
+    unless cz.save
+      logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) #{cz.errors.full_messages.join(';')}")
+      return nil
+    end
+    logger.debug("### #{__method__},(#{__FILE__}, #{__LINE__}) canzhang: #{cz.to_json.to_s}")
+    return cz
+  end
 end
