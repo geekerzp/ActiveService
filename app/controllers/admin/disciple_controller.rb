@@ -146,7 +146,9 @@ class Admin::DiscipleController < ApplicationController
 
     @disciples = []
     @disciple_config.keys.each do |d|
-      next if dt.include?(d)
+       if dt.include?(d)
+         next
+       end
       @disciples << @disciple_config[d]["name"]
     end
   end
@@ -186,9 +188,14 @@ class Admin::DiscipleController < ApplicationController
     d_name = ''
     @names_config.keys.each() do |n|
       if @names_config[n] == name
-        d_name = n
+        if n.gsub(/name_disciple_/, '').to_i > 5000
+          next
+        else
+          d_name = n
+        end
       end
     end
+
     d_type = ""
     @disciple_config.keys.each() do |d|
       if @disciple_config[d]["name"] == d_name
@@ -196,19 +203,32 @@ class Admin::DiscipleController < ApplicationController
         tianfu_gongfu_type = @disciple_config[d]["origin_gongfu"]
       end
     end
-    @disciple = Disciple.new(user_id: session[:user_id], d_type: d_type, level: level, experience: experience,
-                             grow_blood: grow_blood,grow_attack: grow_attack, grow_defend: grow_defend,
-                             grow_internal: grow_internal, break_time: break_time, potential: potential)
+    @disciple = Disciple.new
+    @disciple.user_id = session[:user_id]
+    @disciple.level= level
+    @disciple.experience=experience
+    @disciple.d_type = d_type
+    @disciple.break_time=break_time
+    @disciple.potential = potential
+    @disciple.grow_attack= grow_attack
+    @disciple.grow_blood=grow_blood
+    @disciple.grow_defend=grow_defend
+    @disciple.grow_internal= grow_internal
+
+
 
     if level.to_i < 100
       if @experiences_config[level.to_i] < experience.to_i
+
         flash[:error] = "等级为#{level}的弟子的经验不能超过#{@experiences_config[level.to_i]}"
         respond_to do |format|
           format.html{ render :action => :new}
+
         end
       else
         respond_to do |format|
           if @disciple.save
+
             #创建天赋武功
             @tianfu_gongfu = Gongfu.new(disciple_id: @disciple.id, user_id:session[:user_id], position: 0,
                                         gf_type:tianfu_gongfu_type)
@@ -216,6 +236,7 @@ class Admin::DiscipleController < ApplicationController
               format.html { redirect_to(:action => :show, :id => @disciple.id) }
             end
           else
+
             format.html { render :action => "new" }
           end
         end

@@ -110,6 +110,9 @@ class Gongfu < ActiveRecord::Base
       logger.debug("### #{__method__} (#{__FILE__},#{__LINE__}) no such gongfu #{type}")
       return nil
     end
+    #不同功夫的经验
+    experiences = [10,20,30,40]
+
     gongfu.gf_type = type
     gongfu.user = user
     gongfu.position = -1
@@ -117,7 +120,7 @@ class Gongfu < ActiveRecord::Base
     gongfu.grow_strength = 0
     gongfu.level = 1
     gongfu.disciple_id = -1
-    gongfu.experience = 0
+    gongfu.experience = experiences[gongfu_config[:quality].to_i]
     unless gongfu.save
       logger.error("### #{__method__} (#{__FILE__},#{__LINE__})  #{gongfu.errors.full_messages.join('; ')}")
       return nil

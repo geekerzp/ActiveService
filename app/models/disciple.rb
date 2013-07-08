@@ -218,12 +218,13 @@ class Disciple < ActiveRecord::Base
     disciple.experience = 0
     disciple.user = user
 
+
     # 弟子保存失败
     unless disciple.save
       logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) #{disciple.errors.full_messages.join('; ')}")
       return nil
     end
-
+    logger.debug("------------------#{disciple.to_dictionary}")
     # 添加天生武功
     origin_gongfu = Gongfu.create_gongfu(user, disciple_config['origin_gongfu'])
     origin_gongfu.is_origin = true

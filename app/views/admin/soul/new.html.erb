@@ -21,10 +21,12 @@
           <th ><label for="s_type">魂魄类型</label></th>
           <td>
             <label for="s_type"> </label>
-            <select id="s_type" name="soul[s_type]">
-              <% @s_type_list.each() do |v| %>
-                  <option value=<%= "\"#{@names_config[@disciple_config[v]["name"]]}\"".html_safe %>>
-                    <%= @names_config[@disciple_config[v]["name"]] %></option>
+            <select id="name" name="soul[s_type]">
+              <% @souls.each() do |d| %>
+                  <% if d.gsub(/name_disciple_/, '').to_i > 5000 %>
+                      <% break %>
+                  <% end %>
+                  <option value=<%= "\"#{@names_config[d]}\"".html_safe %>><%= @names_config[d] %></option>
               <% end %>
             </select>
           </td>

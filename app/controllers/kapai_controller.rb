@@ -144,7 +144,7 @@ class KapaiController < ApplicationController
 
     type = get_params(params, :type)
 
-    eq = Equipment.new(e_type: type, level: 0, grow_strength: 0.0,
+    eq = Equipment.new(e_type: type, level: 1, grow_strength: 0.0,
                        user_id: user.id, position: -1, disciple_id: -1)
     unless eq.save
       err_msg = eq.errors.full_messages.join('; ')

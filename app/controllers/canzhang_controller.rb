@@ -78,5 +78,31 @@ class CanzhangController < ApplicationController
     render_result(ResultCode::OK, CanzhangGrabRecorder.get_grabbed_messages(user.id))
   end
 
+  #
+  # 创建一个用户的残章
+  #
+  def create_canzhang
+    re, user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    cz_type = get_params(params, :type)
+    number = params[:number].to_i
+
+    if(cz_type.nil?||number.nil?)
+      render_result(ResultCode::INVALID_PARAMETERS,{err_msg:'cz_type or number is nil'})
+      return
+    end
+
+    canzhang = Canzhang.create_canzhang(cz_type, number, user.id)
+
+    if(canzhang.nil?)
+      render_result(ResultCode::ERROR,{err_msg:'create canzhang failed'})
+      return
+    end
+
+    data = canzhang.to_dictionary
+
+    render_result(ResultCode::OK,data)
+  end
 
 end

@@ -1,3 +1,4 @@
+#encoding:utf-8
 class UserController < ApplicationController
   #
   # 注册接口
@@ -34,12 +35,13 @@ class UserController < ApplicationController
   def login
     login_type = get_params(params,:login_type)  #true =>login from 91, false => login from appServer
 
+    # 91登录
     if login_type.to_i == 1
       uin = get_params(params, :uin)
       sessionId= get_params(params,:sessionId)
-
       code ,user = User.login_from_91server(uin,sessionId,request)
       continuous_login_reward = nil
+    # 直接登录
     else
       username = get_params(params, :username)
       password = get_params(params, :password)
@@ -314,5 +316,145 @@ class UserController < ApplicationController
       render_result(ResultCode::SAVE_FAILED, {err_msg: 'save failed.'})
    end
   end
+  #花费元宝增加体力
+  def add_power_by_gold
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+    gold = get_params(params,:gold)
+    power = get_params(params,:power)
 
+    most_exchange_time = ZhangmenrenConfig.instance.vip_config[user.vip_level.to_s]["power_recovery_time_per_day"]
+
+
+
+    if(gold.nil?||power.nil?)
+      render_result(ResultCode::INVALID_PARAMETERS, {err_msg: 'invalid parameters'})
+      return
+    end
+
+
+    if(user.exchange_power_time < most_exchange_time)
+      if(user.update_gold_power(gold,power))
+        render_result(ResultCode::OK,{})
+        return
+      else
+        render_result(ResultCode::SAVE_FAILED,{err_msg:'save failed'})
+        return
+      end
+    end
+
+    render_result(ResultCode::ERROR,{error_msg: 'reached max times'})
+    return
+
+  end
+
+  #花费元宝增加气力
+  def add_sprite_by_gold
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+    gold = get_params(params,:gold)
+    sprite = get_params(params,:sprite)
+
+    most_exchange_time = ZhangmenrenConfig.instance.vip_config[user.vip_level.to_s]["sprite_recovery_time_per_day"]
+
+
+
+    if(gold.nil?||sprite.nil?)
+      render_result(ResultCode::INVALID_PARAMETERS, {err_msg: 'invalid parameters'})
+      return
+    end
+
+
+    if(user.exchange_sprite_time < most_exchange_time)
+      if(user.update_gold_sprite(gold,sprite))
+        render_result(ResultCode::OK,{})
+        return
+      else
+        render_result(ResultCode::SAVE_FAILED,{err_msg:'save failed'})
+        return
+      end
+    end
+
+    render_result(ResultCode::ERROR,{error_msg: 'reached max times'})
+    return
+
+  end
+    #获取用元宝购买体力的次数
+  def get_exchange_power_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{exchange_power_time:user.exchange_power_time})
+    return
+  end
+  def get_exchange_sprite_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{exchange_sprite_time:user.exchange_sprite_time})
+    return
+  end
+
+  def get_power
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{power:user.power})
+  end
+  def get_sprite
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    render_result(ResultCode::OK,{sprite:user.sprite})
+  end
+
+  def get_power_and_sprite_time
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+      time_power_next='00:00:00'
+      time_power_all='00:00:00'
+      time_sprite_next = '00:00:00'
+      time_sprite_all = '00:00:00'
+
+    if(user.power_time != nil)
+      time = 1800-(Time.now - user.power_time).to_i%1800
+      h=time/3600
+      m=(time%3600)/60
+      s=(time%3600)%60
+      time_power_next='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+
+      time =  (30-user.power-1)*1800 + 1800-(Time.now - user.power_time).to_i%1800
+      h=time/3600
+      m=(time%3600)/60
+      s=(time%3600)%60
+      time_power_all='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+    end
+
+    if(user.sprite_time != nil)
+      time = 1800-(Time.now - user.sprite_time).to_i%1800
+      h=time/3600
+      m=(time%3600)/60
+      s=(time%3600)%60
+      time_sprite_next='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+
+      time =  (12-user.sprite-1)*1800 + 1800-(Time.now - user.sprite_time).to_i%1800
+      h=time/3600
+      m=(time%3600)/60
+      s=(time%3600)%60
+      time_sprite_all='%02d'%h << ':' << '%02d'%m << ':' << '%02d'%s
+    end
+
+    if(user.power>=30)
+      time_power_next='00:00:00'
+      time_power_all='00:00:00'
+    end
+    if(user.sprite>=12)
+      time_sprite_next = '00:00:00'
+      time_sprite_all = '00:00:00'
+    end
+    render_result(ResultCode::OK,{time_power_next:time_power_next,time_sprite_next:time_sprite_next,time_power_all:time_power_all,time_sprite_all:time_sprite_all})
+    return
+
+  end
 end

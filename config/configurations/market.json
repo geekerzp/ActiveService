@@ -2,73 +2,115 @@
     "1_in_10_disciple_getting_probability": [
         {
             "drop_bag_id": "random_drop_bag_1001",
-            "probability": 0.4
+            "probability": 0.53
         },
         {
             "drop_bag_id": "random_drop_bag_1002",
-            "probability": 0.2
+            "probability": 0.15
         },
         {
             "drop_bag_id": "random_drop_bag_1003",
-            "probability": 0.1
+            "probability": 0.015
         },
         {
             "drop_bag_id": "random_drop_bag_2001",
-            "probability": 0.2
+            "probability": 0.25
         },
         {
             "drop_bag_id": "random_drop_bag_2002",
-            "probability": 0.8
+            "probability": 0.05
         },
         {
             "drop_bag_id": "random_drop_bag_2003",
-            "probability": 0.2
+            "probability": 0.005
         }
     ],
     "1_in_100_disciple_getting_probability": [
         {
             "drop_bag_id": "random_drop_bag_1002",
-            "probability": 0.4
+            "probability": 0.49
         },
         {
             "drop_bag_id": "random_drop_bag_1003",
-            "probability": 0.2
-        },
-        {
-            "drop_bag_id": "random_drop_bag_1004",
             "probability": 0.1
         },
         {
+            "drop_bag_id": "random_drop_bag_1004",
+            "probability": 0.03
+        },
+        {
             "drop_bag_id": "random_drop_bag_2002",
-            "probability": 0.2
+            "probability": 0.3
         },
         {
             "drop_bag_id": "random_drop_bag_2003",
-            "probability": 0.8
+            "probability": 0.06
         },
         {
             "drop_bag_id": "random_drop_bag_2004",
-            "probability": 0.2
+            "probability": 0.02
         }
     ],
     "1_in_10000_disciple_getting_probability": [
         {
             "drop_bag_id": "random_drop_bag_1003",
-            "probability": 0.5
+            "probability": 0.57
         },
         {
             "drop_bag_id": "random_drop_bag_1004",
-            "probability": 0.25
-        },
-        {
-            "drop_bag_id": "random_drop_bag_2003",
             "probability": 0.17
         },
         {
+            "drop_bag_id": "random_drop_bag_2003",
+            "probability": 0.2
+        },
+        {
             "drop_bag_id": "random_drop_bag_2004",
-            "probability": 0.8
+            "probability": 0.06
         }
     ],
+    "normal_world_drop": [
+        {
+            "drop_bag_id": "random_drop_bag_6001",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_6001",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_5001",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_6001",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_6001",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_6001",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_6001",
+            "probability": 0.1
+        }
+    ],
+
+
+
+
+
+
+
+
+
+
+
+
     "random_drop_bags": [
         {
             "bag_id": "random_drop_bag_1001",
@@ -3699,8 +3741,54 @@
                     "probability": 0.25
                 }
             ]
+        },
+        {
+            "bag_id": "random_drop_bag_6001",
+            "content": [
+                {
+                    "id": "3",
+                    "type": 5,
+                    "number": 1,
+                    "probability": 1
+                }
+            ]
+        },
+        {
+            "bag_id": "random_drop_bag_7001",
+            "content": [
+                {
+                    "id": "gongfu_2001_canzhang_1",
+                    "type": 11,
+                    "number": 1,
+                    "probability": 0.2
+                },
+                {
+                    "id": "gongfu_2002_canzhang_1",
+                    "type": 11,
+                    "number": 1,
+                    "probability": 0.2
+                },
+                {
+                    "id": "gongfu_2003_canzhang_1",
+                    "type": 11,
+                    "number": 1,
+                    "probability": 0.2
+                },
+                {
+                    "id": "gongfu_2004_canzhang_1",
+                    "type": 11,
+                    "number": 1,
+                    "probability": 0.2
+                },
+                {
+                    "id": "gongfu_2005_canzhang_1",
+                    "type": 11,
+                    "number": 1,
+                    "probability": 0.2
+                }
+            ]
         }
-    ],
+	],
     "goods": [
         {
             "name": "item_0021",

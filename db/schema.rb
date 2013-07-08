@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520135047) do
+ActiveRecord::Schema.define(:version => 20130619070224) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -349,6 +349,23 @@ ActiveRecord::Schema.define(:version => 20130520135047) do
 
   add_index "team_members", ["id"], :name => "index_team_members_on_id"
 
+  create_table "user_blood_fights", :force => true do |t|
+    t.string   "user_id",                  :null => false
+    t.integer  "remain_fight",             :null => false
+    t.integer  "total_star",               :null => false
+    t.integer  "remain_star",              :null => false
+    t.integer  "status",                   :null => false
+    t.integer  "grow_blood_proportion",    :null => false
+    t.integer  "grow_attach_proportion",   :null => false
+    t.integer  "grow_defend_proportion",   :null => false
+    t.integer  "grow_internal_proportion", :null => false
+    t.integer  "battle_array",             :null => false
+    t.integer  "win_session_num",          :null => false
+    t.integer  "continuous_lead_time",     :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
   create_table "user_goods", :force => true do |t|
     t.string   "g_type",     :default => "-1"
     t.integer  "user_id",    :default => -1
@@ -362,19 +379,19 @@ ActiveRecord::Schema.define(:version => 20130520135047) do
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "password"
-    t.string   "name",              :default => ""
-    t.integer  "vip_level",         :default => 1
-    t.integer  "level",             :default => 1
-    t.integer  "prestige",          :default => 0
-    t.integer  "gold",              :default => 0
-    t.integer  "silver",            :default => 0
-    t.integer  "power",             :default => 0
-    t.integer  "experience",        :default => 0
-    t.integer  "sprite",            :default => 0
+    t.string   "name",                 :default => ""
+    t.integer  "vip_level",            :default => 1
+    t.integer  "level",                :default => 1
+    t.integer  "prestige",             :default => 0
+    t.integer  "gold",                 :default => 0
+    t.integer  "silver",               :default => 0
+    t.integer  "power",                :default => 0
+    t.integer  "experience",           :default => 0
+    t.integer  "sprite",               :default => 0
     t.string   "last_login_ip"
     t.datetime "last_login_time"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.integer  "status"
     t.string   "session_key"
     t.integer  "direction_step"
@@ -383,6 +400,10 @@ ActiveRecord::Schema.define(:version => 20130520135047) do
     t.integer  "upgrade_5_reward"
     t.integer  "upgrade_10_reward"
     t.integer  "upgrade_15_reward"
+    t.integer  "exchange_power_time",  :default => 0
+    t.integer  "exchange_sprite_time", :default => 0
+    t.datetime "power_time"
+    t.datetime "sprite_time"
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"
