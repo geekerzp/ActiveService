@@ -90,6 +90,14 @@
           </select>
         </td>
       </tr>
+      <tr>
+      <th>论剑积分</th>
+      <td><%= text_field(:lunjian, :score) %>
+        <% if @lunjian != nil&&@lunjian.errors['score'] && @lunjian.errors['score'].length > 0 %>
+            <span style="color: red;">论剑积分输入不合法，应为数字。</span>
+        <% end %>
+      </td>
+      </tr>
     </table>
     <input type="submit" value="更新用户信息" class="btnsubmit"/>
 <% end %>

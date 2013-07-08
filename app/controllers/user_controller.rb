@@ -457,4 +457,21 @@ class UserController < ApplicationController
     return
 
   end
+  #
+  #充值完成后获取用户的元宝、银币、装备、物品
+  #
+  def get_info_after_recharge
+    re,user = validate_session_key(get_params(params, :session_key))
+    return unless re
+
+    data = {}
+    data[:gold] = user.gold
+    data[:silver] = user.silver
+    data[:goods] = user.user_goodss
+    data[:equipments] = user.equipments
+
+    render_result(ResultCode::OK, data)
+    return
+  end
+
 end

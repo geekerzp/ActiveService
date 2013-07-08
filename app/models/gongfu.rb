@@ -120,7 +120,7 @@ class Gongfu < ActiveRecord::Base
     gongfu.grow_strength = 0
     gongfu.level = 1
     gongfu.disciple_id = -1
-    gongfu.experience = experiences[gongfu_config[:quality].to_i]
+    gongfu.experience = experiences[gongfu_config["quality"].to_i]
     unless gongfu.save
       logger.error("### #{__method__} (#{__FILE__},#{__LINE__})  #{gongfu.errors.full_messages.join('; ')}")
       return nil

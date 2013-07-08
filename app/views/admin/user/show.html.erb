@@ -38,6 +38,11 @@
       <th style="text-align: center">Vip等级</th>
       <td style="text-align: center"><%= @user.vip_level %></td>
     </tr>
+    <tr>
+      <th style="text-align: center">论剑积分</th>
+      <td style="text-align: center"><%=@score  %></td>
+
+    </tr>
   </table>
   <a class="btnsubmit" href=<%= "'/admin/user/#{@user.id}/edit'".html_safe %> >编辑</a>
   <br>
