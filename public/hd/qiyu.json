@@ -1,17 +1,3 @@
 [
-	{
-		"id":1,
-		"filename":"hello.lua",
-		"title":"第一个活动",
-		"beginDate":"2013-05-23",
-		"expireDate":"2013-05-31",
-		"userLevel":">10"
-	},
-	{
-		"filename":"hello2.lua",
-		"title":"第二个活动",
-		"beginDate":"2013-05-31",
-		"expireDate":"2013-06-01",
-		"userLevel":"<10"
-	}
+	
 ]

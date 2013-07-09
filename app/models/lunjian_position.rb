@@ -161,9 +161,6 @@ class LunjianPosition < ActiveRecord::Base
 
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) return:  ")
     user_list.each(){|m| list_printer.call(m)}
-
-
-    #user_list << ZhangmenrenConfig.instance.npc_config[0]
     user_list
   end
 

@@ -1,40 +1,14 @@
-# Logfile created on 2013-05-26 16:51:34 +0800 by logger.rb/25413
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] INFO : Starting the New Relic agent in "development" environment.
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] INFO : Reading configuration from config/newrelic.yml
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] INFO : Environment: development
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] INFO : Dispatcher: webrick
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] INFO : Application: My Application
-[05/26/13 16:51:34 +0800 tsoftime-desktop (20179)] WARN : Agent configured not to send data in this environment.
-[05/26/13 16:51:35 +0800 tsoftime-desktop (20179)] INFO : Installing ActiveRecord instrumentation
-[05/26/13 16:51:35 +0800 tsoftime-desktop (20179)] INFO : Installing Net instrumentation
-[05/26/13 16:51:35 +0800 tsoftime-desktop (20179)] INFO : Installing Rails3 Error instrumentation
-[05/26/13 16:51:35 +0800 tsoftime-desktop (20179)] INFO : Installing Rails 3 Controller instrumentation
-[05/26/13 16:51:35 +0800 tsoftime-desktop (20179)] INFO : Installing Rails 3.1/3.2 view instrumentation
-[05/26/13 16:51:35 +0800 tsoftime-desktop (20179)] INFO : Finished instrumentation
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Starting the New Relic agent in "development" environment.
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Reading configuration from config/newrelic.yml
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Environment: development
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : No known dispatcher detected.
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Application: My Application
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] WARN : Agent configured not to send data in this environment.
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Installing ActiveRecord instrumentation
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Installing Net instrumentation
-[05/26/13 20:32:16 +0800 tsoftime-desktop (5197)] INFO : Installing Rails3 Error instrumentation
-[05/26/13 20:32:17 +0800 tsoftime-desktop (5197)] INFO : Installing Rails 3 Controller instrumentation
-[05/26/13 20:32:17 +0800 tsoftime-desktop (5197)] INFO : Installing Rails 3.1/3.2 view instrumentation
-[05/26/13 20:32:17 +0800 tsoftime-desktop (5197)] INFO : Finished instrumentation
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Starting the New Relic agent in "development" environment.
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Reading configuration from config/newrelic.yml
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Environment: development
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Dispatcher: webrick
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Application: My Application
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] WARN : Agent configured not to send data in this environment.
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Installing ActiveRecord instrumentation
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Installing Net instrumentation
-[05/27/13 17:56:55 +0800 tsoftime-desktop (22554)] INFO : Installing Rails3 Error instrumentation
-[05/27/13 17:56:56 +0800 tsoftime-desktop (22554)] INFO : Installing Rails 3 Controller instrumentation
-[05/27/13 17:56:56 +0800 tsoftime-desktop (22554)] INFO : Installing Rails 3.1/3.2 view instrumentation
-[05/27/13 17:56:56 +0800 tsoftime-desktop (22554)] INFO : Finished instrumentation
+# Logfile created on 2013-07-09 10:26:05 +0800 by logger.rb/25413
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Starting the New Relic agent in "development" environment.
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Reading configuration from config/newrelic.yml
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Environment: development
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : No known dispatcher detected.
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Application: My Application
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] WARN : Agent configured not to send data in this environment.
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Installing ActiveRecord instrumentation
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Installing Net instrumentation
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Installing Rails3 Error instrumentation
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Installing Rails 3 Controller instrumentation
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/09/13 10:26:05 +0800 tsoftime-desktop (12503)] INFO : Finished instrumentation
