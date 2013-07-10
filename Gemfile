@@ -44,7 +44,8 @@ gem 'newrelic_rpm'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+# 远程部署
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'

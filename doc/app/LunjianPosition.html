@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class LunjianPosition - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/lunjian_position.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-get_5_user">::get_5_user</a>
+    
+    <li><a href="#method-c-get_after_5_user">::get_after_5_user</a>
+    
+    <li><a href="#method-c-get_before_5_user">::get_before_5_user</a>
+    
+    <li><a href="#method-c-get_list">::get_list</a>
+    
+    <li><a href="#method-c-lock_for_fight">::lock_for_fight</a>
+    
+    <li><a href="#method-c-produce_random_str">::produce_random_str</a>
+    
+    <li><a href="#method-c-update_result">::update_result</a>
+    
+    <li><a href="#method-i-to_dictionary">#to_dictionary</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./Admin/CanzhangController.html">Admin::CanzhangController</a>
+  
+    <li><a href="./Admin/CanzhangHelper.html">Admin::CanzhangHelper</a>
+  
+    <li><a href="./Admin/DiscipleController.html">Admin::DiscipleController</a>
+  
+    <li><a href="./Admin/DiscipleHelper.html">Admin::DiscipleHelper</a>
+  
+    <li><a href="./Admin/EquipmentController.html">Admin::EquipmentController</a>
+  
+    <li><a href="./Admin/EquipmentHelper.html">Admin::EquipmentHelper</a>
+  
+    <li><a href="./Admin/GongfuController.html">Admin::GongfuController</a>
+  
+    <li><a href="./Admin/GongfuHelper.html">Admin::GongfuHelper</a>
+  
+    <li><a href="./Admin/GoodsController.html">Admin::GoodsController</a>
+  
+    <li><a href="./Admin/GoodsHelper.html">Admin::GoodsHelper</a>
+  
+    <li><a href="./Admin/JianghuController.html">Admin::JianghuController</a>
+  
+    <li><a href="./Admin/JianghuHelper.html">Admin::JianghuHelper</a>
+  
+    <li><a href="./Admin/LoginController.html">Admin::LoginController</a>
+  
+    <li><a href="./Admin/LoginHelper.html">Admin::LoginHelper</a>
+  
+    <li><a href="./Admin/SoulController.html">Admin::SoulController</a>
+  
+    <li><a href="./Admin/SoulHelper.html">Admin::SoulHelper</a>
+  
+    <li><a href="./Admin/TeamController.html">Admin::TeamController</a>
+  
+    <li><a href="./Admin/TeamHelper.html">Admin::TeamHelper</a>
+  
+    <li><a href="./Admin/TianjianController.html">Admin::TianjianController</a>
+  
+    <li><a href="./Admin/TianjianHelper.html">Admin::TianjianHelper</a>
+  
+    <li><a href="./Admin/UserController.html">Admin::UserController</a>
+  
+    <li><a href="./Admin/UserHelper.html">Admin::UserHelper</a>
+  
+    <li><a href="./Admin/ZhangmenjueController.html">Admin::ZhangmenjueController</a>
+  
+    <li><a href="./Admin/ZhangmenjueHelper.html">Admin::ZhangmenjueHelper</a>
+  
+    <li><a href="./Admins.html">Admins</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CanbaiRecorder.html">CanbaiRecorder</a>
+  
+    <li><a href="./CanbaiRewardRecorder.html">CanbaiRewardRecorder</a>
+  
+    <li><a href="./Canzhang.html">Canzhang</a>
+  
+    <li><a href="./CanzhangController.html">CanzhangController</a>
+  
+    <li><a href="./CanzhangGrabRecorder.html">CanzhangGrabRecorder</a>
+  
+    <li><a href="./CanzhangHelper.html">CanzhangHelper</a>
+  
+    <li><a href="./Comm.html">Comm</a>
+  
+    <li><a href="./ContinuousLoginReward.html">ContinuousLoginReward</a>
+  
+    <li><a href="./DianboController.html">DianboController</a>
+  
+    <li><a href="./DianboHelper.html">DianboHelper</a>
+  
+    <li><a href="./Disciple.html">Disciple</a>
+  
+    <li><a href="./Equipment.html">Equipment</a>
+  
+    <li><a href="./FriendApplyRecorder.html">FriendApplyRecorder</a>
+  
+    <li><a href="./FriendController.html">FriendController</a>
+  
+    <li><a href="./GiftbagPurchaseRecorder.html">GiftbagPurchaseRecorder</a>
+  
+    <li><a href="./Gongfu.html">Gongfu</a>
+  
+    <li><a href="./GoodsPurchaseRecorder.html">GoodsPurchaseRecorder</a>
+  
+    <li><a href="./Handbook.html">Handbook</a>
+  
+    <li><a href="./HandbookController.html">HandbookController</a>
+  
+    <li><a href="./JianghuController.html">JianghuController</a>
+  
+    <li><a href="./JianghuHelper.html">JianghuHelper</a>
+  
+    <li><a href="./JianghuRecorder.html">JianghuRecorder</a>
+  
+    <li><a href="./JianghuRewardRecorder.html">JianghuRewardRecorder</a>
+  
+    <li><a href="./JiaohuajiRecorder.html">JiaohuajiRecorder</a>
+  
+    <li><a href="./KapaiController.html">KapaiController</a>
+  
+    <li><a href="./KapaiHelper.html">KapaiHelper</a>
+  
+    <li><a href="./LunjianController.html">LunjianController</a>
+  
+    <li><a href="./LunjianHelper.html">LunjianHelper</a>
+  
+    <li><a href="./LunjianPosition.html">LunjianPosition</a>
+  
+    <li><a href="./LunjianRecorder.html">LunjianRecorder</a>
+  
+    <li><a href="./LunjianRewardRecorder.html">LunjianRewardRecorder</a>
+  
+    <li><a href="./MarketController.html">MarketController</a>
+  
+    <li><a href="./MarketHelper.html">MarketHelper</a>
+  
+    <li><a href="./Message.html">Message</a>
+  
+    <li><a href="./MessageType.html">MessageType</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./ObtainDiscipleRecorder.html">ObtainDiscipleRecorder</a>
+  
+    <li><a href="./Order.html">Order</a>
+  
+    <li><a href="./PayRecorder.html">PayRecorder</a>
+  
+    <li><a href="./QiyuController.html">QiyuController</a>
+  
+    <li><a href="./QiyuHelper.html">QiyuHelper</a>
+  
+    <li><a href="./RechargeController.html">RechargeController</a>
+  
+    <li><a href="./Relationship.html">Relationship</a>
+  
+    <li><a href="./ResourcesUpdater.html">ResourcesUpdater</a>
+  
+    <li><a href="./Result.html">Result</a>
+  
+    <li><a href="./ResultCode.html">ResultCode</a>
+  
+    <li><a href="./Server.html">Server</a>
+  
+    <li><a href="./Soul.html">Soul</a>
+  
+    <li><a href="./SystemController.html">SystemController</a>
+  
+    <li><a href="./SystemRewardRecorder.html">SystemRewardRecorder</a>
+  
+    <li><a href="./TeamController.html">TeamController</a>
+  
+    <li><a href="./TeamHelper.html">TeamHelper</a>
+  
+    <li><a href="./TeamMember.html">TeamMember</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserHelper.html">UserHelper</a>
+  
+    <li><a href="./Zhangmenjue.html">Zhangmenjue</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class LunjianPosition</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="LP_STATUS_ATTACK">LP_STATUS_ATTACK
+        
+        <dd class="description">
+        
+      
+        <dt id="LP_STATUS_BEAT_BACK">LP_STATUS_BEAT_BACK
+        
+        <dd class="description">
+        
+      
+        <dt id="LP_STATUS_NO_OPS">LP_STATUS_NO_OPS
+        
+        <dd class="description">
+        
+      
+        <dt id="LP_STATUS_SEE_TEAM">LP_STATUS_SEE_TEAM
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-get_5_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_5_user</span><span
+            class="method-args">() { |i| ... }</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取五个用户。由block产生position</p>
+          
+
+          
+          <div class="method-source-code" id="get_5_user-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_5_user</span>()
+  <span class="ruby-identifier">user_list</span> = []
+  <span class="ruby-value">5</span>.<span class="ruby-identifier">times</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">position</span> = <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">i</span>)      <span class="ruby-comment"># 通过block获取</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) get user at #{position}&quot;</span>)
+    <span class="ruby-identifier">tmp_user</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">find_by_position</span>(<span class="ruby-identifier">position</span>)
+    <span class="ruby-identifier">user_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp_user</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tmp_user</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">user_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_5_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_5_user-method -->
+
+    
+      <div id="method-c-get_after_5_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_after_5_user</span><span
+            class="method-args">(curr_user_position)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>后面5个用户</p>
+          
+
+          
+          <div class="method-source-code" id="get_after_5_user-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 179</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_after_5_user</span>(<span class="ruby-identifier">curr_user_position</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">10</span>       <span class="ruby-comment"># 前十名的用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)}
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">30</span>    <span class="ruby-comment"># 前三十名的用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">+</span> ((<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) * <span class="ruby-value">2</span>)}
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">200</span>   <span class="ruby-comment"># 前两百名的用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">+</span> ((<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) * <span class="ruby-value">3</span>)}
+  <span class="ruby-keyword">else</span>                              <span class="ruby-comment"># 其他用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">curr_user_position</span>.<span class="ruby-identifier">to_f</span> * (<span class="ruby-value">1.005</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_f</span>  * <span class="ruby-value">0.005</span>)).<span class="ruby-identifier">to_i</span>}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">user_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_after_5_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_after_5_user-method -->
+
+    
+      <div id="method-c-get_before_5_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_before_5_user</span><span
+            class="method-args">(curr_user_position)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>前面的五个用户</p>
+          
+
+          
+          <div class="method-source-code" id="get_before_5_user-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_before_5_user</span>(<span class="ruby-identifier">curr_user_position</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">10</span>       <span class="ruby-comment"># 前十名的用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">-</span> (<span class="ruby-value">5</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>)}
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">30</span>    <span class="ruby-comment"># 前三十名的用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">-</span> (<span class="ruby-value">10</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span> * <span class="ruby-value">2</span>)}
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">200</span>   <span class="ruby-comment"># 前两百名的用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">curr_user_position</span> <span class="ruby-operator">-</span> (<span class="ruby-value">15</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span> * <span class="ruby-value">3</span>)}
+  <span class="ruby-keyword">else</span>                              <span class="ruby-comment"># 其他用户</span>
+    <span class="ruby-identifier">user_list</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_5_user</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">curr_user_position</span>.<span class="ruby-identifier">to_f</span> * (<span class="ruby-value">0.975</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_f</span>  * <span class="ruby-value">0.005</span>)).<span class="ruby-identifier">to_i</span>}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">user_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_before_5_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_before_5_user-method -->
+
+    
+      <div id="method-c-get_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_list</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取列表</p>
+
+<p>@param [User] user 当前用户</p>
+          
+
+          
+          <div class="method-source-code" id="get_list-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_list</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">list_printer</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                 <span class="ruby-node">&quot;id: #{m[:id]} position:#{m[:position]} user_id: #{m[:user_info][:id]} &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                 <span class="ruby-node">&quot;user_name:#{m[:user_info][:name]}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">user_list</span> = []
+  <span class="ruby-comment"># 排名前十的用户</span>
+  <span class="ruby-identifier">first_ten_users</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">'position asc'</span>).<span class="ruby-identifier">offset</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-value">10</span>)
+  <span class="ruby-identifier">first_ten_users</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">usr</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">usr</span>.<span class="ruby-identifier">to_dictionary</span>()
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_SEE_TEAM</span>
+    <span class="ruby-identifier">user_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) top ten : &quot;</span>)
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>(){<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_printer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">m</span>)}
+
+  <span class="ruby-comment"># 当前用户</span>
+  <span class="ruby-identifier">curr_user</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-comment"># 用户第一次进入论剑系统，创建对应的排名记录</span>
+    <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">transaction</span>() <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">position</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">lock</span>.<span class="ruby-identifier">count</span>()
+      <span class="ruby-identifier">curr_user</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">position</span><span class="ruby-operator">:</span> <span class="ruby-identifier">position</span>, <span class="ruby-identifier">score</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">highest_position</span><span class="ruby-operator">:</span> <span class="ruby-identifier">position</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">vip_level</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">left_time</span> = <span class="ruby-value">5</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">left_time</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">vip_config</span>[<span class="ruby-identifier">user</span>.<span class="ruby-identifier">vip_level</span>.<span class="ruby-identifier">to_s</span>][<span class="ruby-string">'lunjian_time_per_day'</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) create new lunjian position at #{position}.&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 最近击败过自己的玩家4名</span>
+  <span class="ruby-identifier">failed_recorders</span> = <span class="ruby-constant">LunjianRecorder</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">defender_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">who_win</span><span class="ruby-operator">:</span> <span class="ruby-constant">LunjianRecorder</span><span class="ruby-operator">::</span><span class="ruby-constant">ATTACKER_WIN</span>).
+                                      <span class="ruby-identifier">order</span>(<span class="ruby-string">'created_at desc'</span>).<span class="ruby-identifier">offset</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-value">4</span>)
+  <span class="ruby-identifier">failed_recorders</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">recorder</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">lp</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-identifier">recorder</span>.<span class="ruby-identifier">attacker_id</span>)
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">position</span>     <span class="ruby-comment"># 战胜过当前用户且排名比当前用户靠前。</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">:position</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">position</span>}  <span class="ruby-comment"># 这个用户排在前10</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_BEAT_BACK</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">to_dictionary</span>()
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_BEAT_BACK</span>
+    <span class="ruby-identifier">user_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) beat me : &quot;</span>)
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>(){<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_printer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">m</span>)}
+
+  <span class="ruby-comment"># 前5名玩家</span>
+  <span class="ruby-identifier">curr_user_position</span> = <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">position</span>
+  <span class="ruby-identifier">before_5_users</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_before_5_user</span>(<span class="ruby-identifier">curr_user_position</span>)
+  <span class="ruby-identifier">before_5_users</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">usr</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">:position</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">usr</span>.<span class="ruby-identifier">position</span>}
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">LP_STATUS_SEE_TEAM</span>
+        <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_ATTACK</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">usr</span>.<span class="ruby-identifier">to_dictionary</span>()
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_ATTACK</span>
+    <span class="ruby-identifier">user_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) before five : &quot;</span>)
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>(){<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_printer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">m</span>)}
+
+  <span class="ruby-comment"># 当前用户</span>
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">:position</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">position</span>}
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">curr_user</span>.<span class="ruby-identifier">to_dictionary</span>()
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_NO_OPS</span>
+    <span class="ruby-identifier">user_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_NO_OPS</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) me : &quot;</span>)
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>(){<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_printer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">m</span>)}
+
+  <span class="ruby-comment"># 后5名玩家</span>
+  <span class="ruby-identifier">after_5_users</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_after_5_user</span>(<span class="ruby-identifier">curr_user_position</span>)
+  <span class="ruby-identifier">after_5_users</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">usr</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">find</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">:position</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">usr</span>.<span class="ruby-identifier">position</span>}
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_NO_OPS</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">usr</span>.<span class="ruby-identifier">to_dictionary</span>()
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_NO_OPS</span>
+    <span class="ruby-identifier">user_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) after 5 : &quot;</span>)
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>(){<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_printer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">m</span>)}
+
+  <span class="ruby-comment"># 清理后面的用户</span>
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span>[<span class="ruby-value">:position</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">curr_user_position</span>
+      <span class="ruby-identifier">x</span>[<span class="ruby-value">:status</span>] = <span class="ruby-constant">LP_STATUS_NO_OPS</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) return:  &quot;</span>)
+  <span class="ruby-identifier">user_list</span>.<span class="ruby-identifier">each</span>(){<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_printer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">m</span>)}
+  <span class="ruby-identifier">user_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_list-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_list-method -->
+
+    
+      <div id="method-c-lock_for_fight" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lock_for_fight</span><span
+            class="method-args">(position1, position2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>锁定这两个用户</p>
+
+<p>@param [Integer] position1 位置1 @param [Integer] position2 位置2</p>
+          
+
+          
+          <div class="method-source-code" id="lock_for_fight-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lock_for_fight</span>(<span class="ruby-identifier">position1</span>, <span class="ruby-identifier">position2</span>)
+  <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">transaction</span>() <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">lp1</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">lock</span>.<span class="ruby-identifier">find_by_position</span>(<span class="ruby-identifier">position1</span>)
+    <span class="ruby-identifier">lp2</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">lock</span>.<span class="ruby-identifier">find_by_position</span>(<span class="ruby-identifier">position2</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">in_fighting</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">in_fighting</span>
+    <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">in_fighting</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">in_fighting</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">save</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lock_for_fight-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lock_for_fight-method -->
+
+    
+      <div id="method-c-produce_random_str" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">produce_random_str</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>生成20以内的数字，并转为字符串</p>
+          
+
+          
+          <div class="method-source-code" id="produce_random_str-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">produce_random_str</span>()
+  <span class="ruby-identifier">num</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-value">10000</span>)<span class="ruby-operator">%</span><span class="ruby-value">20</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">10</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">'0'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">num</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">num</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- produce_random_str-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- produce_random_str-method -->
+
+    
+      <div id="method-c-update_result" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_result</span><span
+            class="method-args">(id, user, position, is_win)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更新战斗结果。同时解锁用户</p>
+
+<p>@param [User] user        发起挑战的用户 @param [Integer] id       挑战的位置的id @param
+[Integer] position 挑战的位置 @param [Integer] is_win   是否胜利。1：胜利，0：失败</p>
+          
+
+          
+          <div class="method-source-code" id="update_result-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update_result</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">position</span>, <span class="ruby-identifier">is_win</span>)
+  <span class="ruby-identifier">score_array</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">lunjian_config</span>[<span class="ruby-string">'score_array'</span>]
+  <span class="ruby-identifier">user_position</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span>, <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_list</span>(<span class="ruby-identifier">user</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_position</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">lp2</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">code</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">transaction</span>() <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">lp1</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">lock</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-identifier">lp2</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">lock</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">position</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">LUNJIAN_POSITION_CHANGE</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_win</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+      <span class="ruby-comment"># 挑战成功，交换位置</span>
+      <span class="ruby-identifier">tmp</span> = <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span>
+      <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span> = <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">position</span>
+      <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">position</span> = <span class="ruby-identifier">tmp</span>
+      <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) exchange (#{lp1.position}, #{lp2.position})&quot;</span>)
+      <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">highest_position</span> = <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">highest_position</span>
+      <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">highest_position</span> = <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">position</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">highest_position</span>
+      <span class="ruby-comment"># 挑战次数减一</span>
+      <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">left_time</span> = <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">left_time</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+      <span class="ruby-comment"># 获得积分</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">score_array</span>.<span class="ruby-identifier">length</span>
+        <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">score</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">score_array</span>[<span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">score</span> <span class="ruby-operator">+=</span> (<span class="ruby-value">300</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">sqrt</span>(<span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_f</span>)).<span class="ruby-identifier">to_i</span>;
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lp1</span>.<span class="ruby-identifier">save</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">err_msg</span> = <span class="ruby-node">&quot;#{lp1.errors.full_messages.join('; ')}&quot;</span>
+      <span class="ruby-identifier">err_msg</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{lp2.errors.full_messages.join('; ')}&quot;</span>
+      <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) #{err_msg}&quot;</span>)
+      <span class="ruby-keyword">next</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">OK</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">code</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">OK</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">code</span>, <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_list</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 创建一条挑战记录</span>
+  <span class="ruby-identifier">lr</span> = <span class="ruby-constant">LunjianRecorder</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">lr</span>.<span class="ruby-identifier">attacker_id</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">lr</span>.<span class="ruby-identifier">defender_id</span> = <span class="ruby-identifier">lp2</span>.<span class="ruby-identifier">user_id</span>
+  <span class="ruby-identifier">lr</span>.<span class="ruby-identifier">who_win</span> = <span class="ruby-identifier">is_win</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-constant">LunjianRecorder</span><span class="ruby-operator">::</span><span class="ruby-constant">ATTACKER_WIN</span> <span class="ruby-operator">:</span> <span class="ruby-constant">LunjianRecorder</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFENDER_WIN</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lr</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;### #{__method__},(#{__FILE__},#{__LINE__}) #{lr.errors.full_messages.join('; ')}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">code</span>, <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">get_list</span>(<span class="ruby-identifier">user</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_result-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_result-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-to_dictionary" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_dictionary</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>将user的信息转化为字典形式</p>
+          
+
+          
+          <div class="method-source-code" id="to_dictionary-source">
+            <pre><span class="ruby-comment"># File app/models/lunjian_position.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_dictionary</span>
+  <span class="ruby-identifier">tmp</span> = {}
+  <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:id</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:position</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">position</span>
+  <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:score</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">score</span>
+  <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:left_time</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">left_time</span>
+  <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:highest_position</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">highest_position</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:user_info</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:user_info</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">to_dictionary</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tmp</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_dictionary-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_dictionary-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
