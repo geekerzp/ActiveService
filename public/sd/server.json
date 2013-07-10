@@ -1,0 +1,22 @@
+{
+    "serverlist": [
+        {
+            "serverId": "serverlist_1001",
+            "serverName": "远程一服",
+            "serverIp": "http://118.144.79.247",
+            "serverStatus": "1"
+        },
+        {
+            "serverId": "serverlist_1002",
+            "serverName": "本地服务",
+            "serverIp": "http://192.168.1.129",
+            "serverStatus": "1"
+        },
+        {
+            "serverId": "serverlist_1003",
+            "serverName": "远程二服",
+            "serverIp": "http://124.205.174.194",
+            "serverStatus": "2"
+        }
+    ]
+}

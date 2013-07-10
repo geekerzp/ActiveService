@@ -1,8 +1,12 @@
 <div id="middle" xmlns="http://www.w3.org/1999/html">
 
-  <%= form_tag("/admin/user/search", :method => 'post') do %>
-      <input class="inputtext" id="search_key" name="search_key" type="text"/>
-      <input name="commit" type="submit" value="搜索" class="searchtn"/>
+  <%= form_tag("/admin/user/search", :method => 'get') do %>
+      <p>
+        <input class="inputtext" id="search_key" name="search_key" type="text"/>
+        <%= submit_tag "Search",:name => nil %>
+      </p>
+
+
   <% end %>
   <table class="tabinfo">
     <tr>

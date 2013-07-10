@@ -70,7 +70,7 @@ class User < ActiveRecord::Base
     self.prestige = 0
     self.gold = 0
     self.silver = 1000
-    self.power = 20
+    self.power = 30
     self.experience = 0
     self.sprite = 12
     self.status = USER_STATUS_NORMAL
@@ -101,6 +101,7 @@ class User < ActiveRecord::Base
     user.last_login_ip = request.remote_ip
     user.last_login_time = Time.now
     user.npc_or_not = 0 # 注册用户不是npc
+    user.vip_level = 0
     user.power_time = Time.now
     user.sprite_time = Time.now
 

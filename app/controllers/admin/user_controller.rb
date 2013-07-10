@@ -4,12 +4,26 @@ class Admin::UserController < ApplicationController
   before_filter :validate_login_admin
 
   def index
+    sr = SystemRewardRecorder.new
+    sr.system_message = '1111'
+    sr.receive_or_not = 0
+    sr.user_id = 42
+    sr.reward_type = 'system_reward_0001'
+    sr.save
     @users = User.where(status: User::USER_STATUS_NORMAL).order('created_at desc').paginate(:page => params[:page])
     session[:user_id] = nil
   end
 
   def search
-    search_key = '%' + params[:search_key] + '%'
+    search_key = ''
+    unless(params[:search_key].nil?)
+      session[:search_key] = params[:search_key]
+      search_key = '%' << params[:search_key] << '%'
+    else
+      search_key = '%' << session[:search_key] << '%'
+    end
+
+
     @users = User.where(["username like ? or name like ?", search_key, search_key]).
                         order('created_at desc').paginate(:page => params[:page])
   end
@@ -17,7 +31,11 @@ class Admin::UserController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     session[:user_id] = params[:id]
-
+    lunjian = LunjianPosition.find_all_by_user_id(@user.id.to_i).first
+    @score = 0
+    unless lunjian.nil?
+      @score = lunjian.score
+    end
     #弟子、名称的解析。
     @names_config = ZhangmenrenConfig.instance.name_config
     @disciple_config = ZhangmenrenConfig.instance.disciple_config
@@ -25,7 +43,7 @@ class Admin::UserController < ApplicationController
 
   def edit
     @user = User.find_by_id(params[:id])
-
+    @lunjian = LunjianPosition.find_all_by_user_id(@user.id.to_i).first
     #用户的vip等级。
     @vip_level_list = [0,1,2,3,4,5,6,7,8,9,10,11,12]
   end
@@ -44,7 +62,8 @@ class Admin::UserController < ApplicationController
     @user.experience = params[:user][:experience]
     @user.sprite = params[:user][:sprite]
     @user.vip_level = params[:user][:vip_level]
-
+    @lunjian = LunjianPosition.find_all_by_user_id(@user.id.to_i).first
+    @lunjian.score = params[:lunjian][:score] unless @lunjian.nil?
     #不同等级对应的不同经验上限。
     @experiences_config = ZhangmenrenConfig.instance.user_experiences_config
     if params[:user][:level].to_i <= 100
@@ -58,7 +77,17 @@ class Admin::UserController < ApplicationController
       else
         respond_to do |format|
           if @user.save
-            format.html {redirect_to(action: :show, id: @user.id)}
+            unless @lunjian.nil?
+              if @lunjian.save
+                format.html{redirect_to(action:show,id:@user.id)}
+              else
+                logger.debug("--------------------------#{@lunjian.score}")
+                logger.debug("--------------------------#{@lunjian}")
+                format.html {render(action: :edit)}
+              end
+            else
+              format.html {redirect_to(action: :show, id: @user.id)}
+            end
           else
             logger.debug("--------------------------#{@user.vip_level}")
             logger.debug("--------------------------#{@user}")
@@ -69,7 +98,17 @@ class Admin::UserController < ApplicationController
     else
       respond_to do |format|
         if @user.save
-          format.html {redirect_to(action: :show, id: @user.id)}
+          unless @lunjian.nil?
+            if @lunjian.save
+              format.html{redirect_to(action:show,id:@user.id)}
+            else
+              logger.debug("--------------------------#{@lunjian.score}")
+              logger.debug("--------------------------#{@lunjian}")
+              format.html {render(action: :edit)}
+            end
+          else
+            format.html {redirect_to(action: :show, id: @user.id)}
+          end
         else
           format.html {render(action: :edit)}
         end

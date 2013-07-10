@@ -57,6 +57,7 @@ class Canzhang < ActiveRecord::Base
     (limit - list.length).times() do |i|
       # 构造npc
       npc_user = User.new
+      npc_user.level = rand(max_level - min_level + 1) + min_level
       npc_user.id = -100    # npc的id统一为-100
       npc_user.name = User.get_random_name
       npc_user.prestige = rand(100)

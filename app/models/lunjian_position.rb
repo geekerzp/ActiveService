@@ -4,8 +4,10 @@ class LunjianPosition < ActiveRecord::Base
   belongs_to :user
 
   validates :left_time, :position, :score, :user_id, :presence => true
-  validates :left_time, :position, :score, :user_id, :numericality => { :greater_than_or_equal_to => 0,
-                                                                        :only_integer => true }
+  validates :left_time, :user_id, :score, :numericality => { :greater_than_or_equal_to => 0,
+                                                                      :only_integer => true }
+  validates :position, :numericality => { :greater_than_or_equal_to => 1,
+                                                 :only_integer => true }
 
   LP_STATUS_SEE_TEAM  = 1 # 前十的玩家，只能查看阵容
   LP_STATUS_BEAT_BACK = 2 # 击败过自己的玩家，反击
@@ -55,6 +57,11 @@ class LunjianPosition < ActiveRecord::Base
                    "user_name:#{m[:user_info][:name]}")
     end
     user_list = []
+
+    if LunjianPosition.first.nil?
+      init_pknpc()
+    end
+
     # 排名前十的用户
     first_ten_users = LunjianPosition.order('position asc').offset(0).limit(10)
     first_ten_users.each() do |usr|
@@ -156,6 +163,55 @@ class LunjianPosition < ActiveRecord::Base
     user_list.each(){|m| list_printer.call(m)}
     user_list
   end
+
+  #
+  #当论剑系统第一次被使用时初始化NPC数据
+  #
+  def self.init_pknpc()
+    lunjian_positon = 1
+    ZhangmenrenConfig.instance.npc_config.each() do |npc|
+      if(User.find_by_name(npc["name"].to_s).nil?)
+      user = User.new
+      user.username = npc["id"].to_s
+      user.password = npc["id"].to_s
+      logger.debug("username : #{user.name}")
+      user.name = ZhangmenrenConfig.instance.name_config[npc['name'].to_s].to_s
+     # user.name = npc["name"].to_s
+      logger.debug("config name : #{npc["name"].to_s}")
+      user.level = npc["level"].to_i
+      logger.debug("config level : #{npc["level"]}")
+      user.save
+      user_id =user.id
+      logger.debug("------------------------")
+      logger.debug("user_id : #{user_id}")
+      team_position = 0
+      npc["team"].each() do |d|
+        disciple = Disciple.new
+        disciple.user_id = user_id
+        disciple.level = d["level"].to_i
+        disciple.d_type = d["id"].to_s
+        disciple.save
+
+        team = TeamMember.new
+        team.user_id = user_id.to_i
+        team.disciple_id = disciple.id.to_i
+        team.position = team_position
+        team.save
+
+        team_position += 1
+      end
+      lunjian = LunjianPosition.new
+      lunjian.user_id = user_id
+      lunjian.score = 0
+      lunjian.position = lunjian_positon
+      lunjian.save
+
+      lunjian_positon += 1
+      end
+
+    end
+  end
+
 
   #
   # 前面的五个用户

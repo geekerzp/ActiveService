@@ -71,11 +71,19 @@
     ],
     "normal_world_drop": [
         {
-            "drop_bag_id": "random_drop_bag_6001",
+            "drop_bag_id": "random_drop_bag_1001",
             "probability": 0.15
         },
         {
-            "drop_bag_id": "random_drop_bag_6001",
+            "drop_bag_id": "random_drop_bag_1002",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_4101",
+            "probability": 0.15
+        },
+        {
+            "drop_bag_id": "random_drop_bag_4201",
             "probability": 0.15
         },
         {
@@ -87,15 +95,7 @@
             "probability": 0.15
         },
         {
-            "drop_bag_id": "random_drop_bag_6001",
-            "probability": 0.15
-        },
-        {
-            "drop_bag_id": "random_drop_bag_6001",
-            "probability": 0.15
-        },
-        {
-            "drop_bag_id": "random_drop_bag_6001",
+            "drop_bag_id": "random_drop_bag_7001",
             "probability": 0.1
         }
     ],
