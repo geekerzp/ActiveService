@@ -33,4 +33,8 @@ class SystemController < ApplicationController
     end
   end
 
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e

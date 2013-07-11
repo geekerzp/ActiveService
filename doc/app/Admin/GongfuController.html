@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Admin::GongfuController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/admin/gongfu_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-delete">#delete</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Admin.html">Admin</a>
+  
+    <li><a href="../Admin/CanzhangController.html">Admin::CanzhangController</a>
+  
+    <li><a href="../Admin/CanzhangHelper.html">Admin::CanzhangHelper</a>
+  
+    <li><a href="../Admin/DiscipleController.html">Admin::DiscipleController</a>
+  
+    <li><a href="../Admin/DiscipleHelper.html">Admin::DiscipleHelper</a>
+  
+    <li><a href="../Admin/EquipmentController.html">Admin::EquipmentController</a>
+  
+    <li><a href="../Admin/EquipmentHelper.html">Admin::EquipmentHelper</a>
+  
+    <li><a href="../Admin/GongfuController.html">Admin::GongfuController</a>
+  
+    <li><a href="../Admin/GongfuHelper.html">Admin::GongfuHelper</a>
+  
+    <li><a href="../Admin/GoodsController.html">Admin::GoodsController</a>
+  
+    <li><a href="../Admin/GoodsHelper.html">Admin::GoodsHelper</a>
+  
+    <li><a href="../Admin/JianghuController.html">Admin::JianghuController</a>
+  
+    <li><a href="../Admin/JianghuHelper.html">Admin::JianghuHelper</a>
+  
+    <li><a href="../Admin/LoginController.html">Admin::LoginController</a>
+  
+    <li><a href="../Admin/LoginHelper.html">Admin::LoginHelper</a>
+  
+    <li><a href="../Admin/SoulController.html">Admin::SoulController</a>
+  
+    <li><a href="../Admin/SoulHelper.html">Admin::SoulHelper</a>
+  
+    <li><a href="../Admin/TeamController.html">Admin::TeamController</a>
+  
+    <li><a href="../Admin/TeamHelper.html">Admin::TeamHelper</a>
+  
+    <li><a href="../Admin/TianjianController.html">Admin::TianjianController</a>
+  
+    <li><a href="../Admin/TianjianHelper.html">Admin::TianjianHelper</a>
+  
+    <li><a href="../Admin/UserController.html">Admin::UserController</a>
+  
+    <li><a href="../Admin/UserHelper.html">Admin::UserHelper</a>
+  
+    <li><a href="../Admin/ZhangmenjueController.html">Admin::ZhangmenjueController</a>
+  
+    <li><a href="../Admin/ZhangmenjueHelper.html">Admin::ZhangmenjueHelper</a>
+  
+    <li><a href="../Admins.html">Admins</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../CanbaiRecorder.html">CanbaiRecorder</a>
+  
+    <li><a href="../CanbaiRewardRecorder.html">CanbaiRewardRecorder</a>
+  
+    <li><a href="../Canzhang.html">Canzhang</a>
+  
+    <li><a href="../CanzhangController.html">CanzhangController</a>
+  
+    <li><a href="../CanzhangGrabRecorder.html">CanzhangGrabRecorder</a>
+  
+    <li><a href="../CanzhangHelper.html">CanzhangHelper</a>
+  
+    <li><a href="../Comm.html">Comm</a>
+  
+    <li><a href="../ContinuousLoginReward.html">ContinuousLoginReward</a>
+  
+    <li><a href="../DianboController.html">DianboController</a>
+  
+    <li><a href="../DianboHelper.html">DianboHelper</a>
+  
+    <li><a href="../Disciple.html">Disciple</a>
+  
+    <li><a href="../Equipment.html">Equipment</a>
+  
+    <li><a href="../FriendApplyRecorder.html">FriendApplyRecorder</a>
+  
+    <li><a href="../FriendController.html">FriendController</a>
+  
+    <li><a href="../GiftbagPurchaseRecorder.html">GiftbagPurchaseRecorder</a>
+  
+    <li><a href="../Gongfu.html">Gongfu</a>
+  
+    <li><a href="../GoodsPurchaseRecorder.html">GoodsPurchaseRecorder</a>
+  
+    <li><a href="../Handbook.html">Handbook</a>
+  
+    <li><a href="../HandbookController.html">HandbookController</a>
+  
+    <li><a href="../JianghuController.html">JianghuController</a>
+  
+    <li><a href="../JianghuHelper.html">JianghuHelper</a>
+  
+    <li><a href="../JianghuRecorder.html">JianghuRecorder</a>
+  
+    <li><a href="../JianghuRewardRecorder.html">JianghuRewardRecorder</a>
+  
+    <li><a href="../JiaohuajiRecorder.html">JiaohuajiRecorder</a>
+  
+    <li><a href="../KapaiController.html">KapaiController</a>
+  
+    <li><a href="../KapaiHelper.html">KapaiHelper</a>
+  
+    <li><a href="../LunjianController.html">LunjianController</a>
+  
+    <li><a href="../LunjianHelper.html">LunjianHelper</a>
+  
+    <li><a href="../LunjianPosition.html">LunjianPosition</a>
+  
+    <li><a href="../LunjianRecorder.html">LunjianRecorder</a>
+  
+    <li><a href="../LunjianRewardRecorder.html">LunjianRewardRecorder</a>
+  
+    <li><a href="../MarketController.html">MarketController</a>
+  
+    <li><a href="../MarketHelper.html">MarketHelper</a>
+  
+    <li><a href="../Message.html">Message</a>
+  
+    <li><a href="../MessageType.html">MessageType</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../ObtainDiscipleRecorder.html">ObtainDiscipleRecorder</a>
+  
+    <li><a href="../Order.html">Order</a>
+  
+    <li><a href="../PayRecorder.html">PayRecorder</a>
+  
+    <li><a href="../QiyuController.html">QiyuController</a>
+  
+    <li><a href="../QiyuHelper.html">QiyuHelper</a>
+  
+    <li><a href="../RechargeController.html">RechargeController</a>
+  
+    <li><a href="../Relationship.html">Relationship</a>
+  
+    <li><a href="../ResourcesUpdater.html">ResourcesUpdater</a>
+  
+    <li><a href="../Result.html">Result</a>
+  
+    <li><a href="../ResultCode.html">ResultCode</a>
+  
+    <li><a href="../Server.html">Server</a>
+  
+    <li><a href="../Soul.html">Soul</a>
+  
+    <li><a href="../SystemController.html">SystemController</a>
+  
+    <li><a href="../SystemRewardRecorder.html">SystemRewardRecorder</a>
+  
+    <li><a href="../TeamController.html">TeamController</a>
+  
+    <li><a href="../TeamHelper.html">TeamHelper</a>
+  
+    <li><a href="../TeamMember.html">TeamMember</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserController.html">UserController</a>
+  
+    <li><a href="../UserHelper.html">UserHelper</a>
+  
+    <li><a href="../Zhangmenjue.html">Zhangmenjue</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Admin::GongfuController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-identifier">level</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:level</span>]
+  <span class="ruby-identifier">grow_strength</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:grow_strength</span>]
+  <span class="ruby-identifier">gongfu</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:gf_type</span>]
+  <span class="ruby-identifier">experience</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:experience</span>]
+
+  <span class="ruby-comment">#功夫的名称与类型</span>
+  <span class="ruby-identifier">gf_name</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">gf_type</span> = <span class="ruby-string">''</span>
+  <span class="ruby-comment">#功夫，弟子，名称的解析。</span>
+  <span class="ruby-ivar">@disciple_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">disciple_config</span>
+  <span class="ruby-ivar">@gongfu_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">gongfu_config</span>
+  <span class="ruby-ivar">@names_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">name_config</span>
+
+  <span class="ruby-comment">#找到功夫的名称</span>
+  <span class="ruby-ivar">@names_config</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@names_config</span>[<span class="ruby-identifier">n</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">gongfu</span>
+      <span class="ruby-identifier">gf_name</span> = <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#找到功夫的类型</span>
+  <span class="ruby-ivar">@gongfu_config</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">gf</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gongfu_config</span>[<span class="ruby-identifier">gf</span>][<span class="ruby-string">&quot;name&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">gf_name</span>
+      <span class="ruby-identifier">gf_type</span> = <span class="ruby-identifier">gf</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@gongfu</span> = <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-identifier">gf_type</span><span class="ruby-operator">:</span> <span class="ruby-identifier">gf_type</span>, <span class="ruby-identifier">disciple_id</span><span class="ruby-operator">:</span> <span class="ruby-value">-1</span>,
+                       <span class="ruby-identifier">level</span><span class="ruby-operator">:</span> <span class="ruby-identifier">level</span>, <span class="ruby-identifier">grow_strength</span><span class="ruby-operator">:</span> <span class="ruby-identifier">grow_strength</span>, <span class="ruby-identifier">grow_probability</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>,
+                       <span class="ruby-identifier">experience</span><span class="ruby-operator">:</span> <span class="ruby-identifier">experience</span>)
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:show</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">id</span>) }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;new&quot;</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>
+  <span class="ruby-identifier">gf</span> = <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">gf</span>.<span class="ruby-identifier">destroy</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gf</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-value">:index</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-ivar">@gongfu</span> = <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@disciples</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">disciples</span>
+
+  <span class="ruby-comment">#编辑的功夫信息存在字典数据中</span>
+  <span class="ruby-ivar">@gongfu_info</span> = {}
+  <span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]] = <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">get_gongfu_details</span>
+
+  <span class="ruby-comment">#功夫，弟子，名称的解析。</span>
+  <span class="ruby-ivar">@gf_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">gongfu_config</span>
+  <span class="ruby-ivar">@disciple_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">disciple_config</span>
+  <span class="ruby-ivar">@names_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">name_config</span>
+
+
+  <span class="ruby-comment">#找到上阵弟子的id</span>
+  <span class="ruby-identifier">team_members</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">team_members</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;position != ?&quot;</span>, <span class="ruby-value">-1</span>)
+  <span class="ruby-identifier">team_members_disciple_ids</span> = []
+  <span class="ruby-identifier">team_members</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">team_members_disciple_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">disciple_id</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@disciple_list</span> = {<span class="ruby-value">-1</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;不装备任何弟子&quot;</span>}
+  <span class="ruby-comment">#找到用户的上阵弟子，并排除已装备该功夫的弟子。</span>
+  <span class="ruby-ivar">@disciples</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">team_members_disciple_ids</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">disciple_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">gf_type</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">gf_type</span>).<span class="ruby-identifier">exists?</span>
+    <span class="ruby-ivar">@disciple_list</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-ivar">@names_config</span>[<span class="ruby-ivar">@disciple_config</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">d_type</span>][<span class="ruby-string">&quot;name&quot;</span>]]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">#若存在装备改功夫的弟子，则要在弟子列表中加入该弟子。</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]][<span class="ruby-value">:disciple_name</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;未使用&quot;</span>
+    <span class="ruby-ivar">@disciple_list</span>[<span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]][<span class="ruby-value">:disciple_id</span>]] = <span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]][<span class="ruby-value">:disciple_name</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-comment">#当前用户的功夫</span>
+  <span class="ruby-ivar">@gongfus</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">gongfus</span>.<span class="ruby-identifier">paginate</span>(<span class="ruby-value">:page</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>])
+
+  <span class="ruby-comment">##功夫，弟子，名称的解析。</span>
+  <span class="ruby-comment">#@gf_config = ZhangmenrenConfig.instance.gongfu_config</span>
+  <span class="ruby-comment">#@disciple_config = ZhangmenrenConfig.instance.disciple_config</span>
+  <span class="ruby-comment">#@names_config = ZhangmenrenConfig.instance.name_config</span>
+
+  <span class="ruby-comment">#用户功夫信息以字典形式存储</span>
+  <span class="ruby-ivar">@gongfus_info</span> = {}
+  <span class="ruby-ivar">@gongfus</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">gf</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@gongfus_info</span>[<span class="ruby-identifier">gf</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-identifier">gf</span>.<span class="ruby-identifier">get_gongfu_details</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@gongfus_info</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">gf</span><span class="ruby-operator">|</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@gongfu</span> = <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-comment">#功夫，弟子，名称的解析。</span>
+  <span class="ruby-ivar">@gongfu_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">gongfu_config</span>
+  <span class="ruby-ivar">@disciple_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">disciple_config</span>
+  <span class="ruby-ivar">@names_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">name_config</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@gongfu</span> = <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-comment">#功夫，弟子，名称的解析。</span>
+  <span class="ruby-ivar">@gf_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">gongfu_config</span>
+  <span class="ruby-ivar">@disciple_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">disciple_config</span>
+  <span class="ruby-ivar">@names_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">name_config</span>
+  <span class="ruby-identifier">disciple</span> = <span class="ruby-constant">Disciple</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">disciple_id</span>)
+  <span class="ruby-ivar">@disciple_name</span> = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">disciple</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-ivar">@disciple_name</span> = <span class="ruby-string">&quot;未使用&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@disciple_name</span> = <span class="ruby-ivar">@names_config</span>[<span class="ruby-ivar">@disciple_config</span>[<span class="ruby-identifier">disciple</span>.<span class="ruby-identifier">d_type</span>][<span class="ruby-string">&quot;name&quot;</span>]]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/admin/gongfu_controller.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">level</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:level</span>]
+  <span class="ruby-identifier">disciple</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:disciple</span>]
+  <span class="ruby-identifier">grow_strength</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:grow_strength</span>]
+  <span class="ruby-identifier">experience</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gongfu</span>][<span class="ruby-value">:experience</span>]
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>])
+  <span class="ruby-ivar">@gongfu</span> = <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@disciples</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">disciples</span>
+
+  <span class="ruby-comment">#编辑的功夫信息存在字典数据中</span>
+  <span class="ruby-ivar">@gongfu_info</span> = {}
+  <span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]] = <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">get_gongfu_details</span>
+
+  <span class="ruby-comment">#功夫，弟子，名称的解析。</span>
+  <span class="ruby-ivar">@gf_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">gongfu_config</span>
+  <span class="ruby-ivar">@disciple_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">disciple_config</span>
+  <span class="ruby-ivar">@names_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">name_config</span>
+  <span class="ruby-identifier">team_members</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">team_members</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;position != ?&quot;</span>, <span class="ruby-value">-1</span>)
+  <span class="ruby-comment">#找到上阵弟子的id</span>
+  <span class="ruby-identifier">team_members_disciple_ids</span> = []
+  <span class="ruby-identifier">team_members</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">team_members_disciple_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">disciple_id</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@disciple_list</span> = {<span class="ruby-value">-1</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;不装备任何弟子&quot;</span>}
+  <span class="ruby-identifier">disciple_id</span> = <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">disciple_id</span>
+  <span class="ruby-identifier">d_name</span> = <span class="ruby-string">''</span>
+  <span class="ruby-ivar">@names_config</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@names_config</span>[<span class="ruby-identifier">n</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">disciple</span>
+      <span class="ruby-identifier">d_name</span> = <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@disciples</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">team_members_disciple_ids</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Gongfu</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">disciple_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">gf_type</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">gf_type</span>).<span class="ruby-identifier">exists?</span>
+    <span class="ruby-ivar">@disciple_list</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>] = <span class="ruby-ivar">@names_config</span>[<span class="ruby-ivar">@disciple_config</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">d_type</span>][<span class="ruby-string">&quot;name&quot;</span>]]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">disciple</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;不装备任何弟子&quot;</span>
+      <span class="ruby-identifier">disciple_id</span> = <span class="ruby-value">-1</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@disciple_config</span>[<span class="ruby-identifier">d</span>.<span class="ruby-identifier">d_type</span>][<span class="ruby-string">&quot;name&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">d_name</span>
+      <span class="ruby-identifier">disciple_id</span> = <span class="ruby-identifier">d</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#若存在装备该功夫的弟子，则要在弟子列表中加入该弟子。</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]][<span class="ruby-value">:disciple_name</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;未使用&quot;</span>
+    <span class="ruby-ivar">@disciple_list</span>[<span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]][<span class="ruby-value">:disciple_id</span>]] = <span class="ruby-ivar">@gongfu_info</span>[<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]][<span class="ruby-value">:disciple_name</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">re</span> = <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">level</span><span class="ruby-operator">:</span> <span class="ruby-identifier">level</span>, <span class="ruby-identifier">disciple_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">disciple_id</span>, <span class="ruby-identifier">grow_strength</span><span class="ruby-operator">:</span> <span class="ruby-identifier">grow_strength</span>,
+                                 <span class="ruby-identifier">experience</span><span class="ruby-operator">:</span> <span class="ruby-identifier">experience</span>)
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">re</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>{ <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:show</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@gongfu</span>.<span class="ruby-identifier">id</span>}
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>{ <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:edit</span>}
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

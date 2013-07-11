@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class User - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/user.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-get_all_messages">::get_all_messages</a>
+    
+    <li><a href="#method-c-get_fight_messages">::get_fight_messages</a>
+    
+    <li><a href="#method-c-get_random_name">::get_random_name</a>
+    
+    <li><a href="#method-c-get_user_list_by_level">::get_user_list_by_level</a>
+    
+    <li><a href="#method-c-get_user_list_by_name">::get_user_list_by_name</a>
+    
+    <li><a href="#method-c-login">::login</a>
+    
+    <li><a href="#method-c-login_from_91server">::login_from_91server</a>
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-c-register">::register</a>
+    
+    <li><a href="#method-i-create_session_key">#create_session_key</a>
+    
+    <li><a href="#method-i-get_jianghu_recorders">#get_jianghu_recorders</a>
+    
+    <li><a href="#method-i-get_user_canzhang_types">#get_user_canzhang_types</a>
+    
+    <li><a href="#method-i-get_user_goods">#get_user_goods</a>
+    
+    <li><a href="#method-i-get_user_souls">#get_user_souls</a>
+    
+    <li><a href="#method-i-to_dictionary">#to_dictionary</a>
+    
+    <li><a href="#method-i-update_gold">#update_gold</a>
+    
+    <li><a href="#method-i-update_gold_power">#update_gold_power</a>
+    
+    <li><a href="#method-i-update_gold_sprite">#update_gold_sprite</a>
+    
+    <li><a href="#method-i-update_info">#update_info</a>
+    
+    <li><a href="#method-i-update_power">#update_power</a>
+    
+    <li><a href="#method-i-update_zhangmen_name">#update_zhangmen_name</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./Admin/CanzhangController.html">Admin::CanzhangController</a>
+  
+    <li><a href="./Admin/CanzhangHelper.html">Admin::CanzhangHelper</a>
+  
+    <li><a href="./Admin/DiscipleController.html">Admin::DiscipleController</a>
+  
+    <li><a href="./Admin/DiscipleHelper.html">Admin::DiscipleHelper</a>
+  
+    <li><a href="./Admin/EquipmentController.html">Admin::EquipmentController</a>
+  
+    <li><a href="./Admin/EquipmentHelper.html">Admin::EquipmentHelper</a>
+  
+    <li><a href="./Admin/GongfuController.html">Admin::GongfuController</a>
+  
+    <li><a href="./Admin/GongfuHelper.html">Admin::GongfuHelper</a>
+  
+    <li><a href="./Admin/GoodsController.html">Admin::GoodsController</a>
+  
+    <li><a href="./Admin/GoodsHelper.html">Admin::GoodsHelper</a>
+  
+    <li><a href="./Admin/JianghuController.html">Admin::JianghuController</a>
+  
+    <li><a href="./Admin/JianghuHelper.html">Admin::JianghuHelper</a>
+  
+    <li><a href="./Admin/LoginController.html">Admin::LoginController</a>
+  
+    <li><a href="./Admin/LoginHelper.html">Admin::LoginHelper</a>
+  
+    <li><a href="./Admin/SoulController.html">Admin::SoulController</a>
+  
+    <li><a href="./Admin/SoulHelper.html">Admin::SoulHelper</a>
+  
+    <li><a href="./Admin/TeamController.html">Admin::TeamController</a>
+  
+    <li><a href="./Admin/TeamHelper.html">Admin::TeamHelper</a>
+  
+    <li><a href="./Admin/TianjianController.html">Admin::TianjianController</a>
+  
+    <li><a href="./Admin/TianjianHelper.html">Admin::TianjianHelper</a>
+  
+    <li><a href="./Admin/UserController.html">Admin::UserController</a>
+  
+    <li><a href="./Admin/UserHelper.html">Admin::UserHelper</a>
+  
+    <li><a href="./Admin/ZhangmenjueController.html">Admin::ZhangmenjueController</a>
+  
+    <li><a href="./Admin/ZhangmenjueHelper.html">Admin::ZhangmenjueHelper</a>
+  
+    <li><a href="./Admins.html">Admins</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CanbaiRecorder.html">CanbaiRecorder</a>
+  
+    <li><a href="./CanbaiRewardRecorder.html">CanbaiRewardRecorder</a>
+  
+    <li><a href="./Canzhang.html">Canzhang</a>
+  
+    <li><a href="./CanzhangController.html">CanzhangController</a>
+  
+    <li><a href="./CanzhangGrabRecorder.html">CanzhangGrabRecorder</a>
+  
+    <li><a href="./CanzhangHelper.html">CanzhangHelper</a>
+  
+    <li><a href="./Comm.html">Comm</a>
+  
+    <li><a href="./ContinuousLoginReward.html">ContinuousLoginReward</a>
+  
+    <li><a href="./DianboController.html">DianboController</a>
+  
+    <li><a href="./DianboHelper.html">DianboHelper</a>
+  
+    <li><a href="./Disciple.html">Disciple</a>
+  
+    <li><a href="./Equipment.html">Equipment</a>
+  
+    <li><a href="./FriendApplyRecorder.html">FriendApplyRecorder</a>
+  
+    <li><a href="./FriendController.html">FriendController</a>
+  
+    <li><a href="./GiftbagPurchaseRecorder.html">GiftbagPurchaseRecorder</a>
+  
+    <li><a href="./Gongfu.html">Gongfu</a>
+  
+    <li><a href="./GoodsPurchaseRecorder.html">GoodsPurchaseRecorder</a>
+  
+    <li><a href="./Handbook.html">Handbook</a>
+  
+    <li><a href="./HandbookController.html">HandbookController</a>
+  
+    <li><a href="./JianghuController.html">JianghuController</a>
+  
+    <li><a href="./JianghuHelper.html">JianghuHelper</a>
+  
+    <li><a href="./JianghuRecorder.html">JianghuRecorder</a>
+  
+    <li><a href="./JianghuRewardRecorder.html">JianghuRewardRecorder</a>
+  
+    <li><a href="./JiaohuajiRecorder.html">JiaohuajiRecorder</a>
+  
+    <li><a href="./KapaiController.html">KapaiController</a>
+  
+    <li><a href="./KapaiHelper.html">KapaiHelper</a>
+  
+    <li><a href="./LunjianController.html">LunjianController</a>
+  
+    <li><a href="./LunjianHelper.html">LunjianHelper</a>
+  
+    <li><a href="./LunjianPosition.html">LunjianPosition</a>
+  
+    <li><a href="./LunjianRecorder.html">LunjianRecorder</a>
+  
+    <li><a href="./LunjianRewardRecorder.html">LunjianRewardRecorder</a>
+  
+    <li><a href="./MarketController.html">MarketController</a>
+  
+    <li><a href="./MarketHelper.html">MarketHelper</a>
+  
+    <li><a href="./Message.html">Message</a>
+  
+    <li><a href="./MessageType.html">MessageType</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./ObtainDiscipleRecorder.html">ObtainDiscipleRecorder</a>
+  
+    <li><a href="./Order.html">Order</a>
+  
+    <li><a href="./PayRecorder.html">PayRecorder</a>
+  
+    <li><a href="./QiyuController.html">QiyuController</a>
+  
+    <li><a href="./QiyuHelper.html">QiyuHelper</a>
+  
+    <li><a href="./RechargeController.html">RechargeController</a>
+  
+    <li><a href="./Relationship.html">Relationship</a>
+  
+    <li><a href="./ResourcesUpdater.html">ResourcesUpdater</a>
+  
+    <li><a href="./Result.html">Result</a>
+  
+    <li><a href="./ResultCode.html">ResultCode</a>
+  
+    <li><a href="./Server.html">Server</a>
+  
+    <li><a href="./Soul.html">Soul</a>
+  
+    <li><a href="./SystemController.html">SystemController</a>
+  
+    <li><a href="./SystemRewardRecorder.html">SystemRewardRecorder</a>
+  
+    <li><a href="./TeamController.html">TeamController</a>
+  
+    <li><a href="./TeamHelper.html">TeamHelper</a>
+  
+    <li><a href="./TeamMember.html">TeamMember</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserHelper.html">UserHelper</a>
+  
+    <li><a href="./Zhangmenjue.html">Zhangmenjue</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class User</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="USER_STATUS_DELETED">USER_STATUS_DELETED
+        
+        <dd class="description">
+        
+      
+        <dt id="USER_STATUS_LOCKED">USER_STATUS_LOCKED
+        
+        <dd class="description">
+        
+      
+        <dt id="USER_STATUS_NORMAL">USER_STATUS_NORMAL
+        
+        <dd class="description"><p>用户状态</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-get_all_messages" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_all_messages</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取用户全部信息(传书) @param [User] user 用户</p>
+          
+
+          
+          <div class="method-source-code" id="get_all_messages-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 529</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_all_messages</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">messages_array</span> = []
+
+  <span class="ruby-comment"># 获取论剑被挑战信息</span>
+  <span class="ruby-identifier">defend_messages</span> = <span class="ruby-constant">LunjianRecorder</span>.<span class="ruby-identifier">get_defend_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">defend_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">defend_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">defend_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 被夺残章信息</span>
+  <span class="ruby-identifier">grab_messages</span> = <span class="ruby-constant">CanzhangGrabRecorder</span>.<span class="ruby-identifier">get_grabbed_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">grab_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">grab_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">grab_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 好友留言信息</span>
+  <span class="ruby-identifier">leave_messages</span> = <span class="ruby-constant">Message</span>.<span class="ruby-identifier">get_leave_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">leave_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">leave_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">leave_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 好友申请信息</span>
+  <span class="ruby-identifier">apply_messages</span> = <span class="ruby-constant">FriendApplyRecorder</span>.<span class="ruby-identifier">get_apply_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">apply_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">apply_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">apply_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 申请好友反馈信息</span>
+  <span class="ruby-identifier">apply_feedback_messages</span> = <span class="ruby-constant">FriendApplyRecorder</span>.<span class="ruby-identifier">get_feedback_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">apply_feedback_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">apply_feedback_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">apply_feedback_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 系统消息</span>
+  <span class="ruby-identifier">system_messages</span> = <span class="ruby-constant">SystemRewardRecorder</span>.<span class="ruby-identifier">get_system_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">system_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">system_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">system_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sort_time_desc</span>(<span class="ruby-identifier">messages_array</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_all_messages-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_all_messages-method -->
+
+    
+      <div id="method-c-get_fight_messages" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_fight_messages</span><span
+            class="method-args">(user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取用户战斗信息(传书) @param [User] user 用户</p>
+          
+
+          
+          <div class="method-source-code" id="get_fight_messages-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 508</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_fight_messages</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-identifier">messages_array</span> = []
+
+  <span class="ruby-comment"># 获取论剑被挑战信息</span>
+  <span class="ruby-identifier">defend_messages</span> = <span class="ruby-constant">LunjianRecorder</span>.<span class="ruby-identifier">get_defend_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">defend_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">defend_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">defend_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 被夺残章信息</span>
+  <span class="ruby-identifier">grab_messages</span> = <span class="ruby-constant">CanzhangGrabRecorder</span>.<span class="ruby-identifier">get_grabbed_messages</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">grab_messages</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">grab_message</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">messages_array</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">grab_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sort_time_desc</span>(<span class="ruby-identifier">messages_array</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_fight_messages-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_fight_messages-method -->
+
+    
+      <div id="method-c-get_random_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_random_name</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_random_name-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 406</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_random_name</span>
+  <span class="ruby-node">&quot;name#{rand(100).to_s}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_random_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_random_name-method -->
+
+    
+      <div id="method-c-get_user_list_by_level" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user_list_by_level</span><span
+            class="method-args">(search_word)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>根据用户等级进行搜索 @param [integer] search_word @return [Array] users_array 数组</p>
+          
+
+          
+          <div class="method-source-code" id="get_user_list_by_level-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 575</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_user_list_by_level</span>(<span class="ruby-identifier">search_word</span>)
+  <span class="ruby-comment"># 返回的用户列表不能是npc</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">'level = ? AND npc_or_not = ?'</span>, <span class="ruby-identifier">search_word</span>, <span class="ruby-value">0</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">'last_login_time desc'</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-value">10</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user_list_by_level-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user_list_by_level-method -->
+
+    
+      <div id="method-c-get_user_list_by_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user_list_by_name</span><span
+            class="method-args">(search_word)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>根据用户门派进行搜索 @param [string] search_word @return [Array] users_array 数组</p>
+          
+
+          
+          <div class="method-source-code" id="get_user_list_by_name-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 584</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_user_list_by_name</span>(<span class="ruby-identifier">search_word</span>)
+  <span class="ruby-comment"># 返回的用户列表不能是npc</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">'name like ? AND npc_or_not = ?'</span>, <span class="ruby-node">&quot;%#{search_word}%&quot;</span>, <span class="ruby-value">0</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">'last_login_time desc'</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-value">10</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user_list_by_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user_list_by_name-method -->
+
+    
+      <div id="method-c-login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login</span><span
+            class="method-args">(username, password, request)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>登录</p>
+
+<p>@param [String] username 用户名 @param [String] password 密码 @param request
+http请求 @return 结果码 @return 当登录成功时，是用户实例。否则是错误描述信息。</p>
+          
+
+          
+          <div class="method-source-code" id="login-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">request</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_username_and_password</span>(<span class="ruby-identifier">username</span>, <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA2</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">password</span>).<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-comment"># 用户被锁定</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">USER_LOCKED</span>, <span class="ruby-string">'user is locked'</span>  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-constant">USER_STATUS_LOCKED</span>
+    <span class="ruby-comment"># 用户已经被删除</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-constant">USER_STATUS_DELETED</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">INVALID_USERNAME_PASSWORD</span>, <span class="ruby-string">'invalid username or password'</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">session_key</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">create_session_key</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_ip</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>
+
+    <span class="ruby-comment"># 部分注册用户是直接通过数据库添加的，last_login_time可能为nil，考虑为空的情况。</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_time</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># 导入连续登陆配置信息</span>
+    <span class="ruby-identifier">login_reward_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">login_reward_config</span>
+    <span class="ruby-identifier">reward_probability_config</span> = <span class="ruby-identifier">login_reward_config</span>[<span class="ruby-string">'continuous_login_rewards'</span>]
+
+    <span class="ruby-comment"># 修改连续登录次数及其奖励</span>
+    <span class="ruby-identifier">day_offset</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_time</span>.<span class="ruby-identifier">day</span>
+    <span class="ruby-identifier">continuous_login_reward</span> = <span class="ruby-constant">ContinuousLoginReward</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">continuous_login_reward</span> = <span class="ruby-constant">ContinuousLoginReward</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> = <span class="ruby-value">1</span> <span class="ruby-comment"># 初始化用户连续登陆次数设置为1</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">receive_or_not</span> = <span class="ruby-value">0</span>
+
+      <span class="ruby-identifier">login_reward_index_1</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'id'</span>]
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_type</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_id</span> = <span class="ruby-string">''</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_type</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_id</span> = <span class="ruby-string">''</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">day_offset</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+        <span class="ruby-comment"># 如果登陆天数相差两天或以上，则将连续登陆次数设置为1</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> = <span class="ruby-value">1</span>
+        <span class="ruby-comment"># 更新连续登陆奖励</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">receive_or_not</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">login_reward_index_1</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'id'</span>]
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_type</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_id</span> = <span class="ruby-string">''</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_type</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_id</span> = <span class="ruby-string">''</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">day_offset</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+        <span class="ruby-comment"># 如果登陆天数相差一天，则将连续登陆次数+1；如果已经为3，则不变。</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> = <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># 更新连续登陆奖励</span>
+        <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">receive_or_not</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+          <span class="ruby-identifier">login_reward_index_1</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'id'</span>]
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_type</span> = <span class="ruby-value">0</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_id</span> = <span class="ruby-string">''</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_type</span> = <span class="ruby-value">0</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_id</span> = <span class="ruby-string">''</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+          <span class="ruby-identifier">login_reward_index_1</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'id'</span>]
+
+          <span class="ruby-comment"># 奖励2不能和奖励1相同</span>
+          <span class="ruby-identifier">login_reward_index_2</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-keyword">while</span> <span class="ruby-identifier">login_reward_index_2</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">login_reward_index_1</span> <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">login_reward_index_2</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_2</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_2</span>][<span class="ruby-string">'id'</span>]
+
+          <span class="ruby-comment"># 奖励3为空</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_type</span> = <span class="ruby-value">0</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_id</span> = <span class="ruby-string">''</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
+          <span class="ruby-identifier">login_reward_index_1</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'id'</span>]
+
+          <span class="ruby-comment"># 奖励2不能和奖励1相同</span>
+          <span class="ruby-identifier">login_reward_index_2</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-keyword">while</span> <span class="ruby-identifier">login_reward_index_2</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">login_reward_index_1</span> <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">login_reward_index_2</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_2</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_2</span>][<span class="ruby-string">'id'</span>]
+
+          <span class="ruby-comment"># 奖励3不能和奖励2相同，也不能和奖励2相同</span>
+          <span class="ruby-identifier">login_reward_index_3</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-keyword">while</span> <span class="ruby-identifier">login_reward_index_3</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">login_reward_index_1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">login_reward_index_3</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">login_reward_index_2</span> <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">login_reward_index_3</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_3</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+          <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_3</span>][<span class="ruby-string">'id'</span>]
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># 连续登陆次数不可能超过3次</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># 在同一天内的登陆不会更新奖励配置</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">save</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span>, <span class="ruby-string">'login failed'</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">OK</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">continuous_login_reward</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">INVALID_USERNAME_PASSWORD</span>, <span class="ruby-string">'invalid username or password'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- login-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- login-method -->
+
+    
+      <div id="method-c-login_from_91server" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login_from_91server</span><span
+            class="method-args">(uin,sessionId,request)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>用户从91登录</p>
+          
+
+          
+          <div class="method-source-code" id="login_from_91server-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login_from_91server</span>(<span class="ruby-identifier">uin</span>,<span class="ruby-identifier">sessionId</span>,<span class="ruby-identifier">request</span>)
+  <span class="ruby-identifier">act</span> = <span class="ruby-value">4</span>
+  <span class="ruby-identifier">url91</span> = <span class="ruby-string">&quot;http://service.sj.91.com/usercenter/ap.aspx&quot;</span>
+
+  <span class="ruby-comment"># 参数错误</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">uin</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">sessionId</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span> , <span class="ruby-string">&quot;invalid parameters&quot;</span>
+  <span class="ruby-comment"># 第一次以后从91登录</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">sessionId</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">login</span>(<span class="ruby-identifier">uin</span>, <span class="ruby-constant">USER_DEFAULT_PWD</span>, <span class="ruby-identifier">request</span>)
+  <span class="ruby-comment"># 第一次从91登录</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">sign</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-constant">APPID</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">act</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">uin</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sessionId</span> <span class="ruby-operator">+</span> <span class="ruby-constant">APPKEY</span>)
+
+    <span class="ruby-identifier">source_str</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;?AppId=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">APPID</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&amp;Act=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">act</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&amp;Uin=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">uin</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&amp;SessionId=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sessionId</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&amp;Sign=&quot;</span> <span class="ruby-operator">+</span><span class="ruby-identifier">sign</span>
+    <span class="ruby-identifier">url</span> = <span class="ruby-identifier">url91</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">source_str</span>
+
+    <span class="ruby-identifier">response</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">open</span>(<span class="ruby-identifier">url</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">http</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span>, <span class="ruby-string">&quot;no response&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">data</span> = <span class="ruby-constant">JSON</span> <span class="ruby-constant">URI</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">response</span>)
+    <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-identifier">data</span>[<span class="ruby-string">&quot;ErrorCode&quot;</span>].<span class="ruby-identifier">eql?</span>(<span class="ruby-value">1</span>.<span class="ruby-identifier">to_s</span>))
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span> , <span class="ruby-identifier">data</span>[<span class="ruby-string">&quot;ErrorDesc&quot;</span>]
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_username</span>(<span class="ruby-identifier">uin</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">uin</span>,<span class="ruby-constant">USER_DEFAULT_PWD</span>,<span class="ruby-identifier">request</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">login</span>(<span class="ruby-identifier">uin</span>,<span class="ruby-constant">USER_DEFAULT_PWD</span>,<span class="ruby-identifier">request</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- login_from_91server-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- login_from_91server-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">'no name'</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vip_level</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">level</span> = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prestige</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">silver</span> = <span class="ruby-value">1000</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span> = <span class="ruby-value">20</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">experience</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite</span> = <span class="ruby-value">12</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-constant">USER_STATUS_NORMAL</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">direction_step</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_3_reward</span>  = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_5_reward</span>  = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_10_reward</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_15_reward</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">npc_or_not</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_power_time</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_sprite_time</span> = <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-c-register" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">register</span><span
+            class="method-args">(username, password, request)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>注册</p>
+
+<p>@param [String] username 用户名 @param [String] password 密码 @param request
+http请求 @return 结果码 @return 当创建成功时，创建的用户实例。否则是错误描述信息。</p>
+          
+
+          
+          <div class="method-source-code" id="register-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">register</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">request</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">REGISTERED_USERNAME</span>, <span class="ruby-string">'already registered username'</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">username</span><span class="ruby-operator">:</span> <span class="ruby-identifier">username</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">username</span> = <span class="ruby-identifier">username</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">password</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA2</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">password</span>).<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">session_key</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">create_session_key</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_ip</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">remote_ip</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">last_login_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">npc_or_not</span> = <span class="ruby-value">0</span> <span class="ruby-comment"># 注册用户不是npc</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">power_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">sprite_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+
+  <span class="ruby-identifier">continuous_login_reward</span> = <span class="ruby-constant">ContinuousLoginReward</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">continuous_login_time</span> = <span class="ruby-value">1</span> <span class="ruby-comment"># 注册用户连续登陆次数设置为1</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">receive_or_not</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">login_reward_config</span> = <span class="ruby-constant">ZhangmenrenConfig</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">login_reward_config</span>
+  <span class="ruby-identifier">reward_probability_config</span> = <span class="ruby-identifier">login_reward_config</span>[<span class="ruby-string">'continuous_login_rewards'</span>]
+  <span class="ruby-identifier">login_reward_index_1</span> = <span class="ruby-identifier">random_config</span>(<span class="ruby-identifier">reward_probability_config</span>)
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_type</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'type'</span>].<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_1_id</span> = <span class="ruby-identifier">reward_probability_config</span>[<span class="ruby-identifier">login_reward_index_1</span>][<span class="ruby-string">'id'</span>]
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_type</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_2_id</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_type</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">reward_3_id</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">continuous_login_reward</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">errors</span>[<span class="ruby-string">'username'</span>].<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">INVALID_USERNAME</span>, <span class="ruby-string">'invalid username'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'; '</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ERROR</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'; '</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># 创建用户的掌门诀</span>
+  <span class="ruby-constant">Zhangmenjue</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">z_type</span><span class="ruby-operator">:</span> <span class="ruby-constant">Zhangmenjue</span><span class="ruby-operator">::</span><span class="ruby-constant">ZHANGMENJUE_TYPE_ATTACK</span>, <span class="ruby-identifier">poli</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">score</span><span class="ruby-value">0</span><span class="ruby-value">0</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>).<span class="ruby-identifier">save</span>
+  <span class="ruby-constant">Zhangmenjue</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">z_type</span><span class="ruby-operator">:</span> <span class="ruby-constant">Zhangmenjue</span><span class="ruby-operator">::</span><span class="ruby-constant">ZHANGMENJUE_TYPE_DEFEND</span>, <span class="ruby-identifier">poli</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">score</span><span class="ruby-value">0</span><span class="ruby-value">0</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>).<span class="ruby-identifier">save</span>
+  <span class="ruby-constant">Zhangmenjue</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">z_type</span><span class="ruby-operator">:</span> <span class="ruby-constant">Zhangmenjue</span><span class="ruby-operator">::</span><span class="ruby-constant">ZHANGMENJUE_TYPE_BLOOD</span>, <span class="ruby-identifier">poli</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">score</span><span class="ruby-value">0</span><span class="ruby-value">0</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>).<span class="ruby-identifier">save</span>
+  <span class="ruby-constant">Zhangmenjue</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">z_type</span><span class="ruby-operator">:</span> <span class="ruby-constant">Zhangmenjue</span><span class="ruby-operator">::</span><span class="ruby-constant">ZHANGMENJUE_TYPE_INTERNAL</span>, <span class="ruby-identifier">poli</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">score</span><span class="ruby-value">0</span><span class="ruby-value">0</span>, <span class="ruby-identifier">level</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>).<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">ResultCode</span><span class="ruby-operator">::</span><span class="ruby-constant">OK</span>, <span class="ruby-identifier">user</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- register-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- register-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-create_session_key" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_session_key</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>创建session key</p>
+          
+
+          
+          <div class="method-source-code" id="create_session_key-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_session_key</span>
+  <span class="ruby-identifier">tmp</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">tmp</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">username</span>
+  <span class="ruby-identifier">tmp</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">password</span>
+  <span class="ruby-identifier">tmp</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">tmp</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">100000</span>).<span class="ruby-identifier">to_s</span>
+  <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA2</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">tmp</span>).<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_session_key-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_session_key-method -->
+
+    
+      <div id="method-i-get_jianghu_recorders" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_jianghu_recorders</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取用户的江湖记录</p>
+          
+
+          
+          <div class="method-source-code" id="get_jianghu_recorders-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 370</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_jianghu_recorders</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">jianghu_recorders</span>.<span class="ruby-identifier">map</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">to_dictionary</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_jianghu_recorders-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_jianghu_recorders-method -->
+
+    
+      <div id="method-i-get_user_canzhang_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user_canzhang_types</span><span
+            class="method-args">(user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取用户的残章类型</p>
+          
+
+          
+          <div class="method-source-code" id="get_user_canzhang_types-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 491</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user_canzhang_types</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">user_canzhang_types_list</span> = []
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">user_canzhangs</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">canzhangs</span>
+    <span class="ruby-identifier">user_canzhangs</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cz</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">user_canzhang_types_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cz</span>.<span class="ruby-identifier">cz_type</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>{<span class="ruby-node">&quot;user_canzhang_types_list = #{user_canzhang_types_list}&quot;</span>}
+  <span class="ruby-identifier">user_canzhang_types_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user_canzhang_types-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user_canzhang_types-method -->
+
+    
+      <div id="method-i-get_user_goods" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user_goods</span><span
+            class="method-args">(user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>得到用户已有的物品</p>
+          
+
+          
+          <div class="method-source-code" id="get_user_goods-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 457</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user_goods</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">user_goods_list</span> = []
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">user_goods</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">user_goodss</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user_goods</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">user_goods</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span><span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">user_goods_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">g</span>.<span class="ruby-identifier">g_type</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">user_goods_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user_goods-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user_goods-method -->
+
+    
+      <div id="method-i-get_user_souls" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user_souls</span><span
+            class="method-args">(user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>得到用户已有的魂魄</p>
+          
+
+          
+          <div class="method-source-code" id="get_user_souls-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 474</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user_souls</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">user_id</span>)
+  <span class="ruby-identifier">user_souls_list</span> = []
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">user_souls</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">souls</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user_souls</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">user_souls</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span><span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">user_souls_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">s_type</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">user_souls_list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user_souls-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user_souls-method -->
+
+    
+      <div id="method-i-to_dictionary" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_dictionary</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>将user的信息转化为字典形式</p>
+          
+
+          
+          <div class="method-source-code" id="to_dictionary-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_dictionary</span>
+  <span class="ruby-identifier">re</span> = {}
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:id</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:session_key</span>] = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">session_key</span> <span class="ruby-operator">||</span> <span class="ruby-string">''</span>)
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:username</span>] = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">username</span> <span class="ruby-operator">||</span> <span class="ruby-string">''</span>)
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:name</span>] = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">||</span> <span class="ruby-string">''</span>)
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:vip_level</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vip_level</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:level</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">level</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:prestige</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prestige</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:gold</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:silver</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">silver</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:power</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:experience</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">experience</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:sprite</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:exchange_power_time</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_power_time</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:exchange_sprite_time</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_sprite_time</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:direction_step</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">direction_step</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:upgrade_3_reward</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_3_reward</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:upgrade_5_reward</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_5_reward</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:upgrade_10_reward</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_10_reward</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:upgrade_15_reward</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">upgrade_15_reward</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:gongfus</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gongfus</span>.<span class="ruby-identifier">each</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span>[<span class="ruby-value">:gongfus</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_dictionary</span> }
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:disciples</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">disciples</span>.<span class="ruby-identifier">each</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span>[<span class="ruby-value">:disciples</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_dictionary</span> }
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:equipments</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">equipments</span>.<span class="ruby-identifier">each</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span>[<span class="ruby-value">:equipments</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_dictionary</span> }
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:souls</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">souls</span>.<span class="ruby-identifier">each</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span>[<span class="ruby-value">:souls</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_dictionary</span> }
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:zhangmenjues</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zhangmenjues</span>.<span class="ruby-identifier">each</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span>[<span class="ruby-value">:zhangmenjues</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_dictionary</span> }
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:goods</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user_goodss</span>.<span class="ruby-identifier">each</span>() {<span class="ruby-operator">|</span><span class="ruby-identifier">goods</span><span class="ruby-operator">|</span> <span class="ruby-identifier">re</span>[<span class="ruby-value">:goods</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">goods</span>.<span class="ruby-identifier">to_dictionary</span>}
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:team</span>] = []
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">team_members</span>.<span class="ruby-identifier">each</span>() <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tm</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">tm</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">!=</span> <span class="ruby-value">-1</span>)
+    <span class="ruby-identifier">re</span>[<span class="ruby-value">:team</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tm</span>.<span class="ruby-identifier">disciple_id</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:lunjian_time</span>] = <span class="ruby-value">5</span>
+  <span class="ruby-identifier">re</span>[<span class="ruby-value">:lunjian_score</span>] = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">lp</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">re</span>[<span class="ruby-value">:lunjian_time</span>] =<span class="ruby-identifier">lp</span>.<span class="ruby-identifier">left_time</span>
+    <span class="ruby-identifier">re</span>[<span class="ruby-value">:lunjian_score</span>] =<span class="ruby-identifier">lp</span>.<span class="ruby-identifier">score</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">re</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_dictionary-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_dictionary-method -->
+
+    
+      <div id="method-i-update_gold" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_gold</span><span
+            class="method-args">(gold)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更新用户元宝数 @param [Integer] gold  元宝数</p>
+          
+
+          
+          <div class="method-source-code" id="update_gold-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 423</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_gold</span>(<span class="ruby-identifier">gold</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span> = <span class="ruby-identifier">gold</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_gold-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_gold-method -->
+
+    
+      <div id="method-i-update_gold_power" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_gold_power</span><span
+            class="method-args">(gold,power)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更新用户元宝和体力 @<a href="http://Integer">param</a> gold 元宝 @<a
+href="http://Integer">param</a> power 体力</p>
+          
+
+          
+          <div class="method-source-code" id="update_gold_power-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 441</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_gold_power</span>(<span class="ruby-identifier">gold</span>,<span class="ruby-identifier">power</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span> = <span class="ruby-identifier">power</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span> = <span class="ruby-identifier">gold</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_power_time</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_gold_power-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_gold_power-method -->
+
+    
+      <div id="method-i-update_gold_sprite" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_gold_sprite</span><span
+            class="method-args">(gold,sprite)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update_gold_sprite-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 448</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_gold_sprite</span>(<span class="ruby-identifier">gold</span>,<span class="ruby-identifier">sprite</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite</span> = <span class="ruby-identifier">sprite</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span> = <span class="ruby-identifier">gold</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_sprite_time</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_gold_sprite-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_gold_sprite-method -->
+
+    
+      <div id="method-i-update_info" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_info</span><span
+            class="method-args">(name, params)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更新用户信息</p>
+
+<p>@param [String] name 门派名称 @param [Hash] params 用户信息</p>
+          
+
+          
+          <div class="method-source-code" id="update_info-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_info</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">params</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vip_level</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:vip_level</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vip_level</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">level</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:level</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">level</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prestige</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:prestige</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prestige</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:gold</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gold</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">silver</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:silver</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">silver</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:power</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">experience</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:experience</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">experience</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:sprite</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_power_time</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:exchange_power_time</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_power_time</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_sprite_time</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:exchange_sprite_time</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exchange_sprite_time</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">lp</span> = <span class="ruby-constant">LunjianPosition</span>.<span class="ruby-identifier">find_by_user_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">left_time</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:lunjian_time</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">left_time</span>).<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">score</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:lunjian_score</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">score</span>).<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span> <span class="ruby-operator">==</span> <span class="ruby-value">29</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sprite_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_info-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_info-method -->
+
+    
+      <div id="method-i-update_power" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_power</span><span
+            class="method-args">(power)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更新用户体力 @<a href="http://Integer">param</a> power 体力</p>
+          
+
+          
+          <div class="method-source-code" id="update_power-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_power</span>(<span class="ruby-identifier">power</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">power</span> = <span class="ruby-identifier">power</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_power-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_power-method -->
+
+    
+      <div id="method-i-update_zhangmen_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_zhangmen_name</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更新用户门派信息</p>
+
+<p>@param [String] name 门派名称</p>
+          
+
+          
+          <div class="method-source-code" id="update_zhangmen_name-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 414</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_zhangmen_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update_zhangmen_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update_zhangmen_name-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

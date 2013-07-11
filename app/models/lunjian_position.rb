@@ -53,8 +53,13 @@ class LunjianPosition < ActiveRecord::Base
   def self.get_list(user)
     list_printer = Proc.new do |m|
       logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) " <<
+<<<<<<< HEAD
                    "id: #{m["id"]} position:#{m["position"]} user_id: #{m["user_info"]["id"]} " <<
                    "user_name:#{m["user_info"]["name"]}")
+=======
+                   "id: #{m[:id]} position:#{m[:position]} user_id: #{m[:user_info][:id]} " <<
+                   "user_name:#{m[:user_info][:name]}")
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     end
     user_list = []
 
@@ -64,16 +69,25 @@ class LunjianPosition < ActiveRecord::Base
 
     # 排名前十的用户
     first_ten_users = LunjianPosition.order('position asc').offset(0).limit(10)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     first_ten_users.each() do |usr|
       tmp = usr.to_dictionary()
       tmp[:status] = LP_STATUS_SEE_TEAM
       user_list << tmp
+<<<<<<< HEAD
 	
     end
     # return user_list
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) top ten : ")
     #user_list.each(){|m| list_printer.call(m)}
+=======
+    end
+    logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) top ten : ")
+    user_list.each(){|m| list_printer.call(m)}
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 
     # 当前用户
     curr_user = LunjianPosition.find_by_user_id(user.id)
@@ -108,7 +122,11 @@ class LunjianPosition < ActiveRecord::Base
       user_list << tmp
     end
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) beat me : ")
+<<<<<<< HEAD
     #user_list.each(){|m| list_printer.call(m)}
+=======
+    user_list.each(){|m| list_printer.call(m)}
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 
     # 前5名玩家
     curr_user_position = curr_user.position
@@ -126,7 +144,11 @@ class LunjianPosition < ActiveRecord::Base
       user_list << tmp
     end
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) before five : ")
+<<<<<<< HEAD
     #user_list.each(){|m| list_printer.call(m)}
+=======
+    user_list.each(){|m| list_printer.call(m)}
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 
     # 当前用户
     tmp = user_list.find{|x| x[:position] == curr_user.position}
@@ -138,7 +160,11 @@ class LunjianPosition < ActiveRecord::Base
       tmp[:status] = LP_STATUS_NO_OPS
     end
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) me : ")
+<<<<<<< HEAD
     #user_list.each(){|m| list_printer.call(m)}
+=======
+    user_list.each(){|m| list_printer.call(m)}
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 
     # 后5名玩家
     after_5_users = LunjianPosition.get_after_5_user(curr_user_position)
@@ -153,7 +179,11 @@ class LunjianPosition < ActiveRecord::Base
       user_list << tmp
     end
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) after 5 : ")
+<<<<<<< HEAD
     #user_list.each(){|m| list_printer.call(m)}
+=======
+    user_list.each(){|m| list_printer.call(m)}
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 
     # 清理后面的用户
     user_list.each() do |x|
@@ -163,10 +193,14 @@ class LunjianPosition < ActiveRecord::Base
     end
 
     logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) return:  ")
+<<<<<<< HEAD
     #user_list.each(){|m| list_printer.call(m)}
 
 
     #user_list << ZhangmenrenConfig.instance.npc_config[0]
+=======
+    user_list.each(){|m| list_printer.call(m)}
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     user_list
   end
 

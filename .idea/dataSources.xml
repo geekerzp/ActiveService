@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="DataSourceManagerImpl" format="xml" hash="2030857662">
     <data-source source="LOCAL" name="Rails zhangmenren_server: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="799d63ce-04ad-4b72-bf2e-8a8828e9e65f">
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -46,5 +47,8 @@
       </libraries>
     </data-source>
   </component>
+=======
+  <component name="DataSourceManagerImpl" compressed="false" hash="2030857662" />
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 </project>
 

@@ -10,6 +10,10 @@ class Admins < ActiveRecord::Base
   # @return [String, Admin]  会话key和管理员实例
   def self.login(username, password)
     admin = Admins.find_by_username_and_password(username, Digest::SHA2.hexdigest(password).to_s)
+<<<<<<< HEAD
+=======
+    #admin = Admins.find_by_username_and_password(username, password)
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     if admin.nil?
       return nil, nil
     end

@@ -30,6 +30,7 @@ class TeamMember < ActiveRecord::Base
     end
     return err_msg.length <= 0, err_msg
   end
+<<<<<<< HEAD
   def self.get_team(user)
     team = []
     user.team_members.each do|t|
@@ -37,4 +38,6 @@ class TeamMember < ActiveRecord::Base
     end
     team
   end
+=======
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 end

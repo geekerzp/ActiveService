@@ -17,34 +17,28 @@ class RechargeController < ApplicationController
   end
 
   #
-  # 查询订单状态接口
+  # 获取订单充值状态接口
   #
-  def get_recharge_status
+  def post_recharge_status
     re, user = validate_session_key(get_params(params, :session_key))
     return unless re
 
-    oid = get_params(params,:oid)
-    if oid.nil?
-      render_result(ResultCode::ERROR,{err_msg:"oid is null"})
+    oid = get_params(params, :oid)
+    status = get_params(params, :status)
+    if oid.empty? or status.empty?
+      render_result(ResultCode::ERROR, {err_msg:"参数错误"})
       return
     end
+
     order = Order.find_by_oid(oid)
+    if !order.nil? and status=='0' and order.status==0
+      order.destroy
+      render_result(ResultCode::OK, {})
+      return 
+    end 
 
-    if order.nil?
-      render_result(ResultCode::ERROR,{err_msg:"invalid oid"})
-    end
-
-    case order.status
-      when 0
-        render_result(ResultCode::ERROR,{err_msg: "order is handling"})
-        return
-      when 1
-        render_result(ResultCode::OK,{err_msg:"recharge finished"})
-        return
-      else
-        render_result(ResultCode::ERROR,{err_msg: "invalid order status"})
-        return
-    end
+    render_result(ResultCode::ERROR, {err_msg: "删除空订单失败"})
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
   end
 
   #
@@ -136,7 +130,13 @@ class RechargeController < ApplicationController
     # 当本地生成的加密sign跟传过来的sign一样时说明数据没问题
     if sign_check == sign
       # 处理逻辑
+<<<<<<< HEAD
 
+=======
+      #ord = Order.new
+
+      #dord.create_blank_order(uid,oid,status)
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
       # 订单不存在
       unless Order.exists?(:oid => coo_order_serial)
         logger.error('订单信息不存在')
@@ -189,4 +189,8 @@ class RechargeController < ApplicationController
       render(:json => result)
     end
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
