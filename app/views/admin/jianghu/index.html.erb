@@ -1,0 +1,32 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  江湖：
+  <table class="tabinfo">
+    <tr>
+      <th>场景</th>
+      <th>条目</th>
+      <th>是否完成</th>
+      <th>战斗次数</th>
+      <th>星级</th>
+      <th>操作</th>
+    </tr>
+    <% @jianghus_info.keys.each() do |jh| %>
+
+        <tr>
+          <td><%= @jianghus_info[jh][:scene_name] %></td>
+          <td><%= @jianghus_info[jh][:item_name] %></td>
+          <td><%= @jianghus_info[jh][:is_finished] %></td>
+          <td><%= @jianghus_info[jh][:fight_time] %></td>
+          <td><%= @jianghus_info[jh][:star] %></td>
+          <td>
+            <a href=<%= "'/admin/jianghu/#{jh}'".html_safe %> >详情</a>
+            <a href=<%= "'/admin/jianghu/edit/#{jh}'".html_safe %> >编辑</a>
+            <a onclick="return confirmDel()" href=<%= "'/admin/jianghu/delete/#{jh}'".html_safe %> >删除</a>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+  <div class="page">
+    <%= will_paginate @jianghu, :previous_label => '<<', :next_label => '>>' %>
+  </div>
+  <a href="/admin/jianghu/new" class="btnlink">添加江湖</a>
+</div>

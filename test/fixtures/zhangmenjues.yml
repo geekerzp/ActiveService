@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  z_type: 1
+  level: 12
+  poli: 12342
+  score: 13453
+  user_id: 1
+
+two:
+  id: 2
+  z_type: 2
+  level: 1234
+  poli: 134
+  score: 12345
+  user_id: 1
+
+three:
+  id: 3
+  z_type: 3
+  level: 12234
+  poli: 1344
+  score: 22345
+  user_id: 1
+
+four:
+  id: 4
+  z_type: 4
+  level: 234
+  poli: 1343
+  score: 15345
+  user_id: 1

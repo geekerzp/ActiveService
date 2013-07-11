@@ -1,0 +1,49 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+    <%= form_tag("/admin/jianghu/#{@jianghu.id}", :method => 'put',:name =>"submit_form", :multipart => true,) do %>
+    <table class="tabinfo">
+      <tr>
+        <th>场景</th>
+        <td>
+          <%=@names_config[@jh_config[@jianghu.scene_id]["name"]]%>
+        </td>
+      </tr>
+      <tr>
+        <th>条目</th>
+        <td>
+          <%=@names_config[@jh_config[@jianghu.scene_id]["items"][@jianghu.item_id - 1]["name"]]%>
+        </td>
+      </tr>
+      <tr>
+        <th>是否完成</th>
+        <td>
+          <select id="is_finish" name="jianghu[is_finish]">
+            <% @is_finish.each() do |v| %>
+                <% if @jianghu.is_finish %>
+                    <option selected="selected" value=<%= "\"#{v}\"".html_safe %>><%= v %></option>
+                <% else %>
+                    <option value=<%= "\"#{v}\"".html_safe %>><%= v %></option>
+                <% end %>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>战斗次数</th>
+        <td><%= text_field(:jianghu, :fight_time) %>
+          <% if @jianghu.errors['fight_time'] && @jianghu.errors['fight_time'].length > 0 %>
+              <span style="color: red;">场景输入不合法。</span>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <th>星级</th>
+        <td><%= text_field(:jianghu, :star) %>
+          <% if @jianghu.errors['star'] && @jianghu.errors['star'].length > 0 %>
+              <span style="color: red;">场景输入不合法。</span>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="更新江湖" class="btnsubmit"/>
+    <% end %>
+</div>

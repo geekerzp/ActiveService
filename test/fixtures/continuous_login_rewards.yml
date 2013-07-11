@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  reward_1_type: MyString
+  reward_2_type: MyString
+  reward_3_type: MyString
+  continuous_login_time: 1
+  receive_or_not: 1
+
+two:
+  user_id: 1
+  reward_1_type: MyString
+  reward_2_type: MyString
+  reward_3_type: MyString
+  continuous_login_time: 1
+  receive_or_not: 1

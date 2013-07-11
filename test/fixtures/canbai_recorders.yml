@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  canbai_at: 2013-03-27 10:20:17
+
+two:
+  user_id: 1
+  canbai_at: 2013-03-27 10:20:17

@@ -1,0 +1,105 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <table class="tabinfo">
+    <tr>
+      <th style="width: 20%">姓名：</th>
+      <td>
+        <%= @name %>
+        (<%= @disciple.d_type %>)
+      </td>
+      <th style="width: 20%">等级：</th>
+      <td><%= @disciple.level %>
+      </td>
+    </tr>
+    <tr>
+      <th>经验：</th>
+      <td>
+        <%= @disciple.experience %>
+      </td>
+      <th>潜力：</th>
+      <td>
+        <%= @disciple.potential %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        成长血量：
+      </th>
+      <td>
+        <%= @disciple.grow_blood %>
+      </td>
+      <th>
+        成长攻击值：
+      </th>
+      <td>
+        <%= @disciple.grow_attack %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        成长防御值：
+      </th>
+      <td>
+        <%= @disciple.grow_defend %>
+      </td>
+      <th>
+        成长内力值：
+      </th>
+      <td>
+        <%= @disciple.grow_internal %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        突破次数：
+      </th>
+      <td>
+        <%= @disciple.break_time %>
+      </td>
+    </tr>
+  </table>
+  <a class="btnsubmit" href=<%= "'/admin/disciple/edit/#{@disciple.id}'".html_safe %> >编辑</a>
+  弟子装备：
+  <table class="tabinfo">
+    <tr>
+      <th>装备id</th>
+      <th>装备名称</th>
+      <th>装备等级</th>
+      <th>装备位置</th>
+    </tr>
+    <% @disciple.equipments.each() do |e| %>
+        <tr>
+          <td><%= e.id %></td>
+          <td>
+            <a href=<%= "'/admin/equipment/#{e.id}'".html_safe %>>
+                <%= @names_config[@equipment_config[e.e_type]["name"]] %>
+                (<%= e.e_type %>)
+            </a>
+          </td>
+          <td><%= e.level %></td>
+          <td><%= e.position %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  弟子功夫：
+  <table class="tabinfo">
+    <tr>
+      <th>武功id</th>
+      <th>武功名称</th>
+      <th>武功等级</th>
+      <th>武功位置</th>
+    </tr>
+    <% @disciple.gongfus.each() do |gf| %>
+    <tr>
+      <td><%= gf.id %></td>
+      <td><a href=<%= "'/admin/gongfu/#{gf.id}'".html_safe %> >
+        <%= @names_config[@gongfu_config[gf.gf_type]["name"]] %>
+        (<%= gf.gf_type %>)</a>
+      </td>
+      <td><%= gf.level %></td>
+      <td><%= gf.position %></td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>

@@ -1,0 +1,56 @@
+﻿@charset "utf-8";
+/******************************************
+ * @descreption	V圈
+ *
+ * @Copyright	2012，Eric
+ * 
+ * @name		base.css
+ * 
+ * @date		2012.12.5
+******************************************/
+
+html, body, div, span, table, tr, th, td, ul, ol, li, img, p, h3, h2 ,strong {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	border: 0;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #2e8bcd;
+}
+
+html, body {
+	font: 16px/1.4 黑体;
+	color: #333;
+	background: #fff;
+}
+
+.border {
+	border: 1px solid #d6dce1;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+h3 {
+    text-align: center;
+    margin: 10px auto;
+}
+

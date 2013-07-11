@@ -1,0 +1,25 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <table class="tabinfo">
+    <tr>
+      <th>场景</th>
+      <td><%= @jianghu_info[@jianghu_id][:scene_name] %></td>
+    </tr>
+    <tr>
+      <th>条目</th>
+      <td><%= @jianghu_info[@jianghu_id][:item_name] %></td>
+    </tr>
+    <tr>
+      <th>是否完成</th>
+      <td><%= @jianghu_info[@jianghu_id][:is_finished] %></td>
+    </tr>
+    <tr>
+      <th>战斗次数</th>
+      <td><%= @jianghu_info[@jianghu_id][:fight_time] %></td>
+    </tr>
+    <tr>
+      <th>星级</th>
+      <td><%= @jianghu_info[@jianghu_id][:star] %></td>
+    </tr>
+  </table>
+  <a class="btnsubmit" href=<%= "'/admin/jianghu/edit/#{@jianghu.id}'".html_safe %> >编辑</a>
+</div>

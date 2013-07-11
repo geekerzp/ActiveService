@@ -1,0 +1,85 @@
+// Place all the styles related to the admin/login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "utf-8";
+/******************************************
+ * @descreption	掌门人后台登录
+ *
+ * @Copyright	2013，Albert Y
+ * 
+ * @name		login.css
+ * 
+ * @date		2013.3.5
+******************************************/
+/*****************************************/
+
+
+
+/**********main***********/
+#main {
+    width: 100%;
+    text-align: center;
+}
+
+/**********header*********/
+#header {
+	width: 100%;
+	height: 50px;
+	margin: 10px auto;
+	text-align: left;
+}
+
+#login_form {
+    width: 350px;
+    height: 400px;
+    margin: 100px auto;
+}
+
+#login_form table {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#login_form td {
+    height: 50px;
+    text-align: center;
+}
+
+#login_form .title {
+   font-size: 18px;
+	line-height: 40px;
+	color: #BCBCBC;
+	cursor: text;
+	font-weight: 600;
+	font-size: 15px;
+}
+#login_form .inputtext {
+	font: 15px "Microsoft YaHei", 微软雅黑;
+   width: 250px;
+   height: 30px;
+   text-indent: 5px;
+	border: solid 1px #ccc;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+	padding-left: 10px;
+	color: #333;
+	line-height: 33px;
+}
+
+#login_form .inputtext:focus{
+	box-shadow: 0 0 4px rgba(181, 222, 244, 0.8);
+	-moz-box-shadow: 0 0 4px rgba(181, 222, 244, 0.8);
+	border: solid 1px rgb(181, 222, 244);
+}
+
+#login_form .loginbtn  {
+	 font: 15px "Microsoft YaHei", 微软雅黑;
+	 background: #399ecf;
+	 color: white;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 40px;
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  r_type: 3
+  user_id: 1
+  accumulated_continuous_time: 3
+  last_canbai_time: 2013-03-24
+
+two:
+  r_type: 5
+  user_id: 10
+  accumulated_continuous_time: 1
+  last_canbai_time: 2013-03-27

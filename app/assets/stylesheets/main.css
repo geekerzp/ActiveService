@@ -1,0 +1,295 @@
+﻿@charset "utf-8";
+/******************************************
+ * @descreption	V圈
+ *
+ * @Copyright	2012，Eric
+ * 
+ * @name		main.css
+ * 
+ * @date		2012.12.5
+******************************************/
+/*****************************************/
+
+h1 {
+	display: inline;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+h2 {
+	font-family: 华文琥珀;
+	color: rgb(246, 0, 0);
+	display: inline;
+	font-size: 30px;
+	margin-left: 10px;
+	line-height: 50px;
+	vertical-align: middle;
+	font-weight: 500;
+}
+
+h3 {
+	color: #399ecf;
+	font-size: 25px;
+	font-weight: normal;
+	line-height: 25px;
+	margin: 40px auto;
+}
+/****** nav ******/
+#nav {
+	width: 100%;
+	height: 41px;
+	margin: 40px auto 0;
+	background: url("bg.png") repeat-x;
+}
+
+#nav ul {
+	height: 41px;
+	width: 1100px;
+	margin: 0 auto;
+    background: url("bg.png") repeat-x;
+}
+
+#nav ul li {
+	float: left;
+	width: 11%;
+	height: 100%;
+}
+
+#nav a {
+	color: white;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	letter-spacing: 1px;
+}
+
+#nav .break {
+	width: 5px;
+	background: url("bg_br.png") no-repeat;
+}
+
+#userInfo {
+    width: 1100px;
+    margin: 10px auto;
+}
+
+#userInfo strong {
+    margin-top: 10px;
+}
+
+#userInfo a {
+    display: inline;
+    color: #5580a5;
+}
+
+#userInfo a:hover {
+    text-decoration: underline;
+}
+
+
+/********************************************/
+/*******  middle  ******/
+/********************************************/
+
+#middle {
+	width: 1100px;
+	height: auto;
+	overflow: hidden;
+	margin-left:160px;
+}
+
+#middle .btnlink {
+    width: 85px;
+    height: 35px;
+    background: #0076a3;
+    border-radius: 3px;
+    display: block;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    float: right;
+    margin-bottom: 10px;
+}
+
+#middle .tab {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#middle .tab th {
+    text-align: right;
+    padding: 2px;
+}
+
+#middle .tab td {
+    padding: 2px;
+}
+
+.tips {
+    color: #ff0000;
+}
+
+.inputtxt {
+    width: 400px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.inputarea {
+    width: 95%;
+    height:200px;
+    padding: 5px;
+    font-size: 18px;
+    text-indent: 2.0em;
+    resize: none;
+}
+
+.btnsubmit {
+    width: 85px;
+    height: 35px;
+    background: #0076a3;
+    border-radius: 3px;
+    display: block;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px auto 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.taglink {
+    color: #59b337;
+}
+
+.taglink:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.tagdiv {
+    width:90%;
+}
+
+.taglable {
+    width:20%;
+    float: left;
+}
+
+.page {
+    width:500px;
+    text-align: center;
+    margin: 10px auto;
+    color: #4169e1;
+}
+
+.page a {
+    font-weight: 600;
+    padding: 5px;
+    color: #8e8f90;
+
+}
+
+
+
+/**************************************************/
+/******************  company index  ***************/
+#middle .lside {
+	width: 75%;
+}
+
+#middle .rside {
+	width: 23%;
+}
+
+
+/*****************  show  ***********************/
+#list {
+	width: 100%;
+	height: auto;
+	margin: 20px 0;
+}
+
+#list .post_manage ,#list .resume_manage ,#list .recommend_user ,#list .consult_manage {
+	width: 62px;
+	height: 72px;
+	margin: 15px;
+	float: left;
+	background: url(sprite.png) no-repeat left top;
+}
+
+#list .resume_manage {
+    background-position: -68px 0px;
+}
+
+#list .recommend_user {
+    background-position: -137px 0px;
+}
+
+#list .consult_manage {
+    background-position: right top;
+}
+
+#list .infro {
+	float: left;
+	margin: 20px 10px;
+}
+
+#list .infro_list {
+	color: #1c449b;
+	margin: 0 5px;
+}
+
+#list .infro_list:hover {
+	text-decoration: underline;
+}
+
+#list .first {
+	margin-left: 0;
+}
+
+ /******************  showpost  *********************/
+#showpost {
+    padding: 3% 5%;
+    background: #eef7ff;
+    margin: 20px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+#showpost span {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    padding: 15px 0 10px;
+    float: left;
+}
+
+#showpost .count {
+    color: #5580a5;
+    margin-right: 3px;
+}
+
+#showpost .break {
+    width: 100%;
+    background: yellow;
+}
+
+#showpost .btn {
+    display: block;
+    width: 120px;
+    height: 34px;
+    background: gray;
+    font-size: 14px;
+    color: #943913;
+    line-height: 34px;
+    vertical-align: middle;
+    font-weight: 600;
+    margin: 15px auto;
+}

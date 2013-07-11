@@ -1,0 +1,17 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <table class="tabinfo">
+    <tr>
+      <th>类型</th>
+      <td><%= @names_config[@gf_config[@cz_config[@canzhang.cz_type]["gongfu_id"]]["name"]] %></td>
+    </tr>
+    <tr>
+      <th>残章类型</th>
+      <td><%= @canzhang.cz_type %></td>
+    </tr>
+    <tr>
+      <th>数量</th>
+      <td><%= @canzhang.number %></td>
+    </tr>
+  </table>
+  <a class="btnsubmit" href=<%= "'/admin/canzhang/edit/#{@canzhang.id}'".html_safe %> >编辑</a>
+</div>

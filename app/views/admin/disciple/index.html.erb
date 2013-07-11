@@ -1,0 +1,31 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  弟子管理：
+  <table class="tabinfo">
+    <tr>
+      <th>姓名</th>
+      <th>是否上阵</th>
+      <th>等级</th>
+      <th>经验</th>
+      <th>操作</th>
+    </tr>
+    <% @disciples_info_list.each() do |disciple| %>
+        <tr>
+          <td><a href=<%= "'/admin/disciple/#{disciple[0].id}'".html_safe %>>
+            <%= @names_config[@disciple_config[disciple[0].d_type]["name"]] %></a>
+          </td>
+          <td><%= disciple[1] %></td>
+          <td><%= disciple[0].level %></td>
+          <td><%= disciple[0].experience %></td>
+          <td>
+            <a href=<%= "'/admin/disciple/#{disciple[0].id}'".html_safe %> >详情</a>
+            <a onclick="return confirmDel()" href=<%= "'/admin/disciple/delete/#{disciple[0].id}'".html_safe %> >删除</a>
+            <a href=<%= "'/admin/disciple/#{disciple[0].id}/edit'".html_safe %> >编辑</a>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+  <div class="page">
+    <%= will_paginate @disciples, :previous_label => '<<', :next_label => '>>' %>
+  </div>
+  <a href="/admin/disciple/new" class="btnlink">添加弟子</a>
+</div>

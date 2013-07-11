@@ -1,0 +1,40 @@
+<!--<div id="middle" xmlns="http://www.w3.org/1999/html">-->
+  <!--<%= form_tag("/admin/zhangmenjue/", :method => 'post', :multipart => true) do %>-->
+      <!--<table class="tabinfo">-->
+        <!--<tr>-->
+          <!--<th>类型</th>-->
+          <td><%= text_field(:zhangmenjue, :z_type) %>
+            <!--<% if @zhangmenjue.errors['z_type'] && @zhangmenjue.errors['z_type'].length > 0 %>-->
+                <!--<span style="color: red;">类型输入不合法。</span>-->
+            <!--<% end %>-->
+          <!--</td>-->
+
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<th>等级</th>-->
+          <td><%= text_field(:zhangmenjue, :level)  %>
+            <!--<% if @zhangmenjue.errors['level'] && @zhangmenjue.errors['level'].length > 0 %>-->
+                <!--<span style="color: red;">等级输入不合法。</span>-->
+            <!--<% end %>-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<th>魄力</th>-->
+          <td><%= text_field(:zhangmenjue, :poli)  %>
+            <!--<% if @zhangmenjue.errors['poli'] && @zhangmenjue.errors['poli'].length > 0 %>-->
+                <!--<span style="color: red;">魄力输入不合法。</span>-->
+            <!--<% end %>-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<th>分数</th>-->
+          <td><%= text_field(:zhangmenjue, :score)  %>
+            <!--<% if @zhangmenjue.errors['score'] && @zhangmenjue.errors['score'].length > 0 %>-->
+                <!--<span style="color: red;">分数输入不合法。</span>-->
+            <!--<% end %>-->
+          <!--</td>-->
+        <!--</tr>-->
+      <!--</table>-->
+      <!--<input type="submit" value="添加魂魄" class="btnsubmit"/>-->
+  <!--<% end %>-->
+<!--</div>-->

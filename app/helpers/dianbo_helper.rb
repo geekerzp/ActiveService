@@ -1,0 +1,2 @@
+module DianboHelper
+end

@@ -1,0 +1,26 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+  <%= form_tag("/admin/soul/#{@soul.id}", :method => 'put', :multipart => true) do %>
+      <table class="tabinfo">
+        <tr>
+          <th>潜力</th>
+          <td><%= @soul.potential %>
+          </td>
+        </tr>
+        <tr>
+          <th>数量</th>
+          <td><%= text_field(:soul, :number)  %>
+            <% if @soul.errors['number'] && @soul.errors['number'].length > 0 %>
+                <span style="color: red;">魂魄值入不合法,应为数字。</span>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <th ><label for="s_type">魂魄类型</label></th>
+          <td>
+            <%= @names_config[@disciple_config[@soul.s_type]["name"]] %>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="更新魂魄" class="btnsubmit"/>
+  <% end %>
+</div>

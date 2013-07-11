@@ -1,0 +1,80 @@
+{
+    "system_rewards": [
+        {
+            "system_reward_type": "system_reward_0001",
+            "icon": "icon_gift_normal.png",
+            "note": "description_system_reward_0001",
+            "goods": [
+                {
+                    "name": "item_0001",
+                    "type": 1,
+                    "number": 10000
+                },
+                {
+                    "name": "item_0033",
+                    "type": 4,
+                    "number": 2
+                },
+                {
+                    "name": "item_0034",
+                    "type": 4,
+                    "number": 2
+                }
+            ]
+        },
+        {
+            "system_reward_type": "system_reward_0002",
+            "icon": "icon_gift_normal.png",
+            "note": "description_system_reward_0002",
+            "goods": [
+                {
+                    "name": "item_0001",
+                    "type": 1,
+                    "number": 50000
+                },
+                {
+                    "name": "item_0044",
+                    "type": 4,
+                    "number": 6
+                },
+                {
+                    "name": "item_0033",
+                    "type": 4,
+                    "number": 5
+                },
+                {
+                    "name": "item_0034",
+                    "type": 4,
+                    "number": 5
+                }
+            ]
+        },
+        {
+            "system_reward_type": "system_reward_0003",
+            "icon": "icon_gift_normal.png",
+            "note": "description_system_reward_0003",
+            "goods": [
+                {
+                    "name": "item_0001",
+                    "type": 1,
+                    "number": 50000
+                },
+                {
+                    "name": "item_0044",
+                    "type": 4,
+                    "number": 6
+                },
+                {
+                    "name": "item_0033",
+                    "type": 4,
+                    "number": 5
+                },
+                {
+                    "name": "equipment_horse_1005",
+                    "type": 8,
+                    "number": 1
+                }
+            ]
+        }
+    ]
+}

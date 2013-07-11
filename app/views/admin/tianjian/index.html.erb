@@ -1,0 +1,21 @@
+<table class="tabinfo">
+  <tr>
+    <th>ID</th>
+    <th>类型</th>
+    <th>数量</th>
+    <th>操作</th>
+  </tr>
+  <% @tianjian.each() do |tj| %>
+
+      <tr>
+        <td><%= tj.id %></td>
+        <td><%= tj.g_type %></td>
+        <td><%= tj.number %></td>
+        <td>
+          <a href=<%= "'/admin/tianjian/#{tj.id}'".html_safe %> >详情</a>
+          <a href=<%= "'/admin/tianjian/#{tj.id}/edit'".html_safe %> >编辑</a>
+          <a onclick="return confirmDel()" href=<%= "'/admin/tianjian/delete/#{tj.id}'".html_safe %> >删除</a>
+        </td>
+      </tr>
+  <% end %>
+</table>

@@ -1,0 +1,44 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+
+  <%= form_tag("/admin/user/search", :method => 'post') do %>
+    <input class="inputtext" id="search_key" name="search_key" type="text"/>
+    <input name="commit" type="submit" value="搜索" class="searchtn"/>
+  <% end %>
+  <table class="tabinfo" style="width: 100%;">
+    <tr>
+      <th>用户名</th>
+      <th>昵称</th>
+      <th>等级</th>
+      <th>威信</th>
+      <th>元宝</th>
+      <th>银两</th>
+      <th>体力</th>
+      <th>经验值</th>
+      <th>注册时间</th>
+      <th>操作</th>
+    </tr>
+    <% @users.each() do |user| %>
+        <tr>
+          <td><a href=<%= "'/admin/user/#{user.id}'".html_safe %> ><%= user.username %></a></td>
+          <td><%= user.name %></td>
+          <td><%= user.level %></td>
+          <td><%= user.prestige %></td>
+          <td><%= user.gold %></td>
+          <td><%= user.silver %></td>
+          <td><%= user.power %></td>
+          <td><%= user.experience %></td>
+          <td><%= user.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+          <td>
+            <a href=<%= "'/admin/user/#{user.id}'".html_safe %> >详情</a>
+            <a href=<%= "'/admin/user/#{user.id}/edit'".html_safe %> >编辑</a>
+            <a onclick="return confirmDel()" href=<%= "'/admin/user/delete/#{user.id}'".html_safe %> >删除</a>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+  <div class="page">
+    <%= will_paginate @users, :previous_label => '<<', :next_label => '>>' %>
+  </div>
+  <a href="/admin/user/new" class="btnlink">添加用户</a>
+
+</div>

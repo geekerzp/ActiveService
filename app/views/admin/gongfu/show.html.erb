@@ -1,0 +1,50 @@
+<div id="middle" xmlns="http://www.w3.org/1999/html">
+<table class="tabinfo">
+  <tr>
+    <th style="width: 20%">
+      功夫名称：
+    </th>
+    <td>
+      <%= @names_config[@gf_config[@gongfu.gf_type]["name"]] %>
+      (<%= @gongfu.gf_type %>)
+    </td>
+  </tr>
+  <tr>
+    <th>
+      使用弟子：
+    </th>
+    <td>
+      <%= @disciple_name %>
+    </td>
+  </tr>
+  <tr>
+    <th>等级：
+    </th>
+    <td><%= @gongfu.level %>
+    </td>
+  </tr><tr>
+  <th>经验：
+  </th>
+  <td><%= @gongfu.experience %>
+  </td>
+</tr>
+
+  <tr>
+    <th>
+      成长强度：
+    </th>
+    <td>
+      <%= @gongfu.grow_strength %>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      成长几率：
+    </th>
+    <td>
+      <%= @gongfu.grow_probability %>
+    </td>
+  </tr>
+</table>
+  <a class="btnsubmit" href=<%= "'/admin/gongfu/edit/#{@gongfu.id}'".html_safe %> >编辑</a>
+</div>
