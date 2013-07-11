@@ -158,6 +158,8 @@ class KapaiController < ApplicationController
   #
   # 创建一个弟子
   #
+  # 请求成功，返回弟子类型id和功夫类型id
+  #
   def create_disciple
     re, user = validate_session_key(get_params(params, :session_key))
     return unless re
@@ -175,6 +177,9 @@ class KapaiController < ApplicationController
       render_result(ResultCode::ERROR, {err_msg: URI.encode(err_msg)})
       return
     end
-    render_result(ResultCode::OK, {id: disciple.id, origin_gongfu_id: disciple.gongfus[0].id})
+    # 弟子类型和功夫类型
+    disciple_type = disciple.d_type.partition(/\d+/)[1]
+    gf_type = disciple.gongfus[0].gf_type.partition(/\d+/)[1]
+    render_result(ResultCode::OK, {id: disciple_type, origin_gongfu_id: gf_type})
   end
 end

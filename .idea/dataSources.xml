@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="DataSourceManagerImpl" format="xml" hash="2030857662">
-    <data-source source="LOCAL" name="Rails zhangmenren_server: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="799d63ce-04ad-4b72-bf2e-8a8828e9e65f">
+  <component name="DataSourceManagerImpl" format="xml" hash="4024403730">
+    <data-source source="LOCAL" name="Rails zhangmenren_server: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="6ca1cf6c-4ab9-4f50-80fa-5dada7b258af">
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/zhangmenren_test_db</jdbc-url>
-      <user-name>zhangmenren</user-name>
-      <user-password>dfd0dfc2dfcbdfc4dfcddfc7dfcfdfc4dfd8dfcfdfc4</user-password>
-      <libraries>
-        <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-license.txt</url>
-        </library>
-        <library>
-          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="Rails zhangmenren_server: development" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="8abcf1cb-da64-419f-bd5f-6ae4078726b4">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/zhangmenren_test</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/zhangmenren_db_development</jdbc-url>
       <user-name>root</user-name>
       <user-password>df93df9bdf99df9edf98df9d</user-password>
       <libraries>
@@ -32,7 +15,23 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails zhangmenren_server: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="8d1a932a-f89a-4742-8e96-62b5f812a681">
+    <data-source source="LOCAL" name="Rails zhangmenren_server: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="bf39ab3a-b802-41da-9c1f-f9e3bc02b1e1">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/zhangmenren_db_test</jdbc-url>
+      <user-name>zhangmenren</user-name>
+      <user-password>dfd0dfc2dfcbdfc4dfcddfc7dfcfdfc4dfd8dfcfdfc4</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails zhangmenren_server: production" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="998af8e9-781b-49e8-be7c-78b92786c884">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/zhangmenren_db</jdbc-url>
       <user-name>zhangmenren</user-name>
@@ -47,8 +46,5 @@
       </libraries>
     </data-source>
   </component>
-=======
-  <component name="DataSourceManagerImpl" compressed="false" hash="2030857662" />
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 </project>
 

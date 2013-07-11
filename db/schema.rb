@@ -276,7 +276,7 @@ ActiveRecord::Schema.define(:version => 20130619070224) do
   create_table "orders", :force => true do |t|
     t.string   "csid"
     t.string   "oid"
-    t.integer  "gid",                                      :default => 0
+    t.string   "gid"
     t.integer  "user_id"
     t.string   "ginfo"
     t.integer  "gcount",                                   :default => 0
@@ -349,26 +349,6 @@ ActiveRecord::Schema.define(:version => 20130619070224) do
 
   add_index "team_members", ["id"], :name => "index_team_members_on_id"
 
-<<<<<<< HEAD
-=======
-  create_table "user_blood_fights", :force => true do |t|
-    t.string   "user_id",                  :null => false
-    t.integer  "remain_fight",             :null => false
-    t.integer  "total_star",               :null => false
-    t.integer  "remain_star",              :null => false
-    t.integer  "status",                   :null => false
-    t.integer  "grow_blood_proportion",    :null => false
-    t.integer  "grow_attach_proportion",   :null => false
-    t.integer  "grow_defend_proportion",   :null => false
-    t.integer  "grow_internal_proportion", :null => false
-    t.integer  "battle_array",             :null => false
-    t.integer  "win_session_num",          :null => false
-    t.integer  "continuous_lead_time",     :null => false
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
-  end
-
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
   create_table "user_goods", :force => true do |t|
     t.string   "g_type",     :default => "-1"
     t.integer  "user_id",    :default => -1

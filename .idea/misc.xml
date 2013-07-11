@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.2-p320" project-jdk-type="RUBY_SDK" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
-=======
   <component name="ProjectRootManager" version="2" project-jdk-name="RVM: ruby-1.9.3-p392" project-jdk-type="RUBY_SDK" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
->>>>>>> 16b06e0b5be2076d0d5bd2b57c5916f44504c120
-=======
-  <component name="ProjectRootManager" version="2" project-jdk-name="ruby-1.9.2-p320" project-jdk-type="RUBY_SDK" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -21,14 +11,6 @@
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <option name="DETECT_NESTED_COPIES" value="true" />
-=======
->>>>>>> 16b06e0b5be2076d0d5bd2b57c5916f44504c120
-=======
-    <option name="DETECT_NESTED_COPIES" value="true" />
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />

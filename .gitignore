@@ -3,3 +3,4 @@ log/
 tmp/ 
 *.swp
 *.un~
+.idea/
