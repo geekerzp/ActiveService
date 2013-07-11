@@ -60,13 +60,10 @@ class Admin::UserController < ApplicationController
     @lunjian.score = params[:lunjian][:score] unless @lunjian.nil?
     #不同等级对应的不同经验上限。
     @experiences_config = ZhangmenrenConfig.instance.user_experiences_config
-<<<<<<< HEAD
     if(@lunjian != nil and @lunjian.save)
-	logger.debug("-------------------#{@lunjian.score}")
+	    logger.debug("-------------------#{@lunjian.score}")
     end
 
-=======
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     if params[:user][:level].to_i <= 100
       #判断该等级下经验是否超过上限。
       if @experiences_config[params[:user][:level].to_i] < params[:user][:experience].to_i
@@ -78,21 +75,7 @@ class Admin::UserController < ApplicationController
       else
         respond_to do |format|
           if @user.save
-<<<<<<< HEAD
-              format.html {redirect_to(action: :show, id: @user.id)}
-=======
-            unless @lunjian.nil?
-              if @lunjian.save
-                format.html{redirect_to(action:show,id:@user.id)}
-              else
-                logger.debug("--------------------------#{@lunjian.score}")
-                logger.debug("--------------------------#{@lunjian}")
-                format.html {render(action: :edit)}
-              end
-            else
-              format.html {redirect_to(action: :show, id: @user.id)}
-            end
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
+            format.html {redirect_to(action: :show, id: @user.id)}
           else
             logger.debug("--------------------------#{@user.vip_level}")
             logger.debug("--------------------------#{@user}")

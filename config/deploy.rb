@@ -33,7 +33,10 @@ set :deploy_via, :remote_cache
 set :scm, 'git'                   # scm软件管理配置
 set :branch, 'master'             # 分支
 set :scm_verbose, false           # 是否建立current目录
-set :use_sudo, false              # 是否使用sudo 
+
+# 其他
+set :use_sudo, true               # 是否使用sudo 
+default_run_options[:pty] = true  # 开启pty
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -61,6 +64,13 @@ namespace :deploy do
   task :seed do 
     run "cd #{current_path}; rake db:seed RAILS_ENV=production"
   end 
+
+  # 重启nginx
+  desc "restart nginx"
+  task :nginx_restart do 
+    run "sudo /opt/nginx/sbin/nginx -s reload"
+  end 
+
 end 
 
 # 在更新代码之后，执行bundle install
