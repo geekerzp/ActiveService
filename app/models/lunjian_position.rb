@@ -53,13 +53,8 @@ class LunjianPosition < ActiveRecord::Base
   def self.get_list(user)
     list_printer = Proc.new do |m|
       logger.debug("### #{__method__},(#{__FILE__},#{__LINE__}) " <<
-<<<<<<< HEAD
-                   "id: #{m["id"]} position:#{m["position"]} user_id: #{m["user_info"]["id"]} " <<
-                   "user_name:#{m["user_info"]["name"]}")
-=======
                    "id: #{m[:id]} position:#{m[:position]} user_id: #{m[:user_info][:id]} " <<
                    "user_name:#{m[:user_info][:name]}")
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     end
     user_list = []
 

@@ -10,10 +10,7 @@ class Order < ActiveRecord::Base
   # 处理用户订单
   #
   def process
-<<<<<<< HEAD
-=======
     # 获取用户信息
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     @user = User.find(user_id)
     # 获取充值信息
     @recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]
@@ -113,9 +110,5 @@ class Order < ActiveRecord::Base
     end
     logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) normal_recharge failed")
     false
-<<<<<<< HEAD
-  end 
-=======
   end
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 end

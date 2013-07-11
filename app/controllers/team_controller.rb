@@ -19,7 +19,7 @@ class TeamController < ApplicationController
     end
     render_result(ResultCode::OK, {})
   end
-<<<<<<< HEAD
+
   def get_team
       re,user= validate_session_key(get_params(params,:session_key))
       return unless re
@@ -28,6 +28,4 @@ class TeamController < ApplicationController
       render_result(ResultCode::OK,{team:team})
     return
   end
-=======
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 end

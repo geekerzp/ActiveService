@@ -111,11 +111,7 @@ class Gongfu < ActiveRecord::Base
       return nil
     end
     #不同功夫的经验
-<<<<<<< HEAD
     experiences = [80,20,30,40]
-=======
-    experiences = [10,20,30,40]
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
 
     gongfu.gf_type = type
     gongfu.user = user

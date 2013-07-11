@@ -32,9 +32,4 @@ class SystemController < ApplicationController
       render_result(ResultCode::SAVE_FAILED, {err_msg: 'save failed.'})
     end
   end
-
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e

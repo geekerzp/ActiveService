@@ -4,15 +4,6 @@ class Admin::UserController < ApplicationController
   before_filter :validate_login_admin
 
   def index
-<<<<<<< HEAD
-=======
-    sr = SystemRewardRecorder.new
-    sr.system_message = '1111'
-    sr.receive_or_not = 0
-    sr.user_id = 42
-    sr.reward_type = 'system_reward_0001'
-    sr.save
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
     @users = User.where(status: User::USER_STATUS_NORMAL).order('created_at desc').paginate(:page => params[:page])
     session[:user_id] = nil
   end
