@@ -1,9 +1,6 @@
 #
 # Capistrano配置脚本
 # 功能：1.远程同步git服务器代码
-#       2.远程建立ruby环境
-#       3.远程建立nginx服务器
-#       4.远程建立mysql数据库
 #
 
 # 配置
@@ -18,7 +15,7 @@ set :application, "zhangmenren"          # 应用名称
 
 # file paths
 set :repository,  "gitolite:zhangmenren_server.git"       # git仓库 
-set :deploy_to, "/home/#{user}/tmp/#{domain}"             # 应用路径
+set :deploy_to, "/home/#{user}/server_for91/#{domain}"             # 应用路径
 
 role :web, web_servers, :port => 10220                              # Your HTTP server, Apache/etc
 role :app, app_servers, :port => 10220                              # This may be the same as your `Web` server
@@ -34,7 +31,7 @@ role :db,  db_servers, :port => 10220
 # git配置
 set :deploy_via, :remote_cache
 set :scm, 'git'                   # scm软件管理配置
-set :branch, 'dev'                # 分支
+set :branch, 'master'             # 分支
 set :scm_verbose, false           # 是否建立current目录
 set :use_sudo, false              # 是否使用sudo 
 
