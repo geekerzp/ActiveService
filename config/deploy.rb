@@ -65,10 +65,22 @@ namespace :deploy do
     run "cd #{current_path}; rake db:seed RAILS_ENV=production"
   end 
 
+  # 启动nginx
+  desc "start nginx" 
+  task :nginx_start do 
+    run "sudo /opt/nginx/sbin/nginx"
+  end 
+
   # 重启nginx
   desc "restart nginx"
   task :nginx_restart do 
     run "sudo /opt/nginx/sbin/nginx -s reload"
+  end 
+
+  # 关闭nginx
+  desc "shut down nginx"
+  task :nginx_stop do 
+    run "sudo pkill -9 nginx"
   end 
 
 end 
