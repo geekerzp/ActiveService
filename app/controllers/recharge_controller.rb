@@ -38,7 +38,6 @@ class RechargeController < ApplicationController
     end 
 
     render_result(ResultCode::ERROR, {err_msg: "删除空订单失败"})
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
   end
 
   #
@@ -130,13 +129,7 @@ class RechargeController < ApplicationController
     # 当本地生成的加密sign跟传过来的sign一样时说明数据没问题
     if sign_check == sign
       # 处理逻辑
-<<<<<<< HEAD
 
-=======
-      #ord = Order.new
-
-      #dord.create_blank_order(uid,oid,status)
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
       # 订单不存在
       unless Order.exists?(:oid => coo_order_serial)
         logger.error('订单信息不存在')
@@ -189,8 +182,4 @@ class RechargeController < ApplicationController
       render(:json => result)
     end
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 1df712f1bd3ad39284bcc93c9ec041257e08933e
