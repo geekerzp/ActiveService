@@ -34,4 +34,8 @@ ZhangmenrenServer::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # 处理日志文件
+  require 'active_support/core_ext/numeric/bytes'
+  config.logger=Logger.new(config.paths.log.first, 10, 10.megabytes)
 end
