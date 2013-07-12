@@ -42,22 +42,7 @@ class RechargeController < ApplicationController
 
   #
   # 充值订单处理接口
-  #
-  # @param [String] AppId 应用ID
-  # @param [String] Act=1 接口行为码
-  # @param [String] ProductName 应用名称
-  # @param [String] ConsumeStreamId 消费流水号
-  # @param [String] CooOrderSerial 商户订单号
-  # @param [String] Uin 91帐号ID
-  # @param [String] GoodsId 商品ID
-  # @param [String] GoodsInfo 商品名称
-  # @param [String] GoodsCount 商品数量
-  # @param [String] OriginalMoney 原始总价(0.00)
-  # @param [String] OrderMoney 实际总价(0.00)
-  # @param [String] Note 支付描述
-  # @param [String] PayStatus 支付状态 : 0=失败，1=成功
-  # @param [String] CreateTime 创建时间(yyyy-MM-dd HH:mm:ss)
-  # @param [String] Sign MD5签名
+  # 用于和91服务器对接
   #
   def recharge_process
     # 存放结果哈希表
@@ -149,6 +134,7 @@ class RechargeController < ApplicationController
         order.gcount= goods_count.to_i
         order.ogmoney= original_money.to_f
         order.omoney= order_money.to_f
+        order.type = '91'   # 订单类型为91平台
 
 
         # 订单处理

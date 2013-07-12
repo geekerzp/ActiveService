@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619070224) do
+ActiveRecord::Schema.define(:version => 20130712024958) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -282,7 +282,7 @@ ActiveRecord::Schema.define(:version => 20130619070224) do
     t.integer  "gcount",                                   :default => 0
     t.decimal  "ogmoney",    :precision => 8, :scale => 2, :default => 0.0
     t.decimal  "omoney",     :precision => 8, :scale => 2, :default => 0.0
-    t.integer  "type"
+    t.string   "type"
     t.integer  "status",                                   :default => 0
     t.datetime "created_at",                                                :null => false
     t.datetime "updated_at",                                                :null => false
