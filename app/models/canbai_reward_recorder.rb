@@ -72,7 +72,7 @@ class CanbaiRewardRecorder < ActiveRecord::Base
     logger.debug("### #{__method__},(#{__FILE__}, #{__LINE__}) rand_num #{rand_num}.")
     sum = 0
     goods_config = nil
-    goods_config_array.each() do |goods|
+    goods_config_array.each do |goods|
       if rand_num <= sum
         goods_config = goods
         break

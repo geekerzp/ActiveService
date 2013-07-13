@@ -36,6 +36,6 @@ ZhangmenrenServer::Application.configure do
   config.assets.debug = true
 
   # 处理日志文件
-  require 'active_support/core_ext/numeric/bytes'
-  config.logger=Logger.new(config.paths.log.first, 10, 10.megabytes)
+  #require 'active_support/core_ext/numeric/bytes'
+  #config.logger = Logger.new(config.paths.log.first, 10, 10.megabytes)
 end

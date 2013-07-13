@@ -66,6 +66,6 @@ ZhangmenrenServer::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # 处理日志文件
-  require 'active_support/core_ext/numeric/bytes'
-  config.logger=Logger.new(config.paths.log.first, 10, 10.megabytes)
+  #require 'active_support/core_ext/numeric/bytes'
+  #config.logger=Logger.new(config.paths.log.first, 10, 10.megabytes)
 end
