@@ -46,8 +46,6 @@ class Order < ActiveRecord::Base
     self.oid = oid
     self.status = status
 
-    self.save
-
     return true if self.save
     false
   end
