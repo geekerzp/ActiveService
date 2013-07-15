@@ -6,12 +6,17 @@ class Order < ActiveRecord::Base
   # 验证器
   validates :oid, :uniqueness => true
 
+  def initialize
+    @recharge_recorder = RechargeRecorder.new   # 新建充值记录
+  end
+
   #
   # 处理用户订单
   #
   def process
     # 获取用户信息
     @user = User.find(user_id)
+    @recharge_recorder.user_id = user_id
     # 获取充值信息
     @recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]
 
@@ -59,10 +64,12 @@ class Order < ActiveRecord::Base
     unless rule.nil?
       # 元宝
       @user.gold= @user.gold + (rule["get"]+rule["present"])*2
+      @recharge_recorder.gold = (rule["get"]+rule["present"]*2)
 
       # 额外赠送
       # 坐骑 乌孙
       @user.silver= @user.silver + 1000000
+      @recharge_recorder.silver = 1000000
       Equipment.create_equipment(user, 'equipment_horse_2007').save!
 
       # 训练丹
@@ -84,9 +91,13 @@ class Order < ActiveRecord::Base
       end
 
       user_goods.save!
+
       @user.save!
+
       self.status= 1 # 充值成功
       self.save!
+
+      @recharge_recorder.save!
       return true
     end
     logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) first_recharge failed")
@@ -103,9 +114,14 @@ class Order < ActiveRecord::Base
     unless rule.nil?
       # 元宝
       @user.gold= @user.gold + (rule["get"]+rule["present"])
+      @recharge_recorder.gold = (rule["get"]+rule["present"])
+
       @user.save!
+
       self.status= 1 # 充值成功
       self.save!
+
+      @recharge_recorder.save!
       return true
     end
     logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) normal_recharge failed")

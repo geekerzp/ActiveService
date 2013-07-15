@@ -45,6 +45,7 @@ class User < ActiveRecord::Base
   has_many :handbooks, :dependent => :destroy
 
   has_many :orders, :dependent => :destroy
+  has_many :recharge_recorders, :dependent => :destroy
 
   # 数据验证
   validates :password, :username, :presence => true, :length => {:maximum => 250, :minimum => 1}
