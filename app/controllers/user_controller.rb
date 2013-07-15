@@ -39,8 +39,7 @@ class UserController < ApplicationController
     if login_type.to_i == 1
       uin = get_params(params, :uin)
       sessionId= get_params(params,:sessionId)
-      code ,user = User.login_from_91server(uin,sessionId,request)
-      continuous_login_reward = nil
+      code ,user,continuous_login_reward = User.login_from_91server(uin,sessionId,request)
     # 直接登录
     else
       username = get_params(params, :username)
