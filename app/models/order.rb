@@ -1,7 +1,7 @@
 # vi: set fileencoding=utf-8 :
 class Order < ActiveRecord::Base
   # ogmoney为废字段，omoney为用户充值金额
-  attr_accessible :csid, :oid, :gid, :ginfo, :gcount, :ogmoney, :omoney, :type, :status, :user_id
+  attr_accessible :csid, :oid, :gid, :ginfo, :gcount, :ogmoney, :omoney, :o_type, :status, :user_id
   # 表间关系
   belongs_to :user
   # 验证器
@@ -29,7 +29,7 @@ class Order < ActiveRecord::Base
         end end end end
       end
     rescue =>e
-      logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) process failed #{e.to_s} #{type} 数据处理保存失败 ###")
+      logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) process failed #{e.to_s} #{o_type} 数据处理保存失败 ###")
       false   # 充值失败
     end
   end

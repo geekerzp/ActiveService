@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130715080612) do
+ActiveRecord::Schema.define(:version => 20130716113349) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -282,7 +282,7 @@ ActiveRecord::Schema.define(:version => 20130715080612) do
     t.integer  "gcount",                                   :default => 0
     t.decimal  "ogmoney",    :precision => 8, :scale => 2, :default => 0.0
     t.decimal  "omoney",     :precision => 8, :scale => 2, :default => 0.0
-    t.string   "type"
+    t.string   "o_type"
     t.integer  "status",                                   :default => 0
     t.datetime "created_at",                                                :null => false
     t.datetime "updated_at",                                                :null => false
@@ -296,14 +296,6 @@ ActiveRecord::Schema.define(:version => 20130715080612) do
   end
 
   add_index "pay_recorders", ["id"], :name => "index_pay_recorders_on_id"
-
-  create_table "recharge_recorders", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "gold",       :default => 0, :null => false
-    t.integer  "silver",     :default => 0, :null => false
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-  end
 
   create_table "relationships", :force => true do |t|
     t.integer  "user_id"

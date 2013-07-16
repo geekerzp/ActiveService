@@ -133,7 +133,7 @@ class RechargeController < ApplicationController
         order.gcount= goods_count.to_i
         order.ogmoney= original_money.to_f
         order.omoney= order_money.to_f
-        order.type = '91'   # 订单类型为91平台
+        order.o_type = '91'   # 订单类型为91平台
 
 
         # 订单处理
