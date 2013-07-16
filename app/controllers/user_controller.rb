@@ -468,7 +468,7 @@ class UserController < ApplicationController
     data[:silver] = user.silver
     data[:goods] = user.user_goodss
     data[:equipments] = user.equipments
-    data[:total_golds] = user.orders.inject(0) {|sum, order| sum + order.omoney }
+    data[:total_golds] = user.orders.inject(0.0) {|sum, order| sum + order.omoney }
 
     render_result(ResultCode::OK, data)
     return

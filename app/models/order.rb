@@ -96,8 +96,7 @@ class Order < ActiveRecord::Base
     rule = @recharge_list.find{|x| x["id"] == gid}    # 找到对应的充值规则
 
     unless rule.nil?
-      # 元宝
-      @user.gold= @user.gold + (rule["get"]+rule["present"])
+      @user.gold= @user.gold + (rule["get"]+rule["present"])    # 元宝
       @user.save!
       self.status= 1 # 充值成功
       self.save!
