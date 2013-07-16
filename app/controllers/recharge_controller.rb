@@ -8,8 +8,6 @@ class RechargeController < ApplicationController
     return unless re
 
     order_number = ("%04d" % rand(1000)) << DateTime.parse(Time.now.to_s()).strftime('%Y%m%d%H%M%S')  << "%04d" % (user.id.hash % 10000).abs
-    render(text: order_number)
-    return
     order = Order.new
     if order.create_blank_order(user.id,order_number,0)
       render_result(ResultCode::OK,{ordernumber: order_number})
