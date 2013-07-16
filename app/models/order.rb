@@ -1,3 +1,4 @@
+# vi: set fileencoding=utf-8 :
 class Order < ActiveRecord::Base
   # ogmoney为废字段，omoney为用户充值金额
   attr_accessible :csid, :oid, :gid, :ginfo, :gcount, :ogmoney, :omoney, :type, :status, :user_id
