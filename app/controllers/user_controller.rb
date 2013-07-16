@@ -457,7 +457,7 @@ class UserController < ApplicationController
 
   end
   #
-  #充值完成后获取用户的元宝、银币、装备、物品
+  #充值完成后获取用户的元宝、银币、装备、物品、累计充值金额
   #
   def get_info_after_recharge
     re,user = validate_session_key(get_params(params, :session_key))
@@ -468,7 +468,7 @@ class UserController < ApplicationController
     data[:silver] = user.silver
     data[:goods] = user.user_goodss
     data[:equipments] = user.equipments
-    data[:total_golds] = user.recharge_recorders.inject(0) {|sum, recorder| sum + recorder.gold }
+    data[:total_golds] = user.orders.inject(0) {|sum, order| sum + order.omoney }
 
     render_result(ResultCode::OK, data)
     return

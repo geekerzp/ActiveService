@@ -112,7 +112,6 @@ class RechargeController < ApplicationController
       << note << pay_status << create_time << APPKEY
     sign_check = Digest::MD5.hexdigest(sign_check)
 
-
     # 当本地生成的加密sign跟传过来的sign一样时说明数据没问题
     if sign_check == sign
       # 处理逻辑

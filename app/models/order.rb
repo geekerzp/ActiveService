@@ -1,24 +1,19 @@
 class Order < ActiveRecord::Base
-  # 读写器
+  # ogmoney为废字段，omoney为用户充值金额
   attr_accessible :csid, :oid, :gid, :ginfo, :gcount, :ogmoney, :omoney, :type, :status, :user_id
   # 表间关系
   belongs_to :user
   # 验证器
   validates :oid, :uniqueness => true
 
-  def initialize
-    @recharge_recorder = RechargeRecorder.new   # 新建充值记录
-  end
-
   #
   # 处理用户订单
+  # (如果订单处理成功，返回true;
+  #  如果订单处理失败，返回false)
   #
   def process
-    # 获取用户信息
-    @user = User.find(user_id)
-    @recharge_recorder.user_id = user_id
-    # 获取充值信息
-    @recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]
+    @user = User.find(user_id)                                                  # 获取用户信息
+    @recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]  # 获取充值信息
 
     begin
       # 多表事务
@@ -33,8 +28,8 @@ class Order < ActiveRecord::Base
         end end end end
       end
     rescue =>e
-      logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) process failed #{e.to_s} #{type}")
-      false # 充值失败
+      logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) process failed #{e.to_s} #{type} 数据处理保存失败 ###")
+      false   # 充值失败
     end
   end
 
@@ -45,36 +40,29 @@ class Order < ActiveRecord::Base
     self.user_id = uid
     self.oid = oid
     self.status = status
-
     return true if self.save
     false
   end
 
   private
-
   #
   # 首次充值
+  # (如果数据保存成功，返回true;
+  #  如果数据保存失败或道具信息不存在，抛出异常;
+  #  如果规则不存在，返回false)
   #
   def first_recharge!
-    # 找到对应的充值规则
-    rule = @recharge_list.find{|x| x["id"] == gid}
+    rule = @recharge_list.find{|x| x["id"] == gid}    # 找到对应的充值规则
 
     unless rule.nil?
-      # 元宝
-      @user.gold= @user.gold + (rule["get"]+rule["present"])*2
-      @recharge_recorder.gold = (rule["get"]+rule["present"]*2)
-
-      # 额外赠送
-      # 坐骑 乌孙
-      @user.silver= @user.silver + 1000000
-      @recharge_recorder.silver = 1000000
-      Equipment.create_equipment(user, 'equipment_horse_2007').save!
-
+      @user.gold= @user.gold + (rule["get"]+rule["present"])*2        # 元宝
+      @user.silver= @user.silver + 1000000                            # 额外赠送
+      Equipment.create_equipment(user, 'equipment_horse_2007').save!  # 坐骑 乌孙
       # 训练丹
       goods_config = ZhangmenrenConfig.instance.goods_config
       goods_info =  goods_config["item_0047"]
       if goods_info.nil?
-        logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) good not exists")
+        logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) good not exists 道具信息不存在 ###")
         raise "good not exists"
       end
       # 更新用户道具记录
@@ -87,42 +75,36 @@ class Order < ActiveRecord::Base
       else
         user_goods.number += 100
       end
-
       user_goods.save!
-
       @user.save!
-
       self.status= 1 # 充值成功
       self.save!
-
-      @recharge_recorder.save!
       return true
     end
-    logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) first_recharge failed")
+
+    logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) first_recharge failed 对应规则不存在 ###")
     false
   end
 
   #
   # 正常充值
+  # (如果数据保存成功，返回true;
+  #  如果数据保存失败，抛出异常;
+  #  如果规则不存在，返回false)
   #
-  def normal_recharge!
-    # 找到对应的充值规则
-    rule = @recharge_list.find{|x| x["id"] == gid}
+  def normal_recharge!    
+    rule = @recharge_list.find{|x| x["id"] == gid}    # 找到对应的充值规则
 
     unless rule.nil?
       # 元宝
       @user.gold= @user.gold + (rule["get"]+rule["present"])
-      @recharge_recorder.gold = (rule["get"]+rule["present"])
-
       @user.save!
-
       self.status= 1 # 充值成功
       self.save!
-
-      @recharge_recorder.save!
       return true
     end
-    logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) normal_recharge failed")
+
+    logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) normal_recharge failed 对应规则不存在 ###")
     false
   end
 end
