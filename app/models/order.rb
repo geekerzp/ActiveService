@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   #  如果订单处理失败，返回false)
   #
   def process
-    @user = User.find(user_id)                                                  # 获取用户信息
+    @user = User.find(self.user_id)                                                  # 获取用户信息
     @recharge_list = ZhangmenrenConfig.instance.market_config["recharge_list"]  # 获取充值信息
 
     begin
