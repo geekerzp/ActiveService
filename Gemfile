@@ -2,6 +2,8 @@ source 'http://ruby.taobao.org'
 
 gem 'rails'
 
+gem 'rake', '~> 10.1.0'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

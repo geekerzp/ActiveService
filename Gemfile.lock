@@ -60,7 +60,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.7)
-    mysql2 (0.3.12)
+    mysql2 (0.3.13)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -133,6 +133,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm
   rails
+  rake (~> 10.1.0)
   redis
   sass-rails (~> 3.2.3)
   test-unit
