@@ -1,0 +1,10 @@
+<div>
+<table>
+<%= form_for @recorder, as: :post, url: { action: "save", id: @recorder } do |f| %>
+	<tr><td>奖励类型:</td> <td><%= f.text_field :r_type %></td></tr>
+	<tr><td>连续参拜次数:</td> <td><%= f.text_field :accumulated_continuous_time %></td></tr>
+	<tr><td>今天是否参拜:</td> <td><%= select_tag "is_canbai", "<option value='1'>是</option><option value='0'>否</option>".html_safe, prompt: "请选择" %></td></tr>
+	<tr><td colspan="2"><%= f.submit "确定" %></td></tr>
+<% end %>
+</table>
+</div>

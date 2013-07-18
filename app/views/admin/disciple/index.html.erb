@@ -21,6 +21,9 @@
             <a onclick="return confirmDel()" href=<%= "'/admin/disciple/delete/#{disciple[0].id}'".html_safe %> >删除</a>
             <a href=<%= "'/admin/disciple/#{disciple[0].id}/edit'".html_safe %> >编辑</a>
           </td>
+          <td>
+            <%= link_to %>
+          </td>
         </tr>
     <% end %>
   </table>
