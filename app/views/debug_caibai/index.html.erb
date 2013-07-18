@@ -6,6 +6,7 @@
 		</tr>
 		<% @recorders.each do |recorder| %>
 		<tr>
+			<% unless recorder.user.nil? %>
 			<td><%= recorder.user.username %></td>
 			<td><%= recorder.r_type %></td>
 			<td><%= recorder.accumulated_continuous_time %></td>
@@ -20,6 +21,7 @@
 				<%= link_to '修改', action: "edit", id: recorder %>
 				<%= link_to '删除', { action: "delete", id: recorder }, confirm: '确定删除？' %>
 			</td>
+			<% end %>
 		</tr>
 		<% end %>
 	</table>
