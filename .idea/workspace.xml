@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c44a57c-0d1a-4765-ba80-4aa905f602e4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/development.log.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/newrelic_agent.log.1" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/recharge_recorder.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130715080612_create_recharge_recorders.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/coffee-script-source-1.6.2.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/hike-1.2.2.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/jquery-rails-2.2.1.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/json-1.7.7.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mail-2.5.3.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/multi_json-1.7.2.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mysql2-0.3.11.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mysql2-0.3.12.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/newrelic_rpm-3.6.1.87.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/rake-10.0.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/ref-1.0.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/sass-3.2.8.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/test-unit-2.5.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/tilt-1.3.7.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/treetop-1.4.12.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/uglifier-2.0.1.gem" afterPath="" />
     </list>
     <ignored path="zhangmenren_server.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373874046016" ignored="false" />
+    <file path="/Dummy.txt" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1374195101991" ignored="false" />
     <file path="/kapai_controller.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373533233198" ignored="false" />
     <file path="/recharge_controller.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373596800005" ignored="false" />
     <file path="/20130712024958_change_type_int_to_string_from_orders.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373597557206" ignored="false" />
@@ -17,7 +32,7 @@
     <file path="/development.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373613261569" ignored="false" />
     <file path="/20130715080612_create_recharge_recorders.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373875974885" ignored="false" />
     <file path="/order.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373876489184" ignored="false" />
-    <file path="/user_controller.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373876838624" ignored="false" />
+    <file path="/user_controller.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1374195197783" ignored="false" />
     <file path="/recharge_recorder.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373877132263" ignored="false" />
     <file path="/user.rb" changelist="1c44a57c-0d1a-4765-ba80-4aa905f602e4" time="1373877189263" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +57,7 @@
       <file leaf-file-name="order.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="6" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.0">
+            <state line="82" column="6" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -51,16 +66,7 @@
       <file leaf-file-name="user_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/user_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="471" column="21" selection-start="12848" selection-end="12848" vertical-scroll-proportion="0.6181818">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recharge_recorder.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/recharge_recorder.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="473" column="10" selection-start="12957" selection-end="12957" vertical-scroll-proportion="3.210744">
               <folding />
             </state>
           </provider>
@@ -69,7 +75,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="54" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
+            <state line="46" column="54" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,9 +107,9 @@
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130715080612_create_recharge_recorders.rb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/recharge_recorder.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/user_controller.rb" />
       </list>
     </option>
   </component>
@@ -232,6 +238,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,39 +286,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zhangmenren_server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="appearance" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: zhangmenren_server">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -518,7 +506,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19596542" sideWeight="0.7659575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19884726" sideWeight="0.7659575" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -646,49 +634,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/recharge_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.2545455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130715080612_create_recharge_recorders.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="64" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.2545455" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="54" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/recharge_recorder.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="46" column="54" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="6" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.0">
+        <state line="82" column="6" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="471" column="21" selection-start="12848" selection-end="12848" vertical-scroll-proportion="0.6181818">
+        <state line="473" column="10" selection-start="12957" selection-end="12957" vertical-scroll-proportion="3.210744">
           <folding />
         </state>
       </provider>

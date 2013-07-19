@@ -122,7 +122,7 @@ class CanbaiRewardRecorder < ActiveRecord::Base
       tmp[:goods_type_id] = goods_type_id
       tmp[:type] = goods_config['type'].to_i
       tmp[:number] = goods_config['number'].to_i
-      tmp[:type] = r_type.to_i
+      #tmp[:type] = r_type.to_i
       tmp[:continuous_time] = accumulated_continuous_time
       tmp[:server_time] = URI.encode(Time.now.strftime('%F %T'))
       logger.debug("### #{__method__},(#{__FILE__}, #{__LINE__}) goods #{tmp.to_json}.")
