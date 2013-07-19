@@ -213,8 +213,11 @@ class Canzhang < ActiveRecord::Base
   def self.create_canzhang(cz_type,number,user_id)
     cangzhang_config = ZhangmenrenConfig.instance.canzhang_config[cz_type]
     return nil if cangzhang_config.nil?
-
-    cz = Canzhang.new(cz_type: cz_type, user_id: user_id, number: number)
+    cz = Canzhang.find_by_cz_type_and_user_id(cz_type,user_id)
+    if cz.nil?  
+       cz = Canzhang.new(cz_type: cz_type, user_id: user_id, number: number)
+    end
+    cz.number +=1
 
     unless cz.save
       logger.error("### #{__method__},(#{__FILE__}, #{__LINE__}) #{cz.errors.full_messages.join(';')}")
