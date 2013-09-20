@@ -1,4 +1,9 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class GoodsPurchaseRecorder < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :name, :number, :user_id
 
   #
@@ -31,7 +36,7 @@ class GoodsPurchaseRecorder < ActiveRecord::Base
     gpr.user_id = user.id
 
     # 更新用户道具记录
-    user_goods = UserGoods.find_by_g_type_and_user_id(type, user.id)
+    user_goods = UserGood.find_by_g_type_and_user_id(type, user.id)
     if user_goods.nil?
       user_goods = UserGoods.new
       user_goods.user = user

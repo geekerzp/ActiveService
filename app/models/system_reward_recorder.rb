@@ -1,5 +1,10 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
 require 'message_type'
+
 class SystemRewardRecorder < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :receive_or_not, :reward_type, :system_message, :user_id
 
   RECEIVED = 1
@@ -8,7 +13,7 @@ class SystemRewardRecorder < ActiveRecord::Base
   #
   # 获取系统信息列表
   #
-  def self.get_system_messages(user_id)
+  def self.get_system_reward_messages(user_id)
     messages = SystemRewardRecorder.where('user_id = ?',user_id).order('created_at desc').limit(10)
     message_array = []
     messages.each do |message|

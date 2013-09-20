@@ -1,9 +1,15 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class Dianbo < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :dianbo_type, :user_id, :server_time
-  validates :dianbo_type, :presence => true
-  validates :dianbo_type, :numericality =>{:only_integer => true, :greater_than_or_equal_to => 1}
 
   belongs_to :user
+
+  validates :dianbo_type, :presence => true
+  validates :dianbo_type, :numericality =>{:only_integer => true, :greater_than_or_equal_to => 1}
 
   #点拨的5中类型。
   DianboTypeOne     = 1

@@ -1,4 +1,9 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class ContinuousLoginReward < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :continuous_login_time, :receive_or_not, :reward_1_type, :reward_2_type, :reward_3_type, :user_id
   attr_accessible :reward_1_id, :reward_2_id, :reward_3_id
 

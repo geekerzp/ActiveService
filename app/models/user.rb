@@ -1,11 +1,22 @@
-#encoding: utf-8
+# vi: set fileencoding=utf-8 :
 require 'digest/sha2'
 require 'digest/md5'
 require 'comm'
 require 'open-uri'
 require 'json'
+require 'second_level_cache/second_level_cache'
+
 include Comm
+
 class User < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+  include Redis::Objects
+
+  # 某个用户论剑位置前5个用户论剑位置的缓存
+  list :lunjian_position_before_5_users, marshal: true
+  # 某个用户论剑位置后5个用户论剑位置的缓存
+  list :lunjian_position_after_5_users, marshal: true
+
   attr_accessible :password, :username, :name, :vip_level, :level, :prestige, :gold, :silver, :power
   attr_accessible :last_login_ip, :last_login_time, :experience, :sprite, :status, :session_key,:exchange_power_time
   attr_accessible :direction_step, :npc_or_not, :upgrade_3_reward, :upgrade_5_reward,:exchange_power_time
@@ -15,26 +26,36 @@ class User < ActiveRecord::Base
   USER_STATUS_NORMAL   = 1  # 正常
   USER_STATUS_LOCKED   = 2  # 已锁定
   USER_STATUS_DELETED  = 3  # 已删除
+  USER_DEFAULT_PWD     = 'ONEPIECE'
+
+
+  # 91配置
+  APPID   = '103139'
+  APPKEY  =  '1d7fa5b7dcd946599bee0e5289f33621bdd2f4b471bcd07f'
 
   has_many :disciples, :dependent => :destroy
   has_many :gongfus, :dependent => :destroy
   has_many :equipments, :dependent => :destroy
 
-  has_many :team_members, :dependent => :destroy, :order => 'position asc'
+  #has_many :team_members, :dependent => :destroy, :order => 'position asc'
+  has_many :team_members, -> { order(position: :asc) }, dependent: :destroy
 
   has_many :zhangmenjues, :dependent => :destroy
   has_many :canzhangs, :dependent => :destroy
 
   has_many :souls, :dependent => :destroy
   has_many :pay_recorders, :dependent => :destroy
-  has_many :user_goodss, :dependent => :destroy
+  has_many :user_goods, :dependent => :destroy
 
-  has_many :jianghu_recorders, :dependent => :destroy, :order =>'created_at desc' #'scene_id asc, item_id asc'
+  #has_many :jianghu_recorders, :dependent => :destroy, :order =>'created_at desc' #'scene_id asc, item_id asc'
+  has_many :jianghu_recorders, -> { order(created_at: :desc) }, dependent: :destroy
 
-  has_many :lunjian_positions, :dependent => :destroy, :order => 'position asc'
+  #has_many :lunjian_positions, :dependent => :destroy, :order => 'position asc'
+  has_many :lunjian_positions, -> { order(position: :asc) }, dependent: :destroy
   has_many :lunjian_recorders, :foreign_key => 'attacker_id', :dependent => :destroy
 
-  has_many :lunjian_reward_recorders, :dependent => :destroy, :order => 'position asc'
+  #has_many :lunjian_reward_recorders, :dependent => :destroy, :order => 'position asc'
+  has_many :lunjian_reward_recorders, -> { order(position: :asc) }, dependent: :destroy
 
   has_many :dianbos, :dependent => :destroy
 
@@ -44,12 +65,15 @@ class User < ActiveRecord::Base
   has_many :canbai_recorders, :dependent => :destroy
   has_many :handbooks, :dependent => :destroy
 
-  has_many :orders, :dependent => :destroy
+  has_many :orders, dependent: :destroy
+
+  has_many :chat_messages, -> { order(created_at: :desc) }, dependent: :destroy
+  has_many :user_messages, -> { order(created_at: :desc) }, dependent: :destroy
 
   # 数据验证
   validates :password, :username, :presence => true, :length => {:maximum => 250, :minimum => 1}
 
-  validates :name, :presence => true, :length => {:maximum => 20, :minimum => 2}
+  validates :name, :presence => true, :length => {:maximum => 32, :minimum => 2}, :uniqueness => true
 
   validates :vip_level, :presence => true, :numericality => {:greater_than_or_equal_to => 0, :less_than => 30}
 
@@ -64,23 +88,23 @@ class User < ActiveRecord::Base
 
   def initialize
     super
-    self.name = 'no name'
-    self.vip_level = 0
-    self.level = 1
-    self.prestige = 0
-    self.gold = 0
-    self.silver = 1000
-    self.power = 30
-    self.experience = 0
-    self.sprite = 12
-    self.status = USER_STATUS_NORMAL
-    self.direction_step = 0
-    self.upgrade_3_reward  = 0
-    self.upgrade_5_reward  = 0
-    self.upgrade_10_reward = 0
-    self.upgrade_15_reward = 0
-    self.npc_or_not = 0
-    self.exchange_power_time = 0
+    self.name                 = 'no name'
+    self.vip_level            = 0
+    self.level                = 1
+    self.prestige             = 0
+    self.gold                 = 0
+    self.silver               = 1000
+    self.power                = 30
+    self.experience           = 0
+    self.sprite               = 12
+    self.status               = USER_STATUS_NORMAL
+    self.direction_step       = 0
+    self.upgrade_3_reward     = 0
+    self.upgrade_5_reward     = 0
+    self.upgrade_10_reward    = 0
+    self.upgrade_15_reward    = 0
+    self.npc_or_not           = 0
+    self.exchange_power_time  = 0
     self.exchange_sprite_time = 0
   end
 
@@ -93,17 +117,19 @@ class User < ActiveRecord::Base
   # @return 结果码
   # @return 当创建成功时，创建的用户实例。否则是错误描述信息。
   def self.register(username, password, request)
+    logger.debug("### User.exists?(username: username)")
     return ResultCode::REGISTERED_USERNAME, 'already registered username' if User.exists?(username: username)
     user = User.new
-    user.username = username
-    user.password = Digest::SHA2.hexdigest(password).to_s
-    user.session_key = user.create_session_key
-    user.last_login_ip = request.remote_ip
-    user.last_login_time = Time.now
-    user.npc_or_not = 0 # 注册用户不是npc
-    user.vip_level = 0
-    user.power_time = Time.now
-    user.sprite_time = Time.now
+    user.username         = username
+    user.password         = Digest::SHA2.hexdigest(password).to_s
+    user.session_key      = user.create_session_key
+    user.last_login_ip    = request.env['REMOTE_ADDR']
+    user.last_login_time  = Time.now
+    user.npc_or_not       = 0 # 注册用户不是npc
+    user.vip_level        = 0
+    user.power_time       = Time.now
+    user.sprite_time      = Time.now
+    user.name             = Digest::MD5.hexdigest(Time.now.to_i.to_s + request.env['REMOTE_ADDR'].to_s).to_s
 
     continuous_login_reward = ContinuousLoginReward.new
     continuous_login_reward.user_id = user.id
@@ -154,7 +180,7 @@ class User < ActiveRecord::Base
       end
 
       user.session_key = user.create_session_key
-      user.last_login_ip = request.remote_ip
+      user.last_login_ip = request.env['REMOTE_ADDR']
 
       # 部分注册用户是直接通过数据库添加的，last_login_time可能为nil，考虑为空的情况。
       if user.last_login_time.nil?
@@ -276,7 +302,8 @@ class User < ActiveRecord::Base
     else
       sign = Digest::MD5.hexdigest(APPID + act.to_s + uin + sessionId + APPKEY)
 
-      source_str ||= "?AppId=" + APPID + "&Act=" + act.to_s + "&Uin=" + uin + "&SessionId=" + sessionId + "&Sign=" +sign
+      source_str = ""
+      source_str << "?AppId=" << APPID << "&Act=" << act.to_s << "&Uin=" << uin << "&SessionId=" << sessionId << "&Sign=" << sign
       url = url91 << source_str
 
       response = nil
@@ -334,9 +361,9 @@ class User < ActiveRecord::Base
     re[:souls] = []
     self.souls.each() {|v| re[:souls] << v.to_dictionary }
     re[:zhangmenjues] = []
-    self.zhangmenjues.each() {|v| re[:zhangmenjues] << v.to_dictionary }
+    self.zhangmenjues.each {|v| re[:zhangmenjues] << v.to_dictionary }
     re[:goods] = []
-    self.user_goodss.each() {|goods| re[:goods] << goods.to_dictionary}
+    self.user_goods.each {|goods| re[:goods] << goods.to_dictionary}
     re[:team] = []
     self.team_members.each() do |tm|
       if(tm.position != -1)
@@ -349,7 +376,7 @@ class User < ActiveRecord::Base
     lp = LunjianPosition.find_by_user_id(self.id)
     unless lp.nil?
       re[:lunjian_time] =lp.left_time
-      re[:lunjian_score] =lp.score
+        re[:lunjian_score] =lp.score
     end
     re
   end
@@ -370,7 +397,7 @@ class User < ActiveRecord::Base
   # 获取用户的江湖记录
   #
   def get_jianghu_recorders
-    self.jianghu_recorders.map() {|r| r.to_dictionary }
+    self.jianghu_recorders.map {|r| r.to_dictionary }
   end
 
   #
@@ -382,8 +409,18 @@ class User < ActiveRecord::Base
     self.name = name
     self.vip_level = (params[:vip_level] || self.vip_level).to_i
     self.level = (params[:level] || self.level).to_i
-    self.prestige = (params[:prestige] || self.prestige).to_i
+    
+    # FIXME 参加活动获得奖励事件
+    added_gold = params[:gold] - self.gold 
+    Trigger.rule_6(user, nil, gold: added_gold)
+    
     self.gold = (params[:gold] || self.gold).to_i
+    self.prestige = (params[:prestige] || self.prestige).to_i
+    
+    # FIXME 参加活动获得奖励事件
+    added_silver = params[:silver] - self.silver
+    Trigger.rule_6(user, nil, silver: added_silver)
+
     self.silver = (params[:silver] || self.silver).to_i
     self.power = (params[:power] || self.power).to_i
     self.experience = (params[:experience] || self.experience).to_i
@@ -423,6 +460,10 @@ class User < ActiveRecord::Base
   # @param [Integer] gold  元宝数
   #
   def update_gold(gold)
+    # FIXME 参加活动奖励事件触发
+    added_gold = gold - self.gold
+    Trigger.rule_6(user, nil, gold: added_gold)
+
     self.gold = gold
     self.save
   end
@@ -441,6 +482,10 @@ class User < ActiveRecord::Base
   #@param[Integer] power 体力
   #
   def update_gold_power(gold,power)
+    # FIXME 参加活动奖励事件触发
+    added_gold = gold - self.gold
+    Trigger.rule_6(user, nil, gold: added_gold)
+
     self.power = power
     self.gold = gold
     self.exchange_power_time += 1
@@ -448,6 +493,10 @@ class User < ActiveRecord::Base
   end
 
   def update_gold_sprite(gold,sprite)
+    # FIXME 参加活动奖励事件触发
+    added_gold = gold - self.gold
+    Trigger.rule_6(user, nil, gold: added_gold)
+
     self.sprite = sprite
     self.gold = gold
     self.exchange_sprite_time += 1
@@ -588,5 +637,45 @@ class User < ActiveRecord::Base
     return User.where('name like ? AND npc_or_not = ?', "%#{search_word}%", 0).order('last_login_time desc').limit(10)
   end
 
+  # 
+  # 用户收取最新消息
+  # 
+  def receive_messages 
+    sys_ad_messages = SysAdMessage.all 
+    send_messages   = SendMessage.find {|msg| msg.receiver_id == current_user.id }
+    received_sys_ad_messages = []
+    received_send_messages   = []
 
+    # 用户收取最新消息
+    # 同时，将最新的消息发送给客户端
+    return ResultCode::Ok, nil if sys_ad_messages.nil?
+    sys_ad_messages.each do |msg|
+      # 收取BroadCast
+      unless UserMessage.exists?(user: self, type: BroadCast, rel_id: msg.id)
+        UserMessage.create(user: self, type: BroadCast, rel_id: msg.id) 
+        received_sys_ad_messages << msg
+      end 
+    end 
+
+    return ResultCode::OK, nil if send_messages.nil?
+    send_messages.each do |msg|
+      # 收取PointToPoint
+      unless UserMessage.exists?(user: self, type: PointToPoint, rel_id: msg.id)
+        UserMessage.create(user: self, type: PointToPoint, rel_id: msg.id)
+        msg.receive_time = Time.now
+        msg.status = SendMessage::RECEIVE_SUCCESS
+        unless msg.save 
+          logger.error "##### #{__FILE__},#{__method__},#{__LINE__} 用户收取信息失败"
+          return ResultCode::ERROR, msg.errors.full_messages.join('; ')
+        end 
+        received_send_messages << msg
+      end 
+    end 
+
+    # 返回收取信息
+    messages = []
+    received_sys_ad_messages.each {|msg| messages << URI.encode(msg.message) }
+    received_send_messages.each {|msg| messages << URI.encode(msg.sender_id.to_s + msg.message) }
+    return ResultCode::OK, messages
+  end 
 end

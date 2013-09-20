@@ -1,0 +1,32 @@
+{
+    "team_member_count":[
+        {
+            "level":1,
+            "number":2
+        },
+        {
+            "level":4,
+            "number":3
+        },
+        {
+            "level":7,
+            "number":4
+        },
+        {
+            "level":11,
+            "number":5
+        },
+        {
+            "level":15,
+            "number":6
+        },
+        {
+            "level":20,
+            "number":7
+        },
+        {
+            "level":25,
+            "number":8
+        }
+    ]
+}

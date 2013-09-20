@@ -1,0 +1,717 @@
+{
+    "equipment_upgrade_baoji": [
+        {
+            "id": 1,
+            "probability": 1,
+            "baoji_interval": [
+                {
+                    "upgrade_level": 1,
+                    "probability": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "probability": 1,
+            "baoji_interval": [
+                {
+                    "upgrade_level": 1,
+                    "probability": 0.85
+                },
+                {
+                    "upgrade_level": 2,
+                    "probability": 0.1
+                },
+                {
+                    "upgrade_level": 3,
+                    "probability": 0.05
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "probability": 1,
+            "baoji_interval": [
+                {
+                    "upgrade_level": 1,
+                    "probability": 0.75
+                },
+                {
+                    "upgrade_level": 2,
+                    "probability": 0.1
+                },
+                {
+                    "upgrade_level": 3,
+                    "probability": 0.1
+                },
+                {
+                    "upgrade_level": 4,
+                    "probability": 0.05
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "probability": 1,
+            "baoji_interval": [
+                {
+                    "upgrade_level": 1,
+                    "probability": 0.65
+                },
+                {
+                    "upgrade_level": 2,
+                    "probability": 0.15
+                },
+                {
+                    "upgrade_level": 3,
+                    "probability": 0.1
+                },
+                {
+                    "upgrade_level": 4,
+                    "probability": 0.05
+                },
+                {
+                    "upgrade_level": 5,
+                    "probability": 0.05
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "probability": 1,
+            "baoji_interval": [
+                {
+                    "upgrade_level": 1,
+                    "probability": 0.58
+                },
+                {
+                    "upgrade_level": 2,
+                    "probability": 0.15
+                },
+                {
+                    "upgrade_level": 3,
+                    "probability": 0.1
+                },
+                {
+                    "upgrade_level": 4,
+                    "probability": 0.07
+                },
+                {
+                    "upgrade_level": 5,
+                    "probability": 0.06
+                },
+                {
+                    "upgrade_level": 6,
+                    "probability": 0.04
+                }
+            ]
+        }
+    ],
+    "vip": [
+        {
+            "level": 0,
+            "baoji_id": 1,
+            "lunjian_time_per_day": 5,
+            "max_following": 5,
+            "max_friends": 50,
+            "baodiexuyuan_per_day": 0,
+            "power_recovery_time_per_day": 0,
+            "sprite_recovery_time_per_day": 0,
+            "max_dianbo_disciples": 0,
+            "jianghu_boss_clear_time_per_day": 0,
+            "jianghu_jingying_clear_time_per_day": 0
+        },
+        {
+            "level": 1,
+            "baoji_id": 2,
+            "lunjian_time_per_day": 5,
+            "max_following": 5,
+            "max_friends": 50,
+            "baodiexuyuan_per_day": 0,
+            "power_recovery_time_per_day": 0,
+            "sprite_recovery_time_per_day": 0,
+            "max_dianbo_disciples": 0,
+            "jianghu_boss_clear_time_per_day": 0,
+            "jianghu_jingying_clear_time_per_day": 0
+        },
+        {
+            "level": 2,
+            "baoji_id": 3,
+            "lunjian_time_per_day": 6,
+            "max_following": 10,
+            "max_friends": 50,
+            "baodiexuyuan_per_day": 0,
+            "power_recovery_time_per_day": 0,
+            "sprite_recovery_time_per_day": 0,
+            "max_dianbo_disciples": 0,
+            "jianghu_boss_clear_time_per_day": 0,
+            "jianghu_jingying_clear_time_per_day": 0
+        },
+        {
+            "level": 3,
+            "baoji_id": 4,
+            "lunjian_time_per_day": 7,
+            "max_following": 15,
+            "max_friends": 55,
+            "baodiexuyuan_per_day": 1,
+            "power_recovery_time_per_day": 0,
+            "sprite_recovery_time_per_day": 0,
+            "max_dianbo_disciples": 0,
+            "jianghu_boss_clear_time_per_day": 0,
+            "jianghu_jingying_clear_time_per_day": 0
+        },
+        {
+            "level": 4,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 8,
+            "max_following": 20,
+            "max_friends": 60,
+            "baodiexuyuan_per_day": 2,
+            "power_recovery_time_per_day": 0,
+            "sprite_recovery_time_per_day": 0,
+            "max_dianbo_disciples": 1,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 5,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 9,
+            "max_following": 25,
+            "max_friends": 65,
+            "baodiexuyuan_per_day": 3,
+            "power_recovery_time_per_day": 5,
+            "sprite_recovery_time_per_day": 5,
+            "max_dianbo_disciples": 1,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 6,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 10,
+            "max_following": 30,
+            "max_friends": 70,
+            "baodiexuyuan_per_day": 4,
+            "power_recovery_time_per_day": 5,
+            "sprite_recovery_time_per_day": 5,
+            "max_dianbo_disciples": 2,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 7,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 11,
+            "max_following": 35,
+            "max_friends": 75,
+            "baodiexuyuan_per_day": 5,
+            "power_recovery_time_per_day": 15,
+            "sprite_recovery_time_per_day": 15,
+            "max_dianbo_disciples": 3,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 8,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 12,
+            "max_following": 40,
+            "max_friends": 80,
+            "baodiexuyuan_per_day": 6,
+            "power_recovery_time_per_day": 15,
+            "sprite_recovery_time_per_day": 15,
+            "max_dianbo_disciples": 4,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 9,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 13,
+            "max_following": 45,
+            "max_friends": 85,
+            "baodiexuyuan_per_day": 8,
+            "power_recovery_time_per_day": 25,
+            "sprite_recovery_time_per_day": 25,
+            "max_dianbo_disciples": 5,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 10,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 14,
+            "max_following": 50,
+            "max_friends": 90,
+            "baodiexuyuan_per_day": 10,
+            "power_recovery_time_per_day": 25,
+            "sprite_recovery_time_per_day": 25,
+            "max_dianbo_disciples": 6,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 11,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 15,
+            "max_following": 55,
+            "max_friends": 95,
+            "baodiexuyuan_per_day": 12,
+            "power_recovery_time_per_day": 25,
+            "sprite_recovery_time_per_day": 25,
+            "max_dianbo_disciples": 6,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        },
+        {
+            "level": 12,
+            "baoji_id": 5,
+            "lunjian_time_per_day": 16,
+            "max_following": 60,
+            "max_friends": 100,
+            "baodiexuyuan_per_day": 15,
+            "power_recovery_time_per_day": 25,
+            "sprite_recovery_time_per_day": 25,
+            "max_dianbo_disciples": 6,
+            "jianghu_boss_clear_time_per_day": 99,
+            "jianghu_jingying_clear_time_per_day": 99
+        }
+    ],
+    "vip_upgrade": [
+        {
+            "level": 1,
+            "money": 10
+        },
+        {
+            "level": 2,
+            "money": 40
+        },
+        {
+            "level": 3,
+            "money": 50
+        },
+        {
+            "level": 4,
+            "money": 100
+        },
+        {
+            "level": 5,
+            "money": 300
+        },
+        {
+            "level": 6,
+            "money": 500
+        },
+        {
+            "level": 7,
+            "money": 1000
+        },
+        {
+            "level": 8,
+            "money": 2000
+        },
+        {
+            "level": 9,
+            "money": 5000
+        },
+        {
+            "level": 10,
+            "money": 8000
+        },
+        {
+            "level": 11,
+            "money": 16000
+        },
+        {
+            "level": 12,
+            "money": 32000
+        }
+    ],
+    "vipDetail": [
+        {
+            "id": "vip1",
+            "contents": [
+                {
+                    "id": "vip1_1"
+                },
+                {
+                    "id": "vip1_2"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip2",
+            "contents": [
+                {
+                    "id": "vip2_1"
+                },
+                {
+                    "id": "vip2_2"
+                },
+                {
+                    "id": "vip2_3"
+                },
+                {
+                    "id": "vip2_4"
+                },
+                {
+                    "id": "vip2_5"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip3",
+            "contents": [
+                {
+                    "id": "vip3_1"
+                },
+                {
+                    "id": "vip3_2"
+                },
+                {
+                    "id": "vip3_3"
+                },
+                {
+                    "id": "vip3_4"
+                },
+                {
+                    "id": "vip3_5"
+                },
+                {
+                    "id": "vip3_6"
+                },
+                {
+                    "id": "vip3_7"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip4",
+            "contents": [
+                {
+                    "id": "vip4_1"
+                },
+                {
+                    "id": "vip4_2"
+                },
+                {
+                    "id": "vip4_3"
+                },
+                {
+                    "id": "vip4_4"
+                },
+                {
+                    "id": "vip4_5"
+                },
+                {
+                    "id": "vip4_6"
+                },
+                {
+                    "id": "vip4_7"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip5",
+            "contents": [
+                {
+                    "id": "vip5_1"
+                },
+                {
+                    "id": "vip5_2"
+                },
+                {
+                    "id": "vip5_3"
+                },
+                {
+                    "id": "vip5_4"
+                },
+                {
+                    "id": "vip5_5"
+                },
+                {
+                    "id": "vip5_6"
+                },
+                {
+                    "id": "vip5_7"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip6",
+            "contents": [
+                {
+                    "id": "vip6_1"
+                },
+                {
+                    "id": "vip6_2"
+                },
+                {
+                    "id": "vip6_3"
+                },
+                {
+                    "id": "vip6_4"
+                },
+                {
+                    "id": "vip6_5"
+                },
+                {
+                    "id": "vip6_6"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip7",
+            "contents": [
+                {
+                    "id": "vip7_1"
+                },
+                {
+                    "id": "vip7_2"
+                },
+                {
+                    "id": "vip7_3"
+                },
+                {
+                    "id": "vip7_4"
+                },
+                {
+                    "id": "vip7_5"
+                },
+                {
+                    "id": "vip7_6"
+                },
+                {
+                    "id": "vip7_7"
+                },
+                {
+                    "id": "vip7_8"
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip8",
+            "contents": [
+                {
+                    "id": "vip8_1"
+                },
+                {
+                    "id": "vip8_2"
+                },
+                {
+                    "id": "vip8_3"
+                },
+                {
+                    "id": "vip8_4"
+                },
+                {
+                    "id": "vip8_5"
+                },
+                {
+                    "id": "vip8_6"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip9",
+            "contents": [
+                {
+                    "id": "vip9_1"
+                },
+                {
+                    "id": "vip9_2"
+                },
+                {
+                    "id": "vip9_3"
+                },
+                {
+                    "id": "vip9_4"
+                },
+                {
+                    "id": "vip9_5"
+                },
+                {
+                    "id": "vip9_6"
+                },
+                {
+                    "id": "vip9_7"
+                },
+                {
+                    "id": "vip9_8"
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip10",
+            "contents": [
+                {
+                    "id": "vip10_1"
+                },
+                {
+                    "id": "vip10_2"
+                },
+                {
+                    "id": "vip10_3"
+                },
+                {
+                    "id": "vip10_4"
+                },
+                {
+                    "id": "vip10_5"
+                },
+                {
+                    "id": "vip10_6"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip11",
+            "contents": [
+                {
+                    "id": "vip11_1"
+                },
+                {
+                    "id": "vip11_2"
+                },
+                {
+                    "id": "vip11_3"
+                },
+                {
+                    "id": "vip11_4"
+                },
+                {
+                    "id": "vip11_5"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        },
+        {
+            "id": "vip12",
+            "contents": [
+                {
+                    "id": "vip12_1"
+                },
+                {
+                    "id": "vip12_2"
+                },
+                {
+                    "id": "vip12_3"
+                },
+                {
+                    "id": "vip12_4"
+                },
+                {
+                    "id": "vip12_5"
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                },
+                {
+                    "id": ""
+                }
+            ]
+        }
+    ]
+}

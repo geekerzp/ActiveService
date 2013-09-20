@@ -1,4 +1,9 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class JiaohuajiRecorder < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :r_type, :user_id
 
   belongs_to :user
@@ -11,6 +16,7 @@ class JiaohuajiRecorder < ActiveRecord::Base
   # 获取user今天吃叫花鸡的记录
   #
   # @param [User] user 用户
+  #
   def self.get_recorders_of_today(user)
     now = Time.now
     today_string = now.strftime('%F')
@@ -29,6 +35,7 @@ class JiaohuajiRecorder < ActiveRecord::Base
   #
   # @param [User] user    用户
   # @param [Integer] type 类型
+  #
   def self.eat(user, type)
     now = Time.now
     today_string = now.strftime('%F')

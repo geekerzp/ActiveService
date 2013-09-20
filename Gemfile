@@ -1,53 +1,40 @@
 source 'http://ruby.taobao.org'
 
-gem 'rails'
+gem 'pg'
+gem 'em-postgresql-adapter', :git => 'git://github.com/leftbee/em-postgresql-adapter.git'
+gem 'rack-fiber_pool',  :require => 'rack/fiber_pool'
+gem 'em-synchrony', :git => 'git://github.com/igrigorik/em-synchrony.git',
+                    :require => ['em-synchrony', 'em-synchrony/activerecord']
+gem 'em-websocket'
+gem 'eventmachine', '~> 1.0.3'
 
-gem 'rake', '~> 10.1.0'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'grape'
+gem 'goliath'
+gem 'tilt'
 
 gem 'mysql2'
 
+# for old rails3
+gem 'protected_attributes'  # rails4的ActiveRecord将attr_accessible类宏移到了Gem
+gem 'devise', '~> 3.0.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+# ruby process monitor
+gem 'god'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+gem 'harmonious_dictionary'
 
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
-gem 'mysql2'
-
-gem 'therubyracer'
-gem 'execjs'
-
+# for cache 
 gem 'redis'
-gem 'will_paginate'
+gem 'hiredis'
+gem 'redis-activesupport'
+gem 'redis-objects'
+gem 'dalli'
 
-gem 'test-unit'
-
-# mysql性能测试工具
-gem 'newrelic_rpm'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
 # 远程部署
 gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'capistrano_colors'
 
-# To use debugger
-# gem 'debugger'
+# rspec
+gem 'rspec'
+gem 'rspec-core'

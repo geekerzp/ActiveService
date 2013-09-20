@@ -1,5 +1,10 @@
-#encoding: utf-8
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+require 'trigger'
+
 class Equipment < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :e_type, :grow_strength, :level, :user_id, :position, :disciple_id
 
   belongs_to :disciple
@@ -12,6 +17,7 @@ class Equipment < ActiveRecord::Base
   validates :grow_strength, :numericality => {:greater_than_or_equal_to => 0}
   validates :disciple_id, :numericality => {:only_integer => true}
   validates :position, :numericality => {:only_integer => true}
+
   #
   # 将信息转化为字典形式
   #
@@ -83,6 +89,14 @@ class Equipment < ActiveRecord::Base
         logger.debug("### #{__method__},(#{__FILE__}, #{__LINE__})no such equipment #{id}")
         next
       end
+
+      # FIXME 武功装备升级强化事件
+      today_first_strength = (eq.level < equipment_info[:level]) && (eq.strengthened_token != Time.now.to_date.to_s)
+      if today_first_strength
+        eq.strengthened_token = Time.now.to_date.to_s
+        Trigger.rule_5(user, type) if today_first_strength
+      end 
+
       eq.level = (equipment_info[:level] || 0).to_i
       eq.grow_strength = (equipment_info[:grow_strength] || 0).to_f
       #eq.position = (equipment_info[:position] || -1).to_i
@@ -108,6 +122,12 @@ class Equipment < ActiveRecord::Base
   # @param [User] user
   # @param [String] type
   def self.create_equipment(user, type)
+    # FIXME 触发开宝箱获得道具事件
+    Trigger.rule_3(user, type)
+
+    # FIXME 参加活动获得奖励事件
+    Trigger.rule_6(user, type)
+
     eq = Equipment.new
     eq.user_id = user.id
     eq.disciple_id = -1

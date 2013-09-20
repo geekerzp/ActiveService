@@ -1,6 +1,11 @@
-#encoding: utf-8
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class JianghuRecorder < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :fight_time, :is_finish, :item_id, :scene_id, :star, :user_id
+
   belongs_to :user
 
   validates :fight_time, :item_id, :scene_id, :star, :user_id, :presence => true
@@ -31,7 +36,7 @@ class JianghuRecorder < ActiveRecord::Base
   # 获取江湖的详情
   #
   def get_jianghu_details
-#解析江湖、条目、弟子、名称。
+    #解析江湖、条目、弟子、名称。
     @jh_config = ZhangmenrenConfig.instance.jianghu_config
     @item_config = ZhangmenrenConfig.instance.item_config
     @disciple_config = ZhangmenrenConfig.instance.disciple_config
@@ -80,12 +85,17 @@ class JianghuRecorder < ActiveRecord::Base
       recorder.is_finish = false
     end
     recorder.fight_time += 1
-    return recorder.save, recorder.errors.full_messages.join('; ')
+    if recorder.save
+      return true, recorder.errors.full_messages.join('; ')
+    else
+      return false, recorder.errors.full_messages.join('; ')
+    end
+
   end
 
   #
   #
-  #
+  # 一定要写好注释：主要功能，参数，返回值
   #
   #
   def self.update_recorder_fight_time_and_gold(user, scene_id, item_id, gold)

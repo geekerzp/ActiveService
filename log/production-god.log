@@ -1,0 +1,768 @@
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)
+DEPRECATION WARNING: The following options in your User.has_many :team_members declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:27)
+DEPRECATION WARNING: The following options in your User.has_many :jianghu_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:36)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_positions declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:38)
+DEPRECATION WARNING: The following options in your User.has_many :lunjian_reward_recorders declaration are deprecated: :order. Please use a scope block instead. For example, the following:
+
+    has_many :spam_comments, conditions: { spam: true }, class_name: 'Comment'
+
+should be rewritten as the following:
+
+    has_many :spam_comments, -> { where spam: true }, class_name: 'Comment'
+. (called from <class:User> at /home/geekerzp/OnPiece/OnPiece_new/app/models/user.rb:41)

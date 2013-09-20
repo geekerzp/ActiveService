@@ -1,4 +1,9 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class Soul < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :s_type, :number, :potential, :user_id
 
   belongs_to :user

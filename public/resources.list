@@ -1,119 +1,109 @@
 {
-"list": [
-{
-"filename":"canzhang.json",
-"md5":"f65e0e405147740cae9efcde02087be1",
-"size":54175
-},
-{
-"filename":"canzhang_npc.json",
-"md5":"fb2b94c0fa8a15e0cda560033092d564",
-"size":2872
-},
-{
-"filename":"changzhang.json",
-"md5":"a5052ce09b0d7aceb115aecd5789f1b1",
-"size":54027
-},
-{
-"filename":"continuous_login_rewards.json",
-"md5":"aae5ade690d4a1fc52cac7e5f7e777f9",
-"size":4969
-},
-{
-"filename":"disciples.json",
-"md5":"61a3efa7ec48f6c17ca235b45e180c3f",
-"size":493402
-},
-{
-"filename":"equipments.json",
-"md5":"fe552b50505ac777aff78902c51e80c3",
-"size":43327
-},
-{
-"filename":"gongfus.json",
-"md5":"91265e61b1278e19a851b29834ccc232",
-"size":39136
-},
-{
-"filename":"jianghu.json",
-"md5":"7baac7344cd3088b62cfdb4221ae5f6e",
-"size":978426
-},
-{
-"filename":"lunjian.json",
-"md5":"3be2fca60b5e83d7cfec2f9790d0e082",
-"size":119
-},
-{
-"filename":"market.json",
-"md5":"2d3d4589ff0815e32a98f8806fd83239",
-"size":150023
-},
-{
-"filename":"name_config.json",
-"md5":"b97579210dddbb16a07596fe9d43a3dd",
-"size":36893
-},
-{
-"filename":"npc_config.json",
-"md5":"b428304ddaba5468bef75b8888be48ff",
-"size":1190335
-},
-{
-"filename":"predestinations.json",
-"md5":"94159e1e5b167f70e653fdf81f7feff1",
-"size":266776
-},
-{
-"filename":"qiyu.json",
-"md5":"5ffc22209b46053450d0ee6fe4021695",
-"size":6
-},
-{
-"filename":"qiyu.json~",
-"md5":"cff770c275ffe062951e470f5da30a8a",
-"size":292
-},
-{
-"filename":"resources.list",
-"md5":"397dd8476f9cc719abd66986790aa6bf",
-"size":183
-},
-{
-"filename":"server.json",
-"md5":"af7a405afe72572107c2d1125115c99f",
-"size":610
-},
-{
-"filename":"setting.json",
-"md5":"e54e1838d955fa47a20da9bc2b73b6da",
-"size":3901
-},
-{
-"filename":"strings.json",
-"md5":"bae79408b57a49d25156d2e728daa080",
-"size":360130
-},
-{
-"filename":"strings.json~",
-"md5":"d36de1a77eda1d3a104f5c765c14dcd5",
-"size":265037
-},
-{
-"filename":"system_rewards.json",
-"md5":"1868f93885b904c8e836143f54aef495",
-"size":2318
-},
-{
-"filename":"team.json",
-"md5":"ea2e35bd57254575d7db27eb087cd981",
-"size":507
-},
-{
-"filename":"vip.json",
-"md5":"89d0ff6093818c62b3b04b2c96dd43bc",
-"size":18966
-}
-]
+  "list": [
+    {
+      "filename": "d832b4ca330ea00d80e2a42cfc7cee6c.list",
+      "md5": "397dd8476f9cc719abd66986790aa6bf",
+      "size": 183
+    },
+    {
+      "filename": "0797fc09042a30808c9ccb4002734fd2.json",
+      "md5": "e54e1838d955fa47a20da9bc2b73b6da",
+      "size": 3901
+    },
+    {
+      "filename": "fd1aee01a7e143b66adacdfef53ac9e9.json",
+      "md5": "aae5ade690d4a1fc52cac7e5f7e777f9",
+      "size": 4969
+    },
+    {
+      "filename": "f6c9146fd09c7520e1ab595cc592d244.json",
+      "md5": "6ba73ce244a5e0eacc4cc24f503bad94",
+      "size": 150021
+    },
+    {
+      "filename": "86c60d2d74054c2d85fa406088744112.json",
+      "md5": "3be2fca60b5e83d7cfec2f9790d0e082",
+      "size": 119
+    },
+    {
+      "filename": "f0379b79a4572ab911b41e76b614a20d.json",
+      "md5": "b97579210dddbb16a07596fe9d43a3dd",
+      "size": 36893
+    },
+    {
+      "filename": "5a65d576bffe9d48dc17e3954721d54b.json",
+      "md5": "b5f3e75ab0bd2522e6ee6e61ec97a981",
+      "size": 518969
+    },
+    {
+      "filename": "a7a234e29623151ec71676ad87e16976.json",
+      "md5": "adc31eaea68c2e542c1457180e11eef5",
+      "size": 266776
+    },
+    {
+      "filename": "b0fb6f57d26ec461c8cf4bebe5404749.json",
+      "md5": "71ebdf353b95dbb78fcb032ba47fd63f",
+      "size": 391860
+    },
+    {
+      "filename": "3e249e38663fc80d6d54f5e5b99b7453.json",
+      "md5": "89d0ff6093818c62b3b04b2c96dd43bc",
+      "size": 18966
+    },
+    {
+      "filename": "afcf7b3a9f3ac740264873596ebef5d4.json",
+      "md5": "fb2b94c0fa8a15e0cda560033092d564",
+      "size": 2872
+    },
+    {
+      "filename": "579f848e4e3087afdaf82dcdaf0b2f6c.json",
+      "md5": "7e0114bb14bcf27d121c5ad6ed4eda10",
+      "size": 419
+    },
+    {
+      "filename": "3c9f151a99e50e953a63cec4f429be25.json",
+      "md5": "91265e61b1278e19a851b29834ccc232",
+      "size": 39136
+    },
+    {
+      "filename": "c57ec28143cb9d75604aee69840b300f.json",
+      "md5": "f65e0e405147740cae9efcde02087be1",
+      "size": 54175
+    },
+    {
+      "filename": "0f7c0158492103e4a10913915173ad7b.json",
+      "md5": "61a3efa7ec48f6c17ca235b45e180c3f",
+      "size": 493402
+    },
+    {
+      "filename": "afdc3051baeb8731e549788171bceeb7.json",
+      "md5": "a5052ce09b0d7aceb115aecd5789f1b1",
+      "size": 54027
+    },
+    {
+      "filename": "90e4dc571aa36e4c984d207720592ff4.json",
+      "md5": "ea2e35bd57254575d7db27eb087cd981",
+      "size": 507
+    },
+    {
+      "filename": "243f645433f633ab2502cac93c6d44f0.json",
+      "md5": "fe552b50505ac777aff78902c51e80c3",
+      "size": 43327
+    },
+    {
+      "filename": "e20d597cdbbb22c37a53218984aca695.json",
+      "md5": "1868f93885b904c8e836143f54aef495",
+      "size": 2318
+    },
+    {
+      "filename": "9a14635f62074d6202ebbdf3fb850d94.json",
+      "md5": "3338cfd1e9cfb5d1c8808839bff3e2fb",
+      "size": 859
+    },
+    {
+      "filename": "8e60f28e573adc9b63919e144376dd06.json",
+      "md5": "22645b4c48a976c5a36331fcbfea1962",
+      "size": 875413
+    }
+  ]
 }

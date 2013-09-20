@@ -1,4 +1,10 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+require 'trigger'
+
 class Disciple < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :d_type, :experience, :grow_attack, :grow_blood, :grow_defend, :grow_internal, :level, :user_id
   attr_accessible :potential, :break_time
 
@@ -9,7 +15,6 @@ class Disciple < ActiveRecord::Base
 
   validates :d_type, :experience, :grow_attack, :grow_blood, :grow_defend,
             :grow_internal, :level, :user_id, :break_time, :presence => true
-
   validates :d_type, :length => { :minimum => 1, :maximum => 250}
   validates :user_id, :experience, :break_time, :numericality => {:greater_than_or_equal_to => 0,
                                                                           :only_integer => true}
@@ -37,6 +42,15 @@ class Disciple < ActiveRecord::Base
   # 将信息转化为字典形式
   #
   def to_dictionary()
+    re = self.get_simple_info
+    re[:gongfus] = [-1, -1, -1]
+    self.gongfus.each() {|gongfu| re[:gongfus][gongfu.position] = gongfu.id }
+
+    re[:equipments] = [-1, -1, -1]
+    self.equipments.each() {|equipment| re[:equipments][equipment.position] = equipment.id }
+    re
+  end
+  def get_simple_info
     re = {}
     re[:id] = self.id
     re[:level] = self.level
@@ -49,14 +63,8 @@ class Disciple < ActiveRecord::Base
     re[:break_time] = self.break_time
     re[:type] = URI.encode(self.d_type || '')
 
-    re[:gongfus] = [-1, -1, -1]
-    self.gongfus.each() {|gongfu| re[:gongfus][gongfu.position] = gongfu.id }
-
-    re[:equipments] = [-1, -1, -1]
-    self.equipments.each() {|equipment| re[:equipments][equipment.position] = equipment.id }
     re
   end
-
   #
   # 更新弟子信息
   #
@@ -64,19 +72,27 @@ class Disciple < ActiveRecord::Base
   # @param [Array] disciple_array 弟子信息数组
   def self.update_disciples(user, disciple_array)
     err_msg = ""
-    disciple_array.each() do |disciple_info|
+    disciple_array.each do |disciple_info|
       id = disciple_info[:id]
       disciple = Disciple.find_by_id_and_user_id(id, user.id)
+      logger.debug "## ################### disciple.break_time #{disciple.break_time}"
       next if disciple.nil?
-      disciple.level = (disciple_info[:level] || 0).to_i
-      disciple.experience = (disciple_info[:experience] || 0).to_i
-      disciple.grow_attack = (disciple_info[:grow_attack] || 0).to_f
-      disciple.grow_blood = (disciple_info[:grow_blood] || 0).to_f
-      disciple.grow_defend = (disciple_info[:grow_defend] || 0).to_f
-      disciple.grow_internal = (disciple_info[:grow_internal] || 0).to_f
+      disciple.level          = (disciple_info[:level] || 0).to_i
+      disciple.experience     = (disciple_info[:experience] || 0).to_i
+      disciple.grow_attack    = (disciple_info[:grow_attack] || 0).to_f
+      disciple.grow_blood     = (disciple_info[:grow_blood] || 0).to_f
+      disciple.grow_defend    = (disciple_info[:grow_defend] || 0).to_f
+      disciple.grow_internal  = (disciple_info[:grow_internal] || 0).to_f
+      disciple.potential      = (disciple_info[:potential] || 0).to_i
 
-      disciple.potential = (disciple_info[:potential] || 0).to_i
-      disciple.break_time = (disciple_info[:break_time] || 0).to_i
+      # FIXME 武将突破时触发用户事件 
+      todday_first_break = (disciple_info[:break_time] > disciple.break_time) && (disciple.breaked_token != Time.now.to_date.to_s)
+      if todday_first_break
+        disciple.breaked_token = Time.now.to_date.to_s
+        Trigger.rule_2(user, disciple)
+      end 
+
+      disciple.break_time     = (disciple_info[:break_time] || 0).to_i
 
       # 更新武功
       gongfu_id_array = disciple_info[:gongfus]
@@ -98,8 +114,8 @@ class Disciple < ActiveRecord::Base
     end
 
     # 删除不存在的弟子
-    user.disciples.each() do |disciple|
-      if (disciple_array.find(){|d_info| d_info[:id].to_i == disciple.id}).nil?
+    user.disciples.each do |disciple|
+      if (disciple_array.find {|d_info| d_info[:id].to_i == disciple.id}).nil?
         disciple.gongfus[0].destroy  # 删除天赋武功
         disciple.destroy
       end
@@ -232,6 +248,10 @@ class Disciple < ActiveRecord::Base
     unless origin_gongfu.nil?
       disciple.gongfus << origin_gongfu
     end
+
+    # FIXME 招降新武将事件
+    Trigger.rule_1(user, disciple)
+
     disciple
   end
 

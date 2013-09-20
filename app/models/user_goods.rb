@@ -1,4 +1,9 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class UserGoods < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :g_type, :number, :user_id
 
   belongs_to :user
@@ -24,6 +29,7 @@ class UserGoods < ActiveRecord::Base
   #
   # @param [User] user    当前用户
   # @param [Array] goods  物品列表
+  #
   def self.update_goods(user, goods)
     goods.each() do |g|
       number = (g[:number] || 0).to_i

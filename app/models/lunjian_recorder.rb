@@ -1,5 +1,10 @@
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
 require 'message_type'
+
 class LunjianRecorder < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :attacker_id, :defender_id, :who_win
 
   belongs_to :attacker, :foreign_key => 'attacker_id', :class_name => 'User'
@@ -17,6 +22,7 @@ class LunjianRecorder < ActiveRecord::Base
   #
   # 获取用户被挑战信息(传书)
   # @param [integer] user_id 用户id
+  #
   def self.get_defend_messages(user_id)
     recorders_array = []
     lunjian_recorders = LunjianRecorder.where('defender_id = ?', user_id).order('created_at desc').limit(10)

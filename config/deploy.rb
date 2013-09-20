@@ -1,28 +1,27 @@
 #
 # Capistrano配置脚本
-# 功能：1.远程同步git服务器代码
+# 功能：远程同步git服务器代码
 #
+#require 'rvm/capistrano'
 
 # 配置
-set :user, 'raysns'                      # ssh用户名
-set :password, 't94RwJIb'                # ssh密码
-set :web_servers, '118.144.79.247'       # web服务器
-set :app_servers, '118.144.79.247'       # 应用服务器
-set :db_servers_main, '118.144.79.247'   # 主数据库服务器
-set :db_servers, '118.144.79.247'        # 从数据库服务器
-set :domain, '118.144.79.247'            # 域名
-set :application, "zhangmenren"          # 应用名称
+set :user, 'onepiece'                   # ssh用户名
+set :password, 'onepiece'               # ssh密码
+set :web_servers, '42.121.6.191'        # web服务器
+set :app_servers, '42.121.6.191'        # 应用服务器
+set :db_servers_main, '42.121.6.191'    # 主数据库服务器
+set :db_servers, '42.121.6.191'         # 从数据库服务器
+set :domain, '42.121.6.191'             # 域名
+set :application, "onepiece"            # 应用名称
 
 # file paths
-set :repository,  "gitolite:zhangmenren_server.git"       # git仓库 
-set :deploy_to, "/home/#{user}/server_for91/#{domain}"             # 应用路径
+set :repository,  "gitolite:OnePiece_Server.git"            # git仓库 
+set :deploy_to, "/home/#{user}/server_for91/#{domain}"           # 应用路径
 
-role :web, web_servers, :port => 10220                              # Your HTTP server, Apache/etc
-role :app, app_servers, :port => 10220                              # This may be the same as your `Web` server
-role :db,  db_servers_main, :primary => true, :port => 10220        # This is where Rails migrations will run
-role :db,  db_servers, :port => 10220
-
-# default_run_options[:pty] = true
+role :web, web_servers, :port => 22                              # Your HTTP server, Apache/etc
+role :app, app_servers, :port => 22                             # This may be the same as your `Web` server
+role :db,  db_servers_main, :primary => true, :port => 22        # This is where Rails migrations will run
+role :db,  db_servers, :port => 22
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
@@ -31,12 +30,12 @@ role :db,  db_servers, :port => 10220
 # git配置
 set :deploy_via, :remote_cache
 set :scm, 'git'                   # scm软件管理配置
-set :branch, 'master'             # 分支
+set :branch, 'new'                # 分支
 set :scm_verbose, false           # 是否建立current目录
 
 # 其他
-set :use_sudo, true               # 是否使用sudo 
-default_run_options[:pty] = true  # 开启pty
+set :use_sudo, false               # 是否默认使用sudo 
+default_run_options[:pty] = true   # 开启pty
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -86,10 +85,10 @@ namespace :deploy do
 end 
 
 # 在更新代码之后，执行bundle install
-after "deploy:update_code", :bundle_install
+#after "deploy:update_code", :bundle_install
 desc "install the necessary preprequisites"
 task :bundle_install do 
-  run "cd #{release_path} && bundle install"
+  run "cd #{release_path} && #{sudo} bundle install"
 end 
 
 

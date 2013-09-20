@@ -1,4 +1,4 @@
-#encoding: utf-8
+# vi: set fileencoding=utf-8 :
 require "singleton"
 #
 # 解析配置文件
@@ -55,20 +55,23 @@ class ZhangmenrenConfig
 
   def initialize
     # 解析弟子配置
-    disciple_config_path = "#{Rails.root}/config/configurations/disciples.json"
+    disciple_config_path    = "#{GGA.root}/config/configurations/disciples.json"
     disciple_config_content = ''
-    File.open(disciple_config_path, 'r'){|f| disciple_config_content = f.read }
+
+    File.open(disciple_config_path, 'r') {|f| disciple_config_content = f.read }
     disciple_config_array = JSON.parse(disciple_config_content)
     #Rails.logger.debug("弟子配置信息: \n#{JSON.pretty_generate(disciple_config_array).to_s}")
+
     self.disciple_config = {}
-    disciple_config_array["disciples"].each() {|d_info| self.disciple_config[d_info['id'].to_s] = d_info }
+    disciple_config_array["disciples"].each {|d_info| self.disciple_config[d_info['id'].to_s] = d_info }
     self.disciple_experiences_config = disciple_config_array["disciple_upgrade_experience_array"]
     #Rails.logger.debug("弟子经验配置信息: \n#{JSON.pretty_generate(disciple_experiences_config).to_s}")
+
     self.user_experiences_config = disciple_config_array["user_upgrade_experience_array"]
     #Rails.logger.debug("用户经验配置信息: \n#{JSON.pretty_generate(user_experiences_config).to_s}")
 
     # 解析武功
-    gongfu_config_path = "#{Rails.root}/config/configurations/gongfus.json"
+    gongfu_config_path = "#{GGA.root}/config/configurations/gongfus.json"
     gongfu_config_content = ''
     File.open(gongfu_config_path, 'r'){|f| gongfu_config_content = f.read }
     gongfu_config_array = JSON.parse(gongfu_config_content)
@@ -77,7 +80,7 @@ class ZhangmenrenConfig
     gongfu_config_array.each() {|gf_info| self.gongfu_config[gf_info['id'].to_s] = gf_info}
 
     # 解析装备
-    equipment_config_path = "#{Rails.root}/config/configurations/equipments.json"
+    equipment_config_path = "#{GGA.root}/config/configurations/equipments.json"
     equipment_config_content = ''
     File.open(equipment_config_path, 'r'){|f| equipment_config_content = f.read }
     equipment_config_array = JSON.parse(equipment_config_content)
@@ -86,7 +89,7 @@ class ZhangmenrenConfig
     equipment_config_array.each() {|e_info| self.equipment_config[e_info['id'].to_s] = e_info}
 
     # 解析市场配置
-    market_config_path = "#{Rails.root}/config/configurations/market.json"
+    market_config_path = "#{GGA.root}/config/configurations/market.json"
     market_config_content = ''
     File.open(market_config_path, 'r'){|f| market_config_content = f.read }
     self.market_config = JSON.parse(market_config_content)
@@ -109,7 +112,7 @@ class ZhangmenrenConfig
     #Rails.logger.debug("掉落组配置信息: \n#{JSON.pretty_generate(self.random_drop_bags_config).to_s}")
 
     # 解析残章配置
-    canzhang_config_path = "#{Rails.root}/config/configurations/canzhang.json"
+    canzhang_config_path = "#{GGA.root}/config/configurations/canzhang.json"
     canzhang_config_content = ''
     File.open(canzhang_config_path, 'r'){|f| canzhang_config_content = f.read }
     # 将残章信息按照武功id和残章id分别存储，便于查找
@@ -138,7 +141,7 @@ class ZhangmenrenConfig
     #Rails.logger.debug("残章抢夺概率配置信息: \n#{JSON.pretty_generate(self.canzhang_grab_probability_config).to_s}")
 
     # 解析残章npc生成规则
-    canzhang_npc_config_path = "#{Rails.root}/config/configurations/canzhang_npc.json"
+    canzhang_npc_config_path = "#{GGA.root}/config/configurations/canzhang_npc.json"
     canzhang_npc_config_content = ''
     File.open(canzhang_npc_config_path, 'r'){|f| canzhang_npc_config_content = f.read }
     canzhang_npc_config = JSON.parse(canzhang_npc_config_content)
@@ -164,7 +167,7 @@ class ZhangmenrenConfig
     #                       "#{JSON.pretty_generate(self.canzhang_npc_disciple_gongfus_config).to_s}")
 
     # 解析vip配置
-    vip_config_path = "#{Rails.root}/config/configurations/vip.json"
+    vip_config_path = "#{GGA.root}/config/configurations/vip.json"
     vip_config_content = ''
     File.open(vip_config_path, 'r'){|f| vip_config_content = f.read }
     vip_config_array = JSON.parse(vip_config_content)['vip']
@@ -173,21 +176,21 @@ class ZhangmenrenConfig
     vip_config_array.each() {|info| self.vip_config[info['level'].to_s] = info }
 
     # 解析论剑配置
-    lunjian_config_path = "#{Rails.root}/config/configurations/lunjian.json"
+    lunjian_config_path = "#{GGA.root}/config/configurations/lunjian.json"
     lunjian_config_content = ''
     File.open(lunjian_config_path, 'r'){|f| lunjian_config_content = f.read }
     self.lunjian_config = JSON.parse(lunjian_config_content)
     #Rails.logger.debug("论剑配置信息: \n#{JSON.pretty_generate(self.lunjian_config).to_s}")
 
     # 解析名称配置
-    name_config_path = "#{Rails.root}/config/configurations/strings.json"
+    name_config_path = "#{GGA.root}/config/configurations/strings.json"
     name_config_content = ''
     File.open(name_config_path, 'r'){|f| name_config_content = f.read }
     self.name_config = JSON.parse(name_config_content)
     #Rails.logger.debug("名称配置信息: \n#{JSON.pretty_generate(self.name_config).to_s}")
 
     # 解析江湖配置
-    jianghu_config_path = "#{Rails.root}/config/configurations/jianghu.json"
+    jianghu_config_path = "#{GGA.root}/config/configurations/jianghu.json"
     jianghu_config_content = ''
     File.open(jianghu_config_path, 'r'){|f| jianghu_config_content = f.read }
     jianghu_config_array = JSON.parse(jianghu_config_content)
@@ -204,25 +207,25 @@ class ZhangmenrenConfig
 
 
     # 解析掌门名称及位置配置
-    zhangmen_name_config_path = "#{Rails.root}/config/configurations/name_config.json"
+    zhangmen_name_config_path = "#{GGA.root}/config/configurations/name_config.json"
     zhangmen_name_config_content = ''
     File.open(zhangmen_name_config_path, 'r'){|f| zhangmen_name_config_content = f.read }
     self.zhangmen_name_config = JSON.parse(zhangmen_name_config_content)
-    Rails.logger.debug("掌门名称配置信息: \n#{JSON.pretty_generate(self.zhangmen_name_config).to_s}")
+    #Rails.logger.debug("掌门名称配置信息: \n#{JSON.pretty_generate(self.zhangmen_name_config).to_s}")
 
     # 解析连续登陆奖励配置
-    login_reward_config_path = "#{Rails.root}/config/configurations/continuous_login_rewards.json"
+    login_reward_config_path = "#{GGA.root}/config/configurations/continuous_login_rewards.json"
     login_reward_config_content = ''
     File.open(login_reward_config_path, 'r'){|f| login_reward_config_content = f.read }
     self.login_reward_config = JSON.parse(login_reward_config_content)
-    Rails.logger.debug("连续登陆配置信息: \n#{JSON.pretty_generate(self.login_reward_config).to_s}")
+    #Rails.logger.debug("连续登陆配置信息: \n#{JSON.pretty_generate(self.login_reward_config).to_s}")
 
     # 解析npc配置
-    npc_config_path = "#{Rails.root}/config/configurations/npc_config.json"
+    npc_config_path = "#{GGA.root}/config/configurations/npc_config.json"
     npc_config_content = ''
     File.open(npc_config_path, 'r'){|f| npc_config_content = f.read }
     self.npc_config = JSON.parse(npc_config_content)
-    Rails.logger.debug("npc配置信息: \n#{JSON.pretty_generate(self.npc_config).to_s}")
+    #Rails.logger.debug("npc配置信息: \n#{JSON.pretty_generate(self.npc_config).to_s}")
 
   end
 end

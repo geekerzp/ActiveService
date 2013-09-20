@@ -1,0 +1,122 @@
+I [2013-08-16 16:27:41]  INFO: Loading config/listen.god
+I [2013-08-16 16:27:41]  INFO: Syslog enabled.
+I [2013-08-16 16:27:41]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+
+***********************************************************************
+*
+* Event conditions are not available for your installation of god.
+* You may still use and write custom conditions using the poll system
+*
+***********************************************************************
+
+W [2013-08-16 16:29:48]  WARN: api-9001 ensuring stop...
+W [2013-08-16 16:29:48]  WARN: api-9004 ensuring stop...
+W [2013-08-16 16:29:48]  WARN: api-9003 ensuring stop...
+W [2013-08-16 16:29:48]  WARN: api-9002 ensuring stop...
+I [2013-08-16 16:29:56]  INFO: Loading config/listen.god
+I [2013-08-16 16:29:56]  INFO: Syslog enabled.
+I [2013-08-16 16:29:56]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+Sending output to log file: /home/geekerzp/OnPiece/OnPiece_new/log/god.log
+I [2013-08-16 16:29:56]  INFO: Started on drbunix:///tmp/god.17165.sock
+I [2013-08-16 16:29:56]  INFO: api-9001 move 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9001 moved 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9002 move 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9002 moved 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9003 move 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9003 moved 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9004 move 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9004 moved 'unmonitored' to 'up'
+I [2013-08-16 16:29:56]  INFO: api-9001 [trigger] process is not running (ProcessRunning)
+I [2013-08-16 16:29:56]  INFO: api-9001 move 'up' to 'start'
+I [2013-08-16 16:29:56]  INFO: api-9001 before_start: deleted pid file (CleanPidFile)
+I [2013-08-16 16:29:56]  INFO: api-9001 start: cd /home/geekerzp/OnPiece/OnPiece_new && ruby server.rb -sv -e production -l log/production.log -p 9001 -P /home/geekerzp/OnPiece/OnPiece_new/tmp/pids/api.9001.pid -d
+I [2013-08-16 16:29:56]  INFO: api-9002 [trigger] process is not running (ProcessRunning)
+I [2013-08-16 16:29:56]  INFO: api-9002 move 'up' to 'start'
+I [2013-08-16 16:29:56]  INFO: api-9002 before_start: deleted pid file (CleanPidFile)
+I [2013-08-16 16:29:56]  INFO: api-9002 start: cd /home/geekerzp/OnPiece/OnPiece_new && ruby server.rb -sv -e production -l log/production.log -p 9002 -P /home/geekerzp/OnPiece/OnPiece_new/tmp/pids/api.9002.pid -d
+I [2013-08-16 16:29:56]  INFO: api-9003 [trigger] process is not running (ProcessRunning)
+I [2013-08-16 16:29:56]  INFO: api-9003 move 'up' to 'start'
+I [2013-08-16 16:29:56]  INFO: api-9003 before_start: deleted pid file (CleanPidFile)
+I [2013-08-16 16:29:56]  INFO: api-9003 start: cd /home/geekerzp/OnPiece/OnPiece_new && ruby server.rb -sv -e production -l log/production.log -p 9003 -P /home/geekerzp/OnPiece/OnPiece_new/tmp/pids/api.9003.pid -d
+I [2013-08-16 16:29:56]  INFO: api-9004 [trigger] process is not running (ProcessRunning)
+I [2013-08-16 16:29:56]  INFO: api-9004 move 'up' to 'start'
+I [2013-08-16 16:29:56]  INFO: api-9004 before_start: deleted pid file (CleanPidFile)
+I [2013-08-16 16:29:56]  INFO: api-9004 start: cd /home/geekerzp/OnPiece/OnPiece_new && ruby server.rb -sv -e production -l log/production.log -p 9004 -P /home/geekerzp/OnPiece/OnPiece_new/tmp/pids/api.9004.pid -d
+/home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:715:in `join': Interrupt
+	from /home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:715:in `join'
+	from /home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:728:in `at_exit'
+	from /home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:762:in `block in <top (required)>'
+I [2013-08-16 16:30:53]  INFO: Loading config/listen.god
+I [2013-08-16 16:30:53]  INFO: Syslog enabled.
+I [2013-08-16 16:30:53]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+Sending output to log file: /home/geekerzp/OnPiece/OnPiece_new/log/god.log
+I [2013-08-16 16:30:53]  INFO: Started on drbunix:///tmp/god.17165.sock
+I [2013-08-16 16:30:53]  INFO: api-9001 move 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9001 moved 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9002 move 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9002 moved 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9003 move 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9003 moved 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9004 move 'unmonitored' to 'up'
+I [2013-08-16 16:30:53]  INFO: api-9004 moved 'unmonitored' to 'up'
+/home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:715:in `join': Interrupt
+	from /home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:715:in `join'
+	from /home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:728:in `at_exit'
+	from /home/geekerzp/.rvm/gems/ruby-1.9.3-p448@grape-goliath/gems/god-0.13.2/lib/god.rb:762:in `block in <top (required)>'
+I [2013-08-16 16:31:17]  INFO: Loading config/listen.god
+I [2013-08-16 16:31:17]  INFO: Syslog enabled.
+I [2013-08-16 16:31:17]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+
+***********************************************************************
+*
+* Event conditions are not available for your installation of god.
+* You may still use and write custom conditions using the poll system
+*
+***********************************************************************
+
+W [2013-08-16 16:32:10]  WARN: api-9001 ensuring stop...
+W [2013-08-16 16:32:10]  WARN: api-9003 ensuring stop...
+W [2013-08-16 16:32:10]  WARN: api-9004 ensuring stop...
+W [2013-08-16 16:32:10]  WARN: api-9002 ensuring stop...
+I [2013-08-16 16:32:14]  INFO: Loading config/listen.god
+I [2013-08-16 16:32:14]  INFO: Syslog enabled.
+I [2013-08-16 16:32:14]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+
+***********************************************************************
+*
+* Event conditions are not available for your installation of god.
+* You may still use and write custom conditions using the poll system
+*
+***********************************************************************
+
+I [2013-08-16 16:32:36]  INFO: Loading config/listen.god
+I [2013-08-16 16:32:36]  INFO: Syslog enabled.
+I [2013-08-16 16:32:36]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+
+***********************************************************************
+*
+* Event conditions are not available for your installation of god.
+* You may still use and write custom conditions using the poll system
+*
+***********************************************************************
+
+E [2013-08-16 16:32:37] ERROR: Socket drbunix:///tmp/god.17165.sock already in use by another instance of god
+W [2013-08-16 16:32:48]  WARN: api-9002 ensuring stop...
+W [2013-08-16 16:32:48]  WARN: api-9001 ensuring stop...
+W [2013-08-16 16:32:48]  WARN: api-9003 ensuring stop...
+W [2013-08-16 16:32:48]  WARN: api-9004 ensuring stop...
+I [2013-08-16 16:32:55]  INFO: Loading config/listen.god
+I [2013-08-16 16:32:55]  INFO: Syslog enabled.
+I [2013-08-16 16:32:55]  INFO: Using pid file directory: /home/geekerzp/OnPiece/OnPiece_new/config
+
+***********************************************************************
+*
+* Event conditions are not available for your installation of god.
+* You may still use and write custom conditions using the poll system
+*
+***********************************************************************
+
+W [2013-08-16 16:34:34]  WARN: api-9002 ensuring stop...
+W [2013-08-16 16:34:35]  WARN: api-9004 ensuring stop...
+W [2013-08-16 16:34:35]  WARN: api-9001 ensuring stop...
+W [2013-08-16 16:34:35]  WARN: api-9003 ensuring stop...

@@ -1,5 +1,9 @@
-#encoding: utf-8
+# vi: set fileencoding=utf-8 :
+require 'second_level_cache/second_level_cache'
+
 class Canzhang < ActiveRecord::Base
+  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
+
   attr_accessible :cz_type, :number, :user_id
 
   belongs_to :user
@@ -8,11 +12,11 @@ class Canzhang < ActiveRecord::Base
   validates :number, :user_id, :numericality => {:greater_than => 0, :only_integer => true}
 
   def to_dictionary
-    tmp = {}
-    tmp[:id] = self.id
-    tmp[:type] = URI.encode(self.cz_type)
-    tmp[:number] = self.number
-    tmp[:user_id] = self.user_id
+    tmp               = {}
+    tmp[:id]          = self.id
+    tmp[:type]        = URI.encode(self.cz_type)
+    tmp[:number]      = self.number
+    tmp[:user_id]     = self.user_id
     tmp[:gongfu_type] = URI.encode(ZhangmenrenConfig.instance.canzhang_config[self.cz_type]['gongfu_id'])
     tmp
   end
@@ -49,6 +53,8 @@ class Canzhang < ActiveRecord::Base
     canzhang_quality = canzhang_config_info['quality'].to_i
     logger.debug("### #{__method__},(#{__FILE__}, #{__LINE__}) canzhang quality: #{canzhang_quality}")
 
+    npc_name_config = ZhangmenrenConfig.instance.name_config
+
     npc_team_config_info = ZhangmenrenConfig.instance.canzhang_npc_team_config[canzhang_quality]
     max_level = npc_team_config_info['max_level'].to_i
     min_level = npc_team_config_info['min_level'].to_i
@@ -59,7 +65,7 @@ class Canzhang < ActiveRecord::Base
       npc_user = User.new
       npc_user.level = rand(max_level - min_level + 1) + min_level
       npc_user.id = -100    # npc的id统一为-100
-      npc_user.name = User.get_random_name
+      npc_user.name = npc_name_config[User.get_random_name].to_s
       npc_user.prestige = rand(100)
       npc_user.gold = rand(100)
       npc_user.silver = rand(100)

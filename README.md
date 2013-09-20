@@ -1,0 +1,92 @@
+                 +++++++++++++++++++++++++++++++++++++++++++++++++++
+                 +                   GGA Framework                 +
+                 +          (Grape + Goliath + ActiveRecord)       +
+                 +                                                 +
+                 +                 authored by geekerzp            +
+                 +                                                 +
+                 +                    //=====                      +
+                 +                   //                            +
+                 +                   ||  *****?                    +
+                 +                   \\      //                    +
+                 +                    \\====//                     +
+                 +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+目录结构
+========
+
+    app/ --------------------- 程序主目录
+     |
+     --- apis/ --------------- 接口目录
+     |     |
+     |     --- helpers/ ------ 路由助手目录（类似于controller）
+     |     |
+     |     --- restfuls/ ----- 路由目录（用来定义URI，调用路由助手完成复杂操作）
+     |     |
+     |     --- validations/ -- 自定义验证器和错误类型目录
+     |     |
+     |     --- api.rb -------- 主文件（接口初始化）（系统文件）
+     |     |
+     |     --- helpers.rb ---- 全局helper（在任意路由文件均可以使用）
+     |     |
+     |     --- patch.rb ------ Grape补丁
+     |
+     --- lib/ ---------------- 程序三方库目录
+     |
+     --- models/ ------------- 模型目录
+     |
+    config/ ------------------ 程序配置文件目录
+     |
+     --- initializers/ ------- 程序初始化文件目录
+     |
+     --- application.rb ------ 程序启动配置文件（系统文件）
+     |
+     --- database.yml -------- 数据库配置文件
+     |
+     --- listen.god ---------- God配置文件（系统文件）
+     |
+    data/ -------------------- json配置文件目录
+     |
+    db/ ---------------------- 数据库文件目录
+     |
+     --- migrate/ ------------ migration目录（需通过rails生成拷贝进来）
+     |
+    log/ --------------------- 日志文件目录
+     |
+    tasks/ ------------------- 自定义rake task目录
+     |
+    tmp/ --------------------- 临时文件，变动文件目录
+     |
+    Gemfile ------------------ gem依赖库文件（bundle install）
+     | 
+    Rakefile ----------------- 系统rake任务（系统文件）
+     |
+    server.rb ---------------- Goliath启动文件（程序初始化）
+
+程序启动
+========
+# 通过server.rb
+$ ruby server.rb -vs 
+$ ruby server.rb -e production(development)   # 启动时指定环境
+$ ruby server.rb -l log/development.log       # 启动时指定写入日志文件
+
+# 通过god启动（生产环境）
+$ god -c config/listen.god -D
+
+Rake 
+====
+# 系统rake 
+rake db:create  GGA_ENV=production | development (默认为development)  创建数据库
+rake db:drop    GGA_ENV=production | development (默认为development)  创建数据库
+rake db:migrate VERSION=integer 执行某个版本的migration
+rake db:migrate                 执行所有没有执行过的migration
+rake db:migrate GGA_ENV=production | development (默认为development)  在特定环境下执行migration
+rake db:setup   GGA_ENV=production | development (默认为development)  create && migrate
+
+# 自定义rake（tasks/） 
+可以自定义rake任务，xxx.rake存放在tasks/文件夹中
+
+系统模块（GGA）
+===============
+GGA.root      # 获取系统根路径
+

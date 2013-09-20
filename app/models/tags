@@ -1,0 +1,172 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Admins	admins.rb	/^class Admins < ActiveRecord::Base$/;"	c
+CanbaiRecorder	canbai_recorder.rb	/^class CanbaiRecorder < ActiveRecord::Base$/;"	c
+CanbaiRewardRecorder	canbai_reward_recorder.rb	/^class CanbaiRewardRecorder < ActiveRecord::Base$/;"	c
+Canzhang	canzhang.rb	/^class Canzhang < ActiveRecord::Base$/;"	c
+CanzhangGrabRecorder	canzhang_grab_recorder.rb	/^class CanzhangGrabRecorder < ActiveRecord::Base$/;"	c
+ContinuousLoginReward	continuous_login_reward.rb	/^class ContinuousLoginReward < ActiveRecord::Base$/;"	c
+Dianbo	dianbo.rb	/^class Dianbo < ActiveRecord::Base$/;"	c
+Disciple	disciple.rb	/^class Disciple < ActiveRecord::Base$/;"	c
+Equipment	equipment.rb	/^class Equipment < ActiveRecord::Base$/;"	c
+FriendApplyRecorder	friend_apply_recorder.rb	/^class FriendApplyRecorder < ActiveRecord::Base$/;"	c
+GiftbagPurchaseRecorder	giftbag_purchase_recorder.rb	/^class GiftbagPurchaseRecorder < ActiveRecord::Base$/;"	c
+Gongfu	gongfu.rb	/^class Gongfu < ActiveRecord::Base$/;"	c
+GoodsPurchaseRecorder	goods_purchase_recorder.rb	/^class GoodsPurchaseRecorder < ActiveRecord::Base$/;"	c
+Handbook	handbook.rb	/^class Handbook < ActiveRecord::Base$/;"	c
+JianghuRecorder	jianghu_recorder.rb	/^class JianghuRecorder < ActiveRecord::Base$/;"	c
+JianghuRewardRecorder	jianghu_reward_recorder.rb	/^class JianghuRewardRecorder < ActiveRecord::Base$/;"	c
+JiaohuajiRecorder	jiaohuaji_recorder.rb	/^class JiaohuajiRecorder < ActiveRecord::Base$/;"	c
+LunjianPosition	lunjian_position.rb	/^class LunjianPosition < ActiveRecord::Base$/;"	c
+LunjianRecorder	lunjian_recorder.rb	/^class LunjianRecorder < ActiveRecord::Base$/;"	c
+LunjianRewardRecorder	lunjian_reward_recorder.rb	/^class LunjianRewardRecorder < ActiveRecord::Base$/;"	c
+Message	message.rb	/^class Message < ActiveRecord::Base$/;"	c
+ObtainDiscipleRecorder	obtain_disciple_recorder.rb	/^class ObtainDiscipleRecorder < ActiveRecord::Base$/;"	c
+Order	order.rb	/^class Order < ActiveRecord::Base$/;"	c
+Post	post.rb	/^class Post < ActiveRecord::Base$/;"	c
+Relationship	relationship.rb	/^class Relationship < ActiveRecord::Base$/;"	c
+ResourcesUpdater	resources_updater.rb	/^class ResourcesUpdater < ActiveRecord::Base$/;"	c
+Server	server.rb	/^class Server < ActiveRecord::Base$/;"	c
+Soul	soul.rb	/^class Soul < ActiveRecord::Base$/;"	c
+SystemRewardRecorder	system_reward_recorder.rb	/^class SystemRewardRecorder < ActiveRecord::Base$/;"	c
+TeamMember	team_member.rb	/^class TeamMember < ActiveRecord::Base$/;"	c
+User	user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserGood	user_good.rb	/^class UserGood < ActiveRecord::Base$/;"	c
+UserGoods	user_goods.rb	/^class UserGoods < ActiveRecord::Base$/;"	c
+Zhangmenjue	zhangmenjue.rb	/^class Zhangmenjue < ActiveRecord::Base$/;"	c
+add	friend_apply_recorder.rb	/^  def self.add(user_id, receiver_id)$/;"	F	class:FriendApplyRecorder
+add	handbook.rb	/^  def self.add(user_id, object_type, object_id, exist_type)$/;"	F	class:Handbook
+add	relationship.rb	/^  def self.add(user_id, friend_id, relationship_type)$/;"	F	class:Relationship
+add_equipment	disciple.rb	/^  def add_equipment(equipment)$/;"	f	class:Disciple
+add_gongfu	disciple.rb	/^  def add_gongfu(gongfu)$/;"	f	class:Disciple
+add_new_dianbo	dianbo.rb	/^  def self.add_new_dianbo(user, type, server_time)$/;"	F	class:Dianbo
+add_recorder	canzhang_grab_recorder.rb	/^  def self.add_recorder(attacker_id, defender_id, winner_id, canzhang_type)$/;"	F	class:CanzhangGrabRecorder
+add_recorder	lunjian_reward_recorder.rb	/^  def self.add_recorder(user, position, reward)$/;"	F	class:LunjianRewardRecorder
+break	soul.rb	/^  def break(user, num, potential)$/;"	f	class:Soul
+buy_gift_bags	giftbag_purchase_recorder.rb	/^  def self.buy_gift_bags(user, name, number)$/;"	F	class:GiftbagPurchaseRecorder
+buy_goods	goods_purchase_recorder.rb	/^  def self.buy_goods(user, type, number)$/;"	F	class:GoodsPurchaseRecorder
+canbai	canbai_reward_recorder.rb	/^  def canbai$/;"	f	class:CanbaiRewardRecorder
+change_name_to_type	equipment.rb	/^  def change_name_to_type(equipment_name)$/;"	f	class:Equipment
+change_name_to_type	gongfu.rb	/^  def change_name_to_type(gf_name)$/;"	f	class:Gongfu
+change_name_to_type	user_good.rb	/^  def change_name_to_type(good_name)$/;"	f	class:UserGood
+change_name_to_type	user_goods.rb	/^  def change_name_to_type(good_name)$/;"	f	class:UserGoods
+change_position	equipment.rb	/^  def change_position(id, fir_id, sec_id, thi_id, user_id)$/;"	f	class:Equipment
+change_position	gongfu.rb	/^  def change_position(id, sec_id, thi_id, user_id)$/;"	f	class:Gongfu
+change_type_to_name	equipment.rb	/^  def change_type_to_name(equipment_type)$/;"	f	class:Equipment
+change_type_to_name	gongfu.rb	/^  def change_type_to_name(gf_type)$/;"	f	class:Gongfu
+check_apply	friend_apply_recorder.rb	/^  def self.check_apply(user_id, receiver_id)$/;"	F	class:FriendApplyRecorder
+check_relationship	relationship.rb	/^  def self.check_relationship(user_id, receiver_id, relationship_type)$/;"	F	class:Relationship
+create_blank_order	order.rb	/^  def create_blank_order(uid,oid,status)$/;"	f
+create_canzhang	canzhang.rb	/^  def self.create_canzhang(cz_type,number,user_id)$/;"	F	class:Canzhang
+create_disciple	disciple.rb	/^  def self.create_disciple(user, type)$/;"	F	class:Disciple
+create_equipment	equipment.rb	/^  def self.create_equipment(user, type)$/;"	F	class:Equipment
+create_gongfu	gongfu.rb	/^  def self.create_gongfu(user, type)$/;"	F	class:Gongfu
+create_session_key	admins.rb	/^  def create_session_key$/;"	f	class:Admins
+create_session_key	user.rb	/^  def create_session_key$/;"	f	class:User.login
+delete_dianbo	dianbo.rb	/^  def self.delete_dianbo(id)$/;"	F	class:Dianbo
+eat	jiaohuaji_recorder.rb	/^  def self.eat(user, type)$/;"	F	class:JiaohuajiRecorder
+first_recharge!	order.rb	/^  def first_recharge!$/;"	f
+first_use_gold_obtain_disciple	obtain_disciple_recorder.rb	/^  def self.first_use_gold_obtain_disciple(type, user)$/;"	F	class:ObtainDiscipleRecorder
+get_5_user	lunjian_position.rb	/^  def self.get_5_user()$/;"	F
+get_after_5_user	lunjian_position.rb	/^  def self.get_after_5_user(curr_user_position)$/;"	F
+get_all_messages	user.rb	/^  def self.get_all_messages(user)$/;"	F	class:User.login
+get_apply_messages	friend_apply_recorder.rb	/^  def self.get_apply_messages(user_id)$/;"	F	class:FriendApplyRecorder
+get_before_5_user	lunjian_position.rb	/^  def self.get_before_5_user(curr_user_position)$/;"	F
+get_defend_messages	lunjian_recorder.rb	/^  def self.get_defend_messages(user_id)$/;"	F	class:LunjianRecorder
+get_equipment_detail	equipment.rb	/^  def get_equipment_detail$/;"	f	class:Equipment
+get_feedback_messages	friend_apply_recorder.rb	/^  def self.get_feedback_messages(user_id)$/;"	F	class:FriendApplyRecorder
+get_fight_messages	user.rb	/^  def self.get_fight_messages(user)$/;"	F	class:User.login
+get_gongfu_details	gongfu.rb	/^  def get_gongfu_details$/;"	f	class:Gongfu
+get_grabbed_messages	canzhang_grab_recorder.rb	/^  def self.get_grabbed_messages(user_id)$/;"	F	class:CanzhangGrabRecorder
+get_handbook_by_type	handbook.rb	/^  def self.get_handbook_by_type(user_id, type)$/;"	F	class:Handbook
+get_jianghu_details	jianghu_recorder.rb	/^  def get_jianghu_details$/;"	f	class:JianghuRecorder
+get_jianghu_recorders	user.rb	/^  def get_jianghu_recorders$/;"	f	class:User.login
+get_leave_messages	message.rb	/^  def self.get_leave_messages(user_id)$/;"	F	class:Message
+get_list	canzhang.rb	/^  def self.get_list(user, type, limit)$/;"	F	class:Canzhang
+get_list	giftbag_purchase_recorder.rb	/^  def self.get_list(user)$/;"	F	class:GiftbagPurchaseRecorder
+get_list	lunjian_position.rb	/^  def self.get_list(user)$/;"	F	class:LunjianPosition
+get_random_name	user.rb	/^  def self.get_random_name$/;"	F	class:User.login
+get_recorder	canbai_reward_recorder.rb	/^  def self.get_recorder(user)$/;"	F	class:CanbaiRewardRecorder
+get_recorders	lunjian_reward_recorder.rb	/^  def self.get_recorders(user)$/;"	F	class:LunjianRewardRecorder
+get_recorders_list	obtain_disciple_recorder.rb	/^  def self.get_recorders_list(user)$/;"	F	class:ObtainDiscipleRecorder
+get_recorders_list_of_type	obtain_disciple_recorder.rb	/^  def self.get_recorders_list_of_type(user, type)$/;"	F	class:ObtainDiscipleRecorder
+get_recorders_of_today	jiaohuaji_recorder.rb	/^  def self.get_recorders_of_today(user)$/;"	F	class:JiaohuajiRecorder
+get_relationship	relationship.rb	/^  def self.get_relationship(user_id, relationship_type)$/;"	F	class:Relationship
+get_reward_goods	canbai_reward_recorder.rb	/^  def get_reward_goods$/;"	f	class:CanbaiRewardRecorder
+get_reward_position	lunjian_reward_recorder.rb	/^  def self.get_reward_position(position)$/;"	F	class:LunjianRewardRecorder
+get_simple_info	disciple.rb	/^  def get_simple_info$/;"	f	class:Disciple
+get_system_messages	system_reward_recorder.rb	/^  def self.get_system_messages(user_id)$/;"	F	class:SystemRewardRecorder
+get_team	team_member.rb	/^  def self.get_team(user)$/;"	F	class:TeamMember
+get_today_left_time	obtain_disciple_recorder.rb	/^  def self.get_today_left_time(user, type)$/;"	F	class:ObtainDiscipleRecorder
+get_types_list	dianbo.rb	/^  def self.get_types_list$/;"	F	class:Dianbo
+get_user_canzhang_types	user.rb	/^  def get_user_canzhang_types(user_id)$/;"	f	class:User.login
+get_user_dianbos	dianbo.rb	/^  def self.get_user_dianbos(user, server_time)$/;"	F	class:Dianbo
+get_user_goods	user.rb	/^  def get_user_goods(user_id)$/;"	f	class:User.login
+get_user_list_by_level	user.rb	/^  def self.get_user_list_by_level(search_word)$/;"	F	class:User.login
+get_user_list_by_name	user.rb	/^  def self.get_user_list_by_name(search_word)$/;"	F	class:User.login
+get_user_souls	user.rb	/^  def get_user_souls(user_id)$/;"	f	class:User.login
+get_zhangmenjue_details	zhangmenjue.rb	/^  def get_zhangmenjue_details$/;"	f	class:Zhangmenjue
+increase_canbai_time	canbai_reward_recorder.rb	/^  def increase_canbai_time$/;"	f	class:CanbaiRewardRecorder
+init_pknpc	lunjian_position.rb	/^  def self.init_pknpc()$/;"	F	class:LunjianPosition
+initialize	disciple.rb	/^  def initialize$/;"	f	class:Disciple
+initialize	user.rb	/^  def initialize$/;"	f	class:User
+lock_for_fight	lunjian_position.rb	/^  def self.lock_for_fight(position1, position2)$/;"	F
+login	admins.rb	/^  def self.login(username, password)$/;"	F	class:Admins
+login	user.rb	/^  def self.login(username, password, request)$/;"	F	class:User
+login_from_91server	user.rb	/^  def self.login_from_91server(uin,sessionId,request)$/;"	F	class:User.login
+logout	admins.rb	/^  def self.logout(session_key)$/;"	F	class:Admins
+normal_recharge!	order.rb	/^  def normal_recharge!    $/;"	f
+obtain	obtain_disciple_recorder.rb	/^  def self.obtain(user, type)$/;"	F	class:ObtainDiscipleRecorder
+obtain_disciple_from_drop_bag	obtain_disciple_recorder.rb	/^  def self.obtain_disciple_from_drop_bag(type)$/;"	F	class:ObtainDiscipleRecorder
+process	order.rb	/^  def process$/;"	f	class:Order
+produce_random_str	lunjian_position.rb	/^  def self.produce_random_str()$/;"	F	class:LunjianPosition
+rand_select_equipment_with_quality_and_type	equipment.rb	/^  def self.rand_select_equipment_with_quality_and_type(quality, type)$/;"	F	class:Equipment
+random_select_disciple	disciple.rb	/^  def self.random_select_disciple(quality)$/;"	F	class:Disciple
+random_select_gongfu_of_quality	gongfu.rb	/^  def self.random_select_gongfu_of_quality(quality)$/;"	F	class:Gongfu
+register	user.rb	/^  def self.register(username, password, request)$/;"	F	class:User
+to_dictionary	canzhang.rb	/^  def to_dictionary$/;"	f	class:Canzhang
+to_dictionary	continuous_login_reward.rb	/^  def to_dictionary$/;"	f	class:ContinuousLoginReward
+to_dictionary	dianbo.rb	/^  def to_dictionary$/;"	f	class:Dianbo
+to_dictionary	disciple.rb	/^  def to_dictionary()$/;"	f	class:Disciple
+to_dictionary	equipment.rb	/^  def to_dictionary()$/;"	f	class:Equipment
+to_dictionary	gongfu.rb	/^  def to_dictionary()$/;"	f	class:Gongfu
+to_dictionary	handbook.rb	/^  def to_dictionary()$/;"	f	class:Handbook
+to_dictionary	jianghu_recorder.rb	/^  def to_dictionary()$/;"	f	class:JianghuRecorder
+to_dictionary	lunjian_position.rb	/^  def to_dictionary$/;"	f	class:LunjianPosition
+to_dictionary	lunjian_reward_recorder.rb	/^  def to_dictionary$/;"	f	class:LunjianRewardRecorder
+to_dictionary	message.rb	/^  def to_dictionary$/;"	f	class:Message
+to_dictionary	obtain_disciple_recorder.rb	/^  def to_dictionary$/;"	f
+to_dictionary	relationship.rb	/^  def to_dictionary$/;"	f	class:Relationship
+to_dictionary	soul.rb	/^  def to_dictionary()$/;"	f	class:Soul
+to_dictionary	system_reward_recorder.rb	/^  def to_dictionary$/;"	f	class:SystemRewardRecorder
+to_dictionary	user.rb	/^  def to_dictionary$/;"	f	class:User.login
+to_dictionary	user_good.rb	/^  def to_dictionary()$/;"	f	class:UserGood
+to_dictionary	user_goods.rb	/^  def to_dictionary()$/;"	f	class:UserGoods
+to_dictionary	zhangmenjue.rb	/^  def to_dictionary()$/;"	f	class:Zhangmenjue
+update_canzhangs	canzhang.rb	/^  def self.update_canzhangs(canzhangs)$/;"	F	class:Canzhang
+update_disciples	disciple.rb	/^  def self.update_disciples(user, disciple_array)$/;"	F	class:Disciple
+update_equipments	equipment.rb	/^  def self.update_equipments(user, equipment_array)$/;"	F	class:Equipment
+update_equipments_position	disciple.rb	/^  def update_equipments_position(equipment_id_array)$/;"	f	class:Disciple
+update_gold	user.rb	/^  def update_gold(gold)$/;"	f	class:User.login
+update_gold_power	user.rb	/^  def update_gold_power(gold,power)$/;"	f	class:User.login
+update_gold_sprite	user.rb	/^  def update_gold_sprite(gold,sprite)$/;"	f	class:User.login
+update_gongfus	gongfu.rb	/^  def self.update_gongfus(user, gongfus_array)$/;"	F	class:Gongfu
+update_gongfus_position	disciple.rb	/^  def update_gongfus_position(gongfu_id_array)$/;"	f	class:Disciple
+update_goods	user_good.rb	/^  def self.update_goods(user, goods)$/;"	F	class:UserGood
+update_goods	user_goods.rb	/^  def self.update_goods(user, goods)$/;"	F	class:UserGoods
+update_info	user.rb	/^  def update_info(name, params)$/;"	f	class:User.login
+update_power	user.rb	/^  def update_power(power)$/;"	f	class:User.login
+update_recorder	jianghu_recorder.rb	/^  def self.update_recorder(user, scene_id, item_id, star, is_finish)$/;"	F	class:JianghuRecorder
+update_recorder_fight_time_and_gold	jianghu_recorder.rb	/^  def self.update_recorder_fight_time_and_gold(user, scene_id, item_id, gold)$/;"	F	class:JianghuRecorder
+update_result	canzhang.rb	/^  def self.update_result(user, type, user_id, is_win)$/;"	F	class:Canzhang
+update_result	lunjian_position.rb	/^  def self.update_result(id, user, position, is_win)$/;"	F
+update_souls	soul.rb	/^  def self.update_souls(user, souls_array)$/;"	F	class:Soul
+update_team	team_member.rb	/^  def self.update_team(user, team)$/;"	F	class:TeamMember
+update_to_disciple	soul.rb	/^  def update_to_disciple(user, type, num)$/;"	f	class:Soul
+update_zhangmen_name	user.rb	/^  def update_zhangmen_name(name)$/;"	f	class:User.login
+update_zhangmenjues	zhangmenjue.rb	/^  def self.update_zhangmenjues(user, zhangmenjue_arry)$/;"	F	class:Zhangmenjue
+use	dianbo.rb	/^  def self.use(id)$/;"	F	class:Dianbo
