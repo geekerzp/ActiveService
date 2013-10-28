@@ -1,6 +1,14 @@
+# Fixed Files
 *~
+.*~
+*.swp
+.*.swp 
+*.un~
+.*.un~
+.*
+!.gitignore
+
+# Fixed Folders
+.idea/
 log/ 
 tmp/ 
-*.swp
-*.un~
-.idea/
