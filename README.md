@@ -2,7 +2,7 @@
                  +                   GGA Framework                 +
                  +          (Grape + Goliath + ActiveRecord)       +
                  +                                                 +
-                 +                 authored by geekerzp            +
+                 +                 Authored by geekerzp            +
                  +                                                 +
                  +                    //=====                      +
                  +                   //                            +
@@ -11,82 +11,47 @@
                  +                    \\====//                     +
                  +++++++++++++++++++++++++++++++++++++++++++++++++++
 
+### License
 
-目录结构
-========
+The MIT License (MIT)
 
-    app/ --------------------- 程序主目录
-     |
-     --- apis/ --------------- 接口目录
-     |     |
-     |     --- helpers/ ------ 路由助手目录（类似于controller）
-     |     |
-     |     --- restfuls/ ----- 路由目录（用来定义URI，调用路由助手完成复杂操作）
-     |     |
-     |     --- validations/ -- 自定义验证器和错误类型目录
-     |     |
-     |     --- api.rb -------- 主文件（接口初始化）（系统文件）
-     |     |
-     |     --- helpers.rb ---- 全局helper（在任意路由文件均可以使用）
-     |     |
-     |     --- patch.rb ------ Grape补丁
-     |
-     --- lib/ ---------------- 程序三方库目录
-     |
-     --- models/ ------------- 模型目录
-     |
-    config/ ------------------ 程序配置文件目录
-     |
-     --- initializers/ ------- 程序初始化文件目录
-     |
-     --- application.rb ------ 程序启动配置文件（系统文件）
-     |
-     --- database.yml -------- 数据库配置文件
-     |
-     --- listen.god ---------- God配置文件（系统文件）
-     |
-    data/ -------------------- json配置文件目录
-     |
-    db/ ---------------------- 数据库文件目录
-     |
-     --- migrate/ ------------ migration目录（需通过rails生成拷贝进来）
-     |
-    log/ --------------------- 日志文件目录
-     |
-    tasks/ ------------------- 自定义rake task目录
-     |
-    tmp/ --------------------- 临时文件，变动文件目录
-     |
-    Gemfile ------------------ gem依赖库文件（bundle install）
-     | 
-    Rakefile ----------------- 系统rake任务（系统文件）
-     |
-    server.rb ---------------- Goliath启动文件（程序初始化）
+Copyright (c) 2013 geekerzp
 
-程序启动
-========
-# 通过server.rb
-$ ruby server.rb -vs 
-$ ruby server.rb -e production(development)   # 启动时指定环境
-$ ruby server.rb -l log/development.log       # 启动时指定写入日志文件
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-# 通过god启动（生产环境）
-$ god -c config/listen.god -D
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Rake 
-====
-# 系统rake 
-rake db:create  GGA_ENV=production | development (默认为development)  创建数据库
-rake db:drop    GGA_ENV=production | development (默认为development)  创建数据库
-rake db:migrate VERSION=integer 执行某个版本的migration
-rake db:migrate                 执行所有没有执行过的migration
-rake db:migrate GGA_ENV=production | development (默认为development)  在特定环境下执行migration
-rake db:setup   GGA_ENV=production | development (默认为development)  create && migrate
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALwL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# 自定义rake（tasks/） 
-可以自定义rake任务，xxx.rake存放在tasks/文件夹中
+### TODO
 
-系统模块（GGA）
-===============
-GGA.root      # 获取系统根路径
+Rails作为一个全栈式web框架，适合于开发web应用，但是如果使用Rails提供API接口，
+Rails太过于重量级，同时，使程序的性能下降。GGA框架通过ActiveRecord提供数据持久化，
+通过Grape提供HTTP路由，通关Goliath作为web服务器，可以提供更加轻量级，响应迅速，
+高并发的API服务。
 
+As a full-stack web framework, Rails is the best choice for developing web applications.
+But if you use Rails as the API interfaces, Rails is too heavyweight that it will reduce
+the program's performance.
+GGA framework provided more lightweight, fast response, high concurrency API services
+through the ActiveRecord provided data persistance, the Grape provided HTTP route,
+the Goliath as a EventMachine web server.
+
+### Install
+
+    git clone git@github.com:geekerzp/gga.git
+
+### Usage
+
+Reference the README.rdoc
