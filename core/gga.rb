@@ -3,10 +3,8 @@ require 'bundler/setup'
 require 'active_support'
 require 'em-synchrony/activerecord'
 require 'em-synchrony/mysql2'
-
 # rails4的ActiveRecord将attr_accessible类宏移到了Gem中
 require 'protected_attributes'
-
 require 'grape'
 require 'uri'
 require 'yaml'
@@ -27,15 +25,15 @@ module GGA
 
       load_init_files
 
-      load_main
+      load_application
     end
 
     def logger
-      @@logger ||= nil
+      @logger ||= nil
     end
 
     def logger=(logger)
-      @@logger = logger
+      @logger = logger
     end
 
     def sys_log(&block)
@@ -52,7 +50,7 @@ module GGA
       Dir[File.expand_path("./config/initializers/*.rb", root)].each {|file| require file }
     end
 
-    def load_main
+    def load_application
       require File.expand_path("./app/apis/application", root)
     end
   end

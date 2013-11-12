@@ -4,8 +4,8 @@ module UserHelper
   # 注册接口
   #
   def register
-    username = get_params(params, :username)
-    password = get_params(params, :password)
+    username = params[:username]
+    password = params[:password]
 
     code, user = User.register(username, password, self)
     if code == ResultCode::OK
