@@ -1,11 +1,11 @@
-#
-# goliath websocket服务器启动文件（程序初始化）
-#
+################################################
+# goliath websocket服务器启动文件（程序初始化）#
+################################################
 
-# 加载核心模块
-require './core/gga'
+# Load core module
+require ::File.expand_path('../core/gga', __FILE__)
 
-# 加载Goliath
+# Load Goliath
 require 'goliath'
 require 'goliath/websocket'
 
@@ -19,12 +19,12 @@ class ApplicationApi < Goliath::WebSocket
 
     # 建立channel
     @@individual_channels[env.object_id] = { :channel => EM::Channel.new, :queue => EM::Queue.new }
-    @@individual_channels[env.object_id][:subscription] = 
+    @@individual_channels[env.object_id][:subscription] =
       @@individual_channels[env.object_id][:channel].subscribe {|m| env.stream_send(m) }
     # subscribe channel
     env[:subscription] = env.channel.subscribe { |m| env.stream_send(m) }
 
-    chat_messages = ChatMessage.today_chat_messages(ChatMessage::ALL_USERS) 
+    chat_messages = ChatMessage.today_chat_messages(ChatMessage::ALL_USERS)
 
     res = {}
     res['chat_messages'] = []
@@ -37,7 +37,7 @@ class ApplicationApi < Goliath::WebSocket
     Fiber.new {
       json_msg = JSON.parse(msg)
       chat = ChatMessage.create_by_session(json_msg['session_key'], json_msg['message'], ChatMessage::ALL_USERS,)
-      if chat.nil?   
+      if chat.nil?
         # 如果创建聊天信息失败，关闭channel
         on_close(env)
         env.logger.info("WS MESSAGE: session_key valid")
@@ -47,17 +47,17 @@ class ApplicationApi < Goliath::WebSocket
         res['chat_messages'] << chat.inspect
         env.channel << res.to_json
         env.logger.info("WS MESSAGE: #{res.to_json}")
-      end 
+      end
     }.resume
   end
 
   def on_close(env)
     # 关闭独立频道
     unless @@individual_channels[env.object_id].nil?
-      @@individual_channels[env.object_id][:channel].unsubscribe(@@individual_channels[env.object_id][:subscription]) 
-    end 
+      @@individual_channels[env.object_id][:channel].unsubscribe(@@individual_channels[env.object_id][:subscription])
+    end
     # 关闭公共频道
-    env.channel.unsubscribe(env[:subscription]) if @@individual_channels.empty? 
+    env.channel.unsubscribe(env[:subscription]) if @@individual_channels.empty?
     env.logger.info("WS CLOSED")
   end
 

@@ -1,4 +1,4 @@
-#encoding: utf-8
+# vi: set fileencoding=utf-8 :
 module Restfuls
   class Users < Grape::API
     format :json
@@ -260,6 +260,6 @@ module Restfuls
         get_info_after_recharge
       end
 
-    end 
-  end 
-end 
+    end
+  end
+end

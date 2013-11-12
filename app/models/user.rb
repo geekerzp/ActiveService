@@ -1,15 +1,10 @@
 # vi: set fileencoding=utf-8 :
 require 'digest/sha2'
 require 'digest/md5'
-require 'comm'
 require 'open-uri'
 require 'json'
-require 'second_level_cache/second_level_cache'
-
-include Comm
 
 class User < ActiveRecord::Base
-  acts_as_cached(version: 1, expires_in: 1.week)  # 开启二级缓存
   include Redis::Objects
 
   # 某个用户论剑位置前5个用户论剑位置的缓存
@@ -409,14 +404,14 @@ class User < ActiveRecord::Base
     self.name = name
     self.vip_level = (params[:vip_level] || self.vip_level).to_i
     self.level = (params[:level] || self.level).to_i
-    
+
     # FIXME 参加活动获得奖励事件
-    added_gold = params[:gold] - self.gold 
+    added_gold = params[:gold] - self.gold
     Trigger.rule_6(user, nil, gold: added_gold)
-    
+
     self.gold = (params[:gold] || self.gold).to_i
     self.prestige = (params[:prestige] || self.prestige).to_i
-    
+
     # FIXME 参加活动获得奖励事件
     added_silver = params[:silver] - self.silver
     Trigger.rule_6(user, nil, silver: added_silver)
@@ -637,11 +632,11 @@ class User < ActiveRecord::Base
     return User.where('name like ? AND npc_or_not = ?', "%#{search_word}%", 0).order('last_login_time desc').limit(10)
   end
 
-  # 
+  #
   # 用户收取最新消息
-  # 
-  def receive_messages 
-    sys_ad_messages = SysAdMessage.all 
+  #
+  def receive_messages
+    sys_ad_messages = SysAdMessage.all
     send_messages   = SendMessage.find {|msg| msg.receiver_id == current_user.id }
     received_sys_ad_messages = []
     received_send_messages   = []
@@ -652,10 +647,10 @@ class User < ActiveRecord::Base
     sys_ad_messages.each do |msg|
       # 收取BroadCast
       unless UserMessage.exists?(user: self, type: BroadCast, rel_id: msg.id)
-        UserMessage.create(user: self, type: BroadCast, rel_id: msg.id) 
+        UserMessage.create(user: self, type: BroadCast, rel_id: msg.id)
         received_sys_ad_messages << msg
-      end 
-    end 
+      end
+    end
 
     return ResultCode::OK, nil if send_messages.nil?
     send_messages.each do |msg|
@@ -664,18 +659,18 @@ class User < ActiveRecord::Base
         UserMessage.create(user: self, type: PointToPoint, rel_id: msg.id)
         msg.receive_time = Time.now
         msg.status = SendMessage::RECEIVE_SUCCESS
-        unless msg.save 
+        unless msg.save
           logger.error "##### #{__FILE__},#{__method__},#{__LINE__} 用户收取信息失败"
           return ResultCode::ERROR, msg.errors.full_messages.join('; ')
-        end 
+        end
         received_send_messages << msg
-      end 
-    end 
+      end
+    end
 
     # 返回收取信息
     messages = []
     received_sys_ad_messages.each {|msg| messages << URI.encode(msg.message) }
     received_send_messages.each {|msg| messages << URI.encode(msg.sender_id.to_s + msg.message) }
     return ResultCode::OK, messages
-  end 
+  end
 end

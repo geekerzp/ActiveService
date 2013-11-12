@@ -1,6 +1,6 @@
-#
-# 配置文件
-#
+##########################
+#        配置文件        #
+##########################
 
 # Heroku云服务器PaaS环境
 # Sets up database configuration
@@ -29,25 +29,26 @@ else # local environment
   GGA.logger = Grape::API.logger
 
   # 自定义系统Log的输出样式
-  GGA.sys_log do |env, response, elapsed_time| 
+  GGA.sys_log do |env, response, elapsed_time|
     method = env[Goliath::Request::REQUEST_METHOD]
     path   = env[Goliath::Request::REQUEST_URI]
 
     env[Goliath::Request::RACK_LOGGER].info("#{response.status} #{method} #{path} in #{'%.2f' % elapsed_time } ms")
-  end 
+  end
 
   # cache_store 设置缓存（目前只支持Redis）
-  CACHE = EventMachine::Synchrony::ConnectionPool.new(size: 100) do 
-    ActiveSupport::Cache.lookup_store :redis_store, 
-      { :host => "localhost", :port => "6379", :driver => :synchrony, :expires_in => 1.week }    
-  end 
+  CACHE = EventMachine::Synchrony::ConnectionPool.new(size: 100) do
+    ActiveSupport::Cache.lookup_store :redis_store,
+      { :host => "localhost", :port => "6379", :driver => :synchrony, :expires_in => 1.week }
+  end
   CACHE.logger = GGA.logger
 
-  SecondLevelCache.configure do |config|
-    config.cache_store      = CACHE
-    config.logger           = GGA.logger
-    config.cache_key_prefix = 'onepiece'
-  end 
+  # For SecondLevelCache
+  #SecondLevelCache.configure do |config|
+  #  config.cache_store      = CACHE
+  #  config.logger           = GGA.logger
+  #  config.cache_key_prefix = 'onepiece'
+  #end
 
   # websocket
   config['channel'] = EM::Channel.new

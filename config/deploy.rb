@@ -1,7 +1,7 @@
-#
-# Capistrano配置脚本
-# 功能：远程同步git服务器代码
-#
+##########################################
+#            Capistrano配置脚本          #
+#       功能：远程同步git服务器代码      #
+##########################################
 #require 'rvm/capistrano'
 
 # 配置
@@ -15,7 +15,7 @@ set :domain, '42.121.6.191'             # 域名
 set :application, "onepiece"            # 应用名称
 
 # file paths
-set :repository,  "gitolite:OnePiece_Server.git"            # git仓库 
+set :repository,  "gitolite:OnePiece_Server.git"            # git仓库
 set :deploy_to, "/home/#{user}/server_for91/#{domain}"           # 应用路径
 
 role :web, web_servers, :port => 22                              # Your HTTP server, Apache/etc
@@ -26,7 +26,7 @@ role :db,  db_servers, :port => 22
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
-# miscellaneous options 
+# miscellaneous options
 # git配置
 set :deploy_via, :remote_cache
 set :scm, 'git'                   # scm软件管理配置
@@ -34,7 +34,7 @@ set :branch, 'new'                # 分支
 set :scm_verbose, false           # 是否建立current目录
 
 # 其他
-set :use_sudo, false               # 是否默认使用sudo 
+set :use_sudo, false               # 是否默认使用sudo
 default_run_options[:pty] = true   # 开启pty
 
 # if you're still using the script/reaper helper you will need
@@ -52,43 +52,43 @@ default_run_options[:pty] = true   # 开启pty
 # end
 
 # 自定义任务
-namespace :deploy do 
+namespace :deploy do
   # 重启Passenger
   desc "cause Passenger to initiate a restart"
-  task :restart do 
+  task :restart do
     run "touch #{current_path}/tmp/restart.txt"
-  end 
+  end
 
   desc "reload the database with seed data"
-  task :seed do 
+  task :seed do
     run "cd #{current_path}; rake db:seed RAILS_ENV=production"
-  end 
+  end
 
   # 启动nginx
-  desc "start nginx" 
-  task :nginx_start do 
+  desc "start nginx"
+  task :nginx_start do
     run "sudo /opt/nginx/sbin/nginx"
-  end 
+  end
 
   # 重启nginx
   desc "restart nginx"
-  task :nginx_restart do 
+  task :nginx_restart do
     run "sudo /opt/nginx/sbin/nginx -s reload"
-  end 
+  end
 
   # 关闭nginx
   desc "shut down nginx"
-  task :nginx_stop do 
+  task :nginx_stop do
     run "sudo pkill -9 nginx"
-  end 
+  end
 
-end 
+end
 
 # 在更新代码之后，执行bundle install
 #after "deploy:update_code", :bundle_install
 desc "install the necessary preprequisites"
-task :bundle_install do 
+task :bundle_install do
   run "cd #{release_path} && #{sudo} bundle install"
-end 
+end
 
 

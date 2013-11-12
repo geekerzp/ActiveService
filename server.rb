@@ -1,11 +1,11 @@
-#
-# goliath api服务器启动文件（程序初始化）
-#
+###########################################
+# goliath api服务器启动文件（程序初始化） #
+###########################################
 
-# 加载核心模块
-require './core/gga'
+# Load core module
+require ::File.expand_path('../core/gga', __FILE__)
 
-# 加载Goliath
+# Load Goliath
 require 'goliath'
 
 class ApplicationApi < Goliath::API

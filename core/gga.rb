@@ -3,7 +3,10 @@ require 'bundler/setup'
 require 'active_support'
 require 'em-synchrony/activerecord'
 require 'em-synchrony/mysql2'
-require 'protected_attributes'    # rails4的ActiveRecord将attr_accessible类宏移到了Gem中
+
+# rails4的ActiveRecord将attr_accessible类宏移到了Gem中
+require 'protected_attributes'
+
 require 'grape'
 require 'uri'
 require 'yaml'
@@ -13,44 +16,47 @@ require 'hiredis'
 require 'redis-objects'
 require 'redis-activesupport'
 
-module GGA 
-  class << self 
-    # The Configuration instance used to configure the GGA environment
-    def root 
-      File.expand_path(File.dirname(__FILE__) + '/..')
-    end 
+module GGA
+  class << self
+    def root
+      ::File.expand_path('../../', __FILE__)
+    end
 
     def initialize!
-      # 初始化加载路径  
-      %w[apis lib models].each do |folder|
-        # $LOAD_PATH为goliath的load-path
-        $:.unshift(File.expand_path(root + "/app/#{folder}")) 
-      end
-      $:.unshift(File.expand_path(File.dirname(__FILE__)))
+      load_path
 
-      # 加载初始化文件
-      Dir[root + "/config/initializers/*.rb"].each {|init| require init }
+      load_init_files
 
-      # 加载程序主文件
-      require root + "/app/apis/api"
-    end 
+      load_main
+    end
 
-    def logger 
-      @@logger ||= nil 
-    end 
+    def logger
+      @@logger ||= nil
+    end
 
     def logger=(logger)
       @@logger = logger
-    end 
+    end
 
     def sys_log(&block)
-      if block_given?
-        Goliath::Request.log_block = block
-      end 
-    end 
-  end 
+      Goliath::Request.log_block = block if block_given?
+    end
 
-  # 初始化程序
-  initialize!
-end 
+    private
 
+    def load_path
+      %w[apis lib models].each {|folder| $: << File.expand_path("./app/#{folder}", root) }
+    end
+
+    def load_init_files
+      Dir[File.expand_path("./config/initializers/*.rb", root)].each {|file| require file }
+    end
+
+    def load_main
+      require File.expand_path("./app/apis/application", root)
+    end
+  end
+end
+
+# Initialize environment
+GGA.initialize!
